@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a786e6d89a5251bb63a874d3b85ecdf8df48626b1c72ec8c196a6205d50fe141
-size 84
+extends layout
+
+block content
+  h1= message
+  h2= error.status
+  pre #{error.stack}
