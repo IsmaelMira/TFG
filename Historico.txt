@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1eecdc710ec00cb08123e45d22e2212b28b855ce53ad09626d27bc4e11b262f6
-size 795
+Datos contaminación:
+	https://aqicn.org/data-platform/register/es/ No nos da valores, sino que los convierte a AQI (0-50 verde, etc.) https://aqicn.org/calculator
+	AQI information: https://www.airnow.gov/aqi/aqi-basics/
+	Dióxido de azufre: SO2 
+	Dióxido de nitrógeno: NO2
+ 	Concentración de Ozono: O3 
+	Partículas en Suspensión < PM10 
+	Unidades: µg/m3
+	Valores deseados y límites: http://gestiona.madrid.org/azul_internet/html/web/2_3.htm?ESTADO_MENU=2_3
+	Qué es cada variable: https://www.comunidad.madrid/servicios/salud/calidad-aire-salud
+Datos tiempo atmosférico:
+	http://www.ogimet.com/gsynres.phtml (Madrid-08221)
+		Presion
+		Viento
+		Humedad
+	https://www.ncdc.noaa.gov/cdo-web/orders (Madrid? Buscar order pa ver que estacion)
+		Temperaturas
+		Precipitaciones

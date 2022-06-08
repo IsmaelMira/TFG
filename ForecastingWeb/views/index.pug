@@ -1,3 +1,623 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a75702e7382f1d2159b9abc4dc44535b3d6caf8353186ede2d37f24ee78ad996
-size 13080
+extends layout
+
+mixin space()
+  |&nbsp;
+
+block content
+  script.
+    initializeVariables();
+  #topPage
+    h1.title Atmospheric pollution forecast
+  //p Welcome to #{totalAQI}
+  //button(onclick="graphToggle()") &#9776;
+  #content
+    p#actualValues AQI actual values
+    #pollutionData
+      #imageAQI
+        img#smog(src='images/foggy.svg' alt='AQI')
+        p#actualAQI 45
+      .listPollutant
+          ul
+            li
+              | PM25: <b>45</b>
+            li
+              | PM10: <b>45</b>
+            li
+              | O3: <b>18</b>
+            li
+              | NO2: <b>12</b>
+            li
+              | SO2: <b>123</b>
+      .listMadrid
+          ul
+            li(style="font-weight: bolder; font-size: 32px;")
+              | Madrid
+            li
+              | #{date0}
+            li
+              | 23ºC 
+            li 
+              | Sunny      
+    #buttons
+      button.pollutant#PM25Button(onclick="togglePM25()" style="text-decoration:underline; font-weight:bolder") PM2.5
+      ||
+      button.pollutant#PM10Button(onclick="togglePM10()") PM10
+      ||
+      button.pollutant#O3Button(onclick="toggleO3()") O3
+      ||
+      button.pollutant#NO2Button(onclick="toggleNO2()") NO2
+      ||
+      button.pollutant#SO2Button(onclick="toggleSO2()") SO2
+    p.pollutantInfo#PM25Info PM2.5 refers to particles in the air that are two and one half microns or less in width. <br> Especially dangerous to human health because they bypass many of our body’s defenses.
+    p.pollutantInfo#PM10Info(style="display:none;") PM10 refers to particles with a diameter of 10 micrometers (µm) or less. <br> Because PM10 is a larger particle than PM2.5, it’s less likely to cross from the lungs into the bloodstream.
+    p.pollutantInfo#O3Info(style="display:none;") Ozone can be particularly dangerous and abundant on hot days in an urban area. <br> Exposure to ozone can make it very difficult to breathe and cause coughing and shortness of breath.
+    p.pollutantInfo#NO2Info(style="display:none;") Nitrogen dioxide is produced from combustion processes. <br> Its presence is closely linked to the formation or presence of other air pollutants. 
+    p.pollutantInfo#SO2Info(style="display:none;") Sulfur dioxide is a a colorless, bad-smelling, toxic gas. <br> It can contribute to respiratory illness by making breathing more difficult.
+    #pollutionCharts
+      +space
+      canvas#PM25Chart(width='768' height='400' style="margin:40px")
+      script.
+        var data = [34,36,40,26,36,43,81,68];
+        var colors = [];
+        for(var i = 0; i < data.length; i++){
+          var color;
+          switch(true){
+              case data[i] < 51:
+                  color = "#177245";
+                  break;
+              case data[i] < 101:
+                  color = "#C4A705";
+                  break;
+              case data[i] < 151:
+                  color = "#C96112";
+                  break;
+              case data[i] < 201:
+                  color = "#C1301C";
+                  break;
+              case data[i] < 301:
+                  color = "rgb(143, 63, 151)";
+                  break;
+              case data[i] < 501:
+                  color = "rgb(126, 0, 35)";
+                  break;
+          }
+          colors[i] = color;
+        }
+        var ctx= document.getElementById("PM25Chart").getContext("2d");
+        var myChart= new Chart(ctx,{
+        type: 'bar',
+        data: {
+          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          datasets: [{ 
+              data: data,
+              backgroundColor: colors,
+              borderColor: 'grey',
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          scales : {
+              x: {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              }
+            },
+            y : {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              },
+              min: 0
+            }
+          },
+          plugins: {
+            legend: {
+                display:false
+            }
+          }
+        }
+        });
+
+      canvas#PM10Chart(width='768' height='400' style="margin:40px; display:none")
+      script.
+        var data = [11,14,10,15,19,22,25,37];
+        var colors = [];
+        for(var i = 0; i < data.length; i++){
+          var color;
+          switch(true){
+              case data[i] < 51:
+                  color = "#177245";
+                  break;
+              case data[i] < 101:
+                  color = "#C4A705";
+                  break;
+              case data[i] < 151:
+                  color = "#C96112";
+                  break;
+              case data[i] < 201:
+                  color = "#C1301C";
+                  break;
+              case data[i] < 301:
+                  color = "rgb(143, 63, 151)";
+                  break;
+              case data[i] < 501:
+                  color = "rgb(126, 0, 35)";
+                  break;
+          }
+          colors[i] = color;
+        }
+
+        var ctx= document.getElementById("PM10Chart").getContext("2d");
+        var myChart= new Chart(ctx,{
+        type: 'bar',
+        data: {
+          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          datasets: [{ 
+              data: data,
+              backgroundColor: colors,
+              borderColor: 'grey',
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          scales : {
+              x: {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              }
+            },
+            y : {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              },
+              min: 0
+            }
+          },
+          plugins: {
+            legend: {
+                display:false
+            }
+          }
+        }
+        });
+
+      canvas#O3Chart(width='768' height='400' style="margin:40px; display:none")
+      script.
+        var data = [112,14,140,15,19,22,25,37];
+        var colors = [];
+        for(var i = 0; i < data.length; i++){
+          var color;
+          switch(true){
+              case data[i] < 51:
+                  color = "#177245";
+                  break;
+              case data[i] < 101:
+                  color = "#C4A705";
+                  break;
+              case data[i] < 151:
+                  color = "#C96112";
+                  break;
+              case data[i] < 201:
+                  color = "#C1301C";
+                  break;
+              case data[i] < 301:
+                  color = "rgb(143, 63, 151)";
+                  break;
+              case data[i] < 501:
+                  color = "rgb(126, 0, 35)";
+                  break;
+          }
+          colors[i] = color;
+        }
+
+        var ctx= document.getElementById("O3Chart").getContext("2d");
+        var myChart= new Chart(ctx,{
+        type: 'bar',
+        data: {
+          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          datasets: [{ 
+              data: data,
+              backgroundColor: colors,
+              borderColor: 'grey',
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          scales : {
+              x: {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              }
+            },
+            y : {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              },
+              min: 0
+            }
+          },
+          plugins: {
+            legend: {
+                display:false
+            }
+          }
+        }
+        });
+
+      canvas#NO2Chart(width='768' height='400' style="margin:40px; display:none")
+      script.
+        var data = [11,14,10,154,19,22,25,347];
+        var colors = [];
+        for(var i = 0; i < data.length; i++){
+          var color;
+          switch(true){
+              case data[i] < 51:
+                  color = "#177245";
+                  break;
+              case data[i] < 101:
+                  color = "#C4A705";
+                  break;
+              case data[i] < 151:
+                  color = "#C96112";
+                  break;
+              case data[i] < 201:
+                  color = "#C1301C";
+                  break;
+              case data[i] < 301:
+                  color = "rgb(143, 63, 151)";
+                  break;
+              case data[i] < 501:
+                  color = "rgb(126, 0, 35)";
+                  break;
+          }
+          colors[i] = color;
+        }
+
+        var ctx= document.getElementById("NO2Chart").getContext("2d");
+        var myChart= new Chart(ctx,{
+        type: 'bar',
+        data: {
+          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          datasets: [{ 
+              data: data,
+              backgroundColor: colors,
+              borderColor: 'grey',
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          scales : {
+              x: {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              }
+            },
+            y : {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              },
+              min: 0
+            }
+          },
+          plugins: {
+            legend: {
+                display:false
+            }
+          }
+        }
+        });
+
+      canvas#SO2Chart(width='768' height='400' style="margin:40px; display:none")
+      script.
+        var data = [67,14,10,15,19,123,25,37];
+        var colors = [];
+        for(var i = 0; i < data.length; i++){
+          var color;
+          switch(true){
+              case data[i] < 51:
+                  color = "#177245";
+                  break;
+              case data[i] < 101:
+                  color = "#C4A705";
+                  break;
+              case data[i] < 151:
+                  color = "#C96112";
+                  break;
+              case data[i] < 201:
+                  color = "#C1301C";
+                  break;
+              case data[i] < 301:
+                  color = "rgb(143, 63, 151)";
+                  break;
+              case data[i] < 501:
+                  color = "rgb(126, 0, 35)";
+                  break;
+          }
+          colors[i] = color;
+        }
+
+        var ctx= document.getElementById("SO2Chart").getContext("2d");
+        var myChart= new Chart(ctx,{
+        type: 'bar',
+        data: {
+          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          datasets: [{ 
+              data: data,
+              backgroundColor: colors,
+              borderColor: 'grey',
+              borderWidth: 2
+            }
+          ]
+        },
+        options: {
+          responsive: false,
+          scales : {
+              x: {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              }
+            },
+            y : {
+              ticks: {
+                font: {
+                    size: 16,
+                }
+              },
+              min: 0
+            }
+          },
+          plugins: {
+            legend: {
+                display:false
+            }
+          }
+        }
+        });
+
+      .my-legend
+        .legend-title AQI standard levels and meaning
+        .legend-scale
+          ul.legend-labels
+            li
+              span(style='background: #177245;')
+              | Good (<50)
+            li
+              span(style='background: #C4A705')
+              | Moderate (<100)
+            li
+              span(style='background: #C96112;')
+              | Unhealthy (sensitive groups) (<150)
+            li
+              span(style='background: #C1301C;')
+              | Unhealthy (<200)
+            li
+              span(style='background: rgb(143, 63, 151);')
+              | Very unhealty (<300)
+            li
+              span(style='background: rgb(126, 0, 35)')
+              | Hazardous (300+)
+        .legend-source
+          | Source: 
+          a(href='https://www.airnow.gov/aqi/aqi-basics/') AirNow 
+
+    +space
+    table
+      caption(style='text-align:center;font-size:larger')
+        strong AQI Basics for Ozone and Particle Pollution
+      thead
+        tr(style='background: rgb(225, 235, 244)')
+          th(scope='col' style='text-align: center; vertical-align: text-top; width: 114px;') Daily AQI Color
+          th(scope='col' style='text-align: center; vertical-align: text-top; width: 122px;') Levels of Concern
+          th(scope='col' style='text-align: center; vertical-align: text-top; width: 98px;') Values of Index
+          th(scope='col' style='text-align: center; vertical-align: text-top; width: 258px;') Description of Air Quality
+      tbody
+        tr(style='background: rgb(0, 228, 0)')
+          td(style='text-align: center;')
+            strong Green
+          td#good(style='text-align: center;')
+            strong Good
+          td(style='text-align: center;')
+            strong 0 to 50
+          td
+            strong Air quality is satisfactory, and air pollution poses little or no risk.
+        tr(style='background: yellow')
+          td(style='text-align: center;')
+            strong Yellow
+          td#mod(style='text-align: center;')
+            strong Moderate
+          td(style='text-align: center;')
+            strong 51 to 100
+          td
+            strong
+              | Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution.
+        tr(style='background: #C96112;color:white')
+          td(style='text-align: center;')
+            strong Orange
+          td#sens(style='text-align: center;')
+            strong Unhealthy for Sensitive Groups
+          td(style='text-align: center;')
+            strong 101 to 150
+          td
+            strong
+              | Members of sensitive groups may experience health effects. The general public is less likely to be affected.
+        tr(style='background: red;color:white')
+          td(style='text-align: center; ')
+            strong Red
+          td#unh(style='text-align: center; ')
+            strong Unhealthy
+          td(style='text-align: center; ')
+            strong 151 to 200
+          td
+            strong
+              | Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects.
+        tr(style='background: rgb(143, 63, 151);color:white')
+          td(style='text-align: center;')
+            strong Purple
+          td#vunh(style='text-align: center; ')
+            strong Very Unhealthy
+          td(style='text-align: center; ')
+            strong 201 to 300
+          td
+            strong Health alert: The risk of health effects is increased for everyone.
+        tr(style='background: rgb(126, 0, 35);color:white')
+          td(style='text-align: center; ')
+            strong Maroon
+          td#haz(style='text-align: center; ')
+            strong Hazardous
+          td(style='text-align: center; ')
+            strong 301 and higher
+          td
+            strong Health warning of emergency conditions: everyone is more likely to be affected.
+
+
+    +space
+    h2 Weather forecast used to predict contamination values
+    table(style='margin-top:30px')
+      tr
+        th Date
+        th Max. temperature (ºC)
+        th Min. temperature (ºC)
+        th Avg. temperature (ºC)
+        th Pressure (hPa)
+        th Humidity (%)
+        th Wind speed (km/h)
+        th Precipitation expected (mm)
+      tr
+        td Yesterday
+        td #{tMaxMinus1}
+        td #{tMinMinus1}
+        td #{tAvgMinus1}
+        td #{pressureMinus1}
+        td #{humidityMinus1}
+        td #{windSpeedMinus1}
+        td #{precipitationsMinus1}
+      tr
+        td Today
+        td #{tMax0}
+        td #{tMin0}
+        td #{tAvg0}
+        td #{pressure0}
+        td #{humidity0}
+        td #{windSpeed0}
+        td #{precipitations0}
+      tr
+        td Tomorrow
+        td #{tMax1}
+        td #{tMin1}
+        td #{tAvg1}
+        td #{pressure1}
+        td #{humidity1}
+        td #{windSpeed1}
+        td #{precipitations1}
+      tr
+        td 2 days from now
+        td #{tMax2}
+        td #{tMin2}
+        td #{tAvg2}
+        td #{pressure2}
+        td #{humidity2}
+        td #{windSpeed2}
+        td #{precipitations2}
+      tr
+        td 3 days from now
+        td #{tMax3}
+        td #{tMin3}
+        td #{tAvg3}
+        td #{pressure3}
+        td #{humidity3}
+        td #{windSpeed3}
+        td #{precipitations3}
+      tr
+        td 4 days from now
+        td #{tMax4}
+        td #{tMin4}
+        td #{tAvg4}
+        td #{pressure4}
+        td #{humidity4}
+        td #{windSpeed4}
+        td #{precipitations4}
+      tr
+        td 5 days from now
+        td #{tMax5}
+        td #{tMin5}
+        td #{tAvg5}
+        td #{pressure5}
+        td #{humidity5}
+        td #{windSpeed5}
+        td #{precipitations5}
+      tr
+        td 6 days from now
+        td #{tMax6}
+        td #{tMin6}
+        td #{tAvg6}
+        td #{pressure6}
+        td #{humidity6}
+        td #{windSpeed6}
+        td #{precipitations6}
+      tr
+        td 7 days from now
+        td #{tMax7}
+        td #{tMin7}
+        td #{tAvg7}
+        td #{pressure7}
+        td #{humidity7}
+        td #{windSpeed7}
+        td #{precipitations7}
+    
+
+    #graphs2(style="display:flex; flex-direction: row; justify-content: center; align-items: center")
+      +space
+      canvas#proChart(width='600' height='400' style="margin:40px")
+      script.
+        var ctx= document.getElementById("proChart").getContext("2d");
+        var myChart= new Chart(ctx,{
+        type: 'bar',
+        data: {
+          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          datasets: [
+            {
+              label: "Max temperature (ºC)",
+              backgroundColor: ["#FF0000"],
+              data: [#{tMax0},#{tMax1},#{tMax2},#{tMax3},#{tMax4},#{tMax5},#{tMax6},#{tMax7}]
+            },
+            {
+              label: "Average temperature (ºC)",
+              backgroundColor: ["#008000"],
+              data: [#{tAvg0},#{tAvg1},#{tAvg2},#{tAvg3},#{tAvg4},#{tAvg5},#{tAvg6},#{tAvg7}]
+            },
+            {
+              label: "Min temperature (ºC)",
+              backgroundColor: ["#0000FF"],
+              data: [#{tMin0},#{tMin1},#{tMin2},#{tMin3},#{tMin4},#{tMin5},#{tMin6},#{tMin7}]
+            }
+          ]
+        },
+        options: {
+          responsive:false
+        }
+        })

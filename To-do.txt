@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:73365f9ae3545cdac9922746bf04b327c786b299f1c49ce3362bde87ed5d7c2b
-size 727
+-meter modelo neural en web y sacar las variables de las api ahi
+-Buscar modelos fisicos
+
+-Integrar css.
+-Decidir que graficas hacer, parecido a la temperatura de Google
+-API problema maximas diarios: Acceder a base de datos, guardar ahi los cambios si date//bbdd.bate. Si no, get de la base de datos, mandar esos.
+-Cuadro de texto al lado del grafico explicando lo que es cada cosa(pm10, pm25...) y su influencia.
+-Informacion de los datos: que es el AQI, fuentes, etc.
+-Copiar diseño google: datos actuales arriba, barras colores, etc. Numeros en graficos mas grandes.
+
+
+-Probar grafico con datos contaminacion.
+logo red neural en header antes de atmospheric
+logo usal header derecha
+mi nombre por ahi
+codear values de madrid con api tiempo
+codear valores de contaminacion con api cont
+
