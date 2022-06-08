@@ -6,8 +6,8 @@ const axios = require("axios");
 router.get('/', async function(req, res, next) {
   
   //const pastWeather= await getPastWeatherData();
-  //const futureWeather= await getFutureWeatherForecast();
-  //const responsePollution= await getPollutionData();
+  const futureWeather= await getFutureWeatherForecast();
+  const responsePollution= await getPollutionData();
   var startDate = new Date();
   var finishDate = new Date();
   finishDate.setDate(finishDate.getDate() + 7);
@@ -16,7 +16,7 @@ router.get('/', async function(req, res, next) {
 
   //res.send(respuesta);
   res.render('index', { title: "Express", 
-  /*tMin0: futureWeather.days[0].tempmin, tMax0: futureWeather.days[0].tempmax, tAvg0: futureWeather.days[0].temp,  pressure0: futureWeather.days[0].pressure, humidity0: futureWeather.days[0].humidity, windSpeed0: futureWeather.days[0].windspeed, precipitations0: futureWeather.days[0].precip,
+  tMin0: futureWeather.days[0].tempmin, tMax0: futureWeather.days[0].tempmax, tAvg0: futureWeather.days[0].temp,  pressure0: futureWeather.days[0].pressure, humidity0: futureWeather.days[0].humidity, windSpeed0: futureWeather.days[0].windspeed, precipitations0: futureWeather.days[0].precip,
   tMin1: futureWeather.days[1].tempmin, tMax1: futureWeather.days[1].tempmax, tAvg1: futureWeather.days[1].temp,  pressure1: futureWeather.days[1].pressure, humidity1: futureWeather.days[1].humidity, windSpeed1: futureWeather.days[1].windspeed, precipitations1: futureWeather.days[1].precip,
   tMin2: futureWeather.days[2].tempmin, tMax2: futureWeather.days[2].tempmax, tAvg2: futureWeather.days[2].temp,  pressure2: futureWeather.days[2].pressure, humidity2: futureWeather.days[2].humidity, windSpeed2: futureWeather.days[2].windspeed, precipitations2: futureWeather.days[2].precip,
   tMin3: futureWeather.days[3].tempmin, tMax3: futureWeather.days[3].tempmax, tAvg3: futureWeather.days[3].temp,  pressure3: futureWeather.days[3].pressure, humidity3: futureWeather.days[3].humidity, windSpeed3: futureWeather.days[3].windspeed, precipitations3: futureWeather.days[3].precip,
@@ -24,9 +24,10 @@ router.get('/', async function(req, res, next) {
   tMin5: futureWeather.days[5].tempmin, tMax5: futureWeather.days[5].tempmax, tAvg5: futureWeather.days[5].temp,  pressure5: futureWeather.days[5].pressure, humidity5: futureWeather.days[5].humidity, windSpeed5: futureWeather.days[5].windspeed, precipitations5: futureWeather.days[5].precip,
   tMin6: futureWeather.days[6].tempmin, tMax6: futureWeather.days[6].tempmax, tAvg6: futureWeather.days[6].temp,  pressure6: futureWeather.days[6].pressure, humidity6: futureWeather.days[6].humidity, windSpeed6: futureWeather.days[6].windspeed, precipitations6: futureWeather.days[6].precip,
   tMin7: futureWeather.days[7].tempmin, tMax7: futureWeather.days[7].tempmax, tAvg7: futureWeather.days[7].temp,  pressure7: futureWeather.days[7].pressure, humidity7: futureWeather.days[7].humidity, windSpeed7: futureWeather.days[7].windspeed, precipitations7: futureWeather.days[7].precip,
-  tMinMinus1: pastWeather.days[0].tempmin, tMaxMinus1: pastWeather.days[0].tempmax, tAvgMinus1: pastWeather.days[0].temp, pressureMinus1:pastWeather.days[0].pressure, humidityMinus1:pastWeather.days[0].humidity, windSpeedMinus1:pastWeather.days[0].windspeed, precipitationsMinus1: pastWeather.days[0].precip,
-  */date0: getDaysArray[0], date1: getDaysArray[1], date2: getDaysArray[2], date3: getDaysArray[3], date4: getDaysArray[4], date5: getDaysArray[5], date6: getDaysArray[6], date7: getDaysArray[7],
-  //totalAQI: responsePollution.aqi//SEND POLLUTION DATA*/
+  /*tMinMinus1: pastWeather.days[0].tempmin, tMaxMinus1: pastWeather.days[0].tempmax, tAvgMinus1: pastWeather.days[0].temp, pressureMinus1:pastWeather.days[0].pressure, humidityMinus1:pastWeather.days[0].humidity, windSpeedMinus1:pastWeather.days[0].windspeed, precipitationsMinus1: pastWeather.days[0].precip,
+  */currentTemperature: futureWeather.currentConditions.temp, condition: futureWeather.currentConditions.conditions,
+  date0: getDaysArray[0], date1: getDaysArray[1], date2: getDaysArray[2], date3: getDaysArray[3], date4: getDaysArray[4], date5: getDaysArray[5], date6: getDaysArray[6], date7: getDaysArray[7],
+  totalAQI: responsePollution.aqi, actualPM25: responsePollution.iaqi.pm25.v, actualPM10: responsePollution.iaqi.pm10.v, actualO3: responsePollution.iaqi.o3.v, actualNO2: responsePollution.iaqi.no2.v, actualSO2: responsePollution.iaqi.so2.v //SEND POLLUTION DATA*/
   });
 });
 

@@ -7,12 +7,12 @@
 -Cuadro de texto al lado del grafico explicando lo que es cada cosa(pm10, pm25...) y su influencia.
 -Informacion de los datos: que es el AQI, fuentes, etc.
 -Copiar diseño google: datos actuales arriba, barras colores, etc. Numeros en graficos mas grandes.
+-Footer ocn logo usal y nombre?
 
 
--Probar grafico con datos contaminacion.
-logo red neural en header antes de atmospheric
-logo usal header derecha
+-Probar grafico con datos contaminacion modelo.
+logo red neural networks tutorial en header antes de atmospheric
 mi nombre por ahi
-codear values de madrid con api tiempo
-codear valores de contaminacion con api cont
+continuous deployment
+
 

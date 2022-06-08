@@ -15,19 +15,25 @@ block content
     #pollutionData
       #imageAQI
         img#smog(src='images/foggy.svg' alt='AQI')
-        p#actualAQI 45
+        //p#actualAQI 45
+        p#actualAQI #{totalAQI}
       .listPollutant
           ul
             li
-              | PM25: <b>45</b>
+              // | PM25: <b>45</b>
+              | PM25: <b>#{actualPM25}</b>
             li
-              | PM10: <b>45</b>
+              // | PM10: <b>45</b>
+              | PM10: <b>#{actualPM10}</b>
             li
-              | O3: <b>18</b>
+              //| O3: <b>18</b>
+              | 03: <b>#{actualO3}</b>
             li
-              | NO2: <b>12</b>
+              //| NO2: <b>12</b>
+              | NO2: <b>#{actualNO2}</b>
             li
-              | SO2: <b>123</b>
+              //| SO2: <b>123</b>
+              | SO2: <b>#{actualSO2}</b>
       .listMadrid
           ul
             li(style="font-weight: bolder; font-size: 32px;")
@@ -35,9 +41,9 @@ block content
             li
               | #{date0}
             li
-              | 23ºC 
+              | #{currentTemperature} ºC
             li 
-              | Sunny      
+              | #{condition}      
     #buttons
       button.pollutant#PM25Button(onclick="togglePM25()" style="text-decoration:underline; font-weight:bolder") PM2.5
       ||
@@ -91,7 +97,7 @@ block content
           datasets: [{ 
               data: data,
               backgroundColor: colors,
-              borderColor: 'grey',
+              borderColor: 'rgba(0, 0, 0, 0)',
               borderWidth: 2
             }
           ]
@@ -160,7 +166,7 @@ block content
           datasets: [{ 
               data: data,
               backgroundColor: colors,
-              borderColor: 'grey',
+              borderColor: 'rgba(0, 0, 0, 0)',
               borderWidth: 2
             }
           ]
@@ -229,7 +235,7 @@ block content
           datasets: [{ 
               data: data,
               backgroundColor: colors,
-              borderColor: 'grey',
+              borderColor: 'rgba(0, 0, 0, 0)',
               borderWidth: 2
             }
           ]
@@ -298,7 +304,7 @@ block content
           datasets: [{ 
               data: data,
               backgroundColor: colors,
-              borderColor: 'grey',
+              borderColor: 'rgba(0, 0, 0, 0)',
               borderWidth: 2
             }
           ]
@@ -367,7 +373,7 @@ block content
           datasets: [{ 
               data: data,
               backgroundColor: colors,
-              borderColor: 'grey',
+              borderColor: 'rgba(0, 0, 0, 0)',
               borderWidth: 2
             }
           ]

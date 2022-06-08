@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c23b4d2f80611ce1bd2a61310b191f7631c4927f1c42ce79db833f53ac62b53
-size 415
+https://www.computerhope.com/issues/ch002070.htm
+https://masteringjs.io/tutorials/axios/get
+https://tobiasahlin.com/blog/chartjs-charts-to-get-you-started/
+https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+https://stackoverflow.com/questions/4413590/javascript-get-array-of-dates-between-2-dates?page=1&tab=scoredesc#tab-top
+https://tilemill-project.github.io/tilemill/docs/guides/advanced-legends/
+https://htmlcolorcodes.com/es/tabla-de-colores/
