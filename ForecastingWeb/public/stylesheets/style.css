@@ -4,10 +4,6 @@ body {
   font: 18px Roboto;
 }
 
-a {
-  color: #00B7FF;
-}
-
 * {
     margin: 0; 
 }
@@ -54,7 +50,7 @@ p {
 }
 
 a:link, a:visited { 
-    color: black;
+    color: #235c84;
     text-decoration: none; 
 }
 
@@ -79,11 +75,6 @@ table {
     margin-bottom: 0.1rem;
     font-size:20px;
     margin-left:10px;
-}
-
-tr {
-    
-
 }
 
 td, th {
