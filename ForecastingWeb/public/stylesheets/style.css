@@ -8,18 +8,16 @@ a {
   color: #00B7FF;
 }
 
-/* element styles */
 * {
-    margin: 0; /* by default, all elements (selector *) have no margin */
+    margin: 0; 
 }
 
 html {
-    width: 100%; /* 100% width of parent (root) element */
-    height: 100vh; /* 100% height of viewport */
-    /*background: rgb(0, 0, 0, 0.1); /* 10% black */
+    width: 100%; 
+    height: 100vh; 
     background: whitesmoke;
-    font-size: 1.0em; /* our root font size */
-    font-family: Roboto; /* default font */
+    font-size: 1.0em; 
+    font-family: Roboto; 
 }
 
 body {
@@ -28,255 +26,85 @@ body {
 
 section {
     padding: 0.5rem;
-    flex-grow: 1; /* in a flexbox, sections expand along flex axis */
+    flex-grow: 1; 
 }
 
-h1 { /* Website name in header */
+h1 { 
     font-size: 2.0rem;
     font-weight: normal;
 }
 
-h2 { /* About, Contact */
+h2 { 
     font-size: 1.25rem;
 }
 
-h3 { /* Section headings */
+h3 { 
     font-size: 1.2rem;
-    padding: 0.5rem;
+    align-self: flex-end; 
+    padding:35px
 }
 
-h4 { /* Section item title */
+h4 { 
     font-weight: normal;
     padding: 0.5rem;
 }
 
-p { /* Paragraph styling */
-    padding: 0.5rem;
-}
-
-a:link, a:visited { /* anchor links, and visited anchor links */
-    color: black;
-    text-decoration: none; /* disable underline */
-}
-
-a:hover { /* when anchor link is hovered */
-    color: rgb(25, 25, 25);
-}
-
-a:active { /* when anchor link is clicked */
-    color: rgb(96, 96, 96);
-}
-/* component styles */
-#container {
-    display: grid;
-    height: 100%;
-    grid-template-columns: [left] 10rem auto 10rem [right];
-    grid-template-rows: [top] 5rem auto 5rem [bottom];
-    grid-template-areas:
-        "head head head"
-        "panleft mainbody panright"
-        "foot foot foot";
-}
-
-#header {
-    
-    background: rgb(0, 0, 0, 0.2); /* 20% black */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline; /* site name and nav item text aligns baseline */
-    padding: 0rem;
-}
-
-#panel { /* if element id="panel" */
-    display: flex; /* this element is a flexbox parent */
-    flex-direction: column; /* its child elements flex vertically */
-    padding: 0.5rem;
-    background: rgb(0, 0, 0, 0.1); /* 10% black */
-}
-
-    #panel.left { /* if element id="panel" and class="left" */
-        grid-area: panleft; /* this element fills a grid area */
-    }
-
-    #panel.right { /* if element id="panel" and class="right" */
-        grid-area: panright; /* this element fills a grid area */
-    }
-
-#footer { /* if element id="footer" */
-    grid-area: foot; /* this element fills a grid area */
-    display: flex; /* this element is a flexbox parent */
-    flex-direction: column; /* its child elements flex vertically */
-    justify-content: center; /* horizontal center footer content */
-    align-items: center; /* vertical center footer content */
-    padding: 0.5rem;
-    background: rgb(0, 0, 0, 0.2);
-}
-
-#mainbody { /* if element id="mainbody" */
-    display: flex; /* this element is a flexbox parent */
-    flex-direction: column; /* its child elements flex vertically */
-    grid-area: mainbody;
-    justify-self: center; /* fixed-width mainbody always centered */
-    width: 100%;
-    min-width: 22.5rem; /* mainbody width can't go < 22.5rem */
-}
-
-div#panel,
-div#mainbody { /* extra space under header */
+p { 
     padding-top: 0.5rem;
 }
 
-#partners, #sections { /* if element id="partners" or id="sections" */
-    display: flex; /* this element is a flexbox parent */
-    flex-direction: row; /* its child elements flex horizontally */
-    flex-wrap: wrap; /* its child elements can wrap to next line */
-    align-content: flex-start; /* child elements start in upper left */
+a:link, a:visited { 
+    color: black;
+    text-decoration: none; 
 }
 
-    #partners.wide { /* if element id="partners" and class="wide" */
-        display: none; /* by default, do not display this element */
-    }
-
-#menu {
-    position: absolute; /* menu position unaffected by other elements */
-    right: 0; /* zero pixels from the right boundary */
-    background: rgb(239, 239, 239);
-    border: 0.15rem solid rgb(0, 0, 0, 0.4);
-    visibility: hidden; /* visibility property supports transitions */
-    opacity: 0; /* opacity + visibility transition = menu fade effect */
-    z-index: 1; /* ensure menu appears over all other content */
+a:hover { 
+    color: rgb(25, 25, 25);
 }
 
-#menuitems { /* menu is implemented as a flexbox container */
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
+a:active { 
+    color: rgb(96, 96, 96);
 }
 
-    #menuitems h3 {
-        border-top: 0.15rem solid rgb(0, 0, 0, 0.1); /* light horizontal rule */
-    }
-
-    #menuitems .menusec {
-        border-color: rgb(0, 0, 0, 0.25); /* darker horizontal rule */
-    }
-
-    #menuitems h3:hover {
-        background-color: rgb(0, 0, 0, 0.1); /* gray of rollover menuitems */
-    }
-
-.menubutton {
-    text-align: right;
-    cursor: pointer; /* indicates it can be clicked like a link */
-    user-select: none; /* user cannot select the button as text */
-}
-
-#menuitems .alignright {
-    text-align: right; /* right-aligned menu item text (unused) */
-}
-
-#header h1.menubutton {
-    display: none; /* in default view (landscape), hide menu button */
-    border: 0.15rem solid rgb(0, 0, 0, 0); /* (invisible) alignment shim */
-}
-
-#header .placeholder { /* this invisible button is rendered when menu */
-    color: rgb(0, 0, 0, 0); /* button is hidden, so header height matches. */
-    user-select: none; /* user can't select text of invisible button */
-}
-
-.sectionlink, .partnerlink {
-    border-radius: 0.25rem; /* give this element a slight rounded edge */
-    font-weight: normal;
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    width: 7rem; /* fixed width for these items */
-    margin-bottom: 1rem; /* slight margin for readability */
-    background: rgb(0, 0, 0, 0.1);
-}
-
-    .sectionlink:hover, .partnerlink:hover {
-        background-color: rgb(0, 0, 0, 0.065); /* brighten bg on mouse hover */
-    }
-
-.partnerlink {
-    height: 7rem; /* partner elements are additionally fixed height */
-}
-
-    .partnerlink.wide {
-        margin: 0.5rem 1rem 0.5rem 0; /* margins for spacing if they wrap */
-    }
-
-.clickable-area { /* use whenever a clickable area excludes margins */
-    height: 100%; /* clickable area spans height of parent */
-}
-
-.eventitem, .announceitem, .motditem {
-    margin-bottom: 0.5rem; /* slight margin for readability */
-}
-
-.title { /* e.g., "Open for business" */
+.title {
     padding: 20px;
     font-size: 4rem;
     font-weight: bolder;
     text-align: center;
 }
 
-.date { /* e.g., January 1, 2021 */
-    font-style: italic;
-    font-size: 0.9rem;
-    padding: 0 0 0 0.5rem;
-    color: rgb(0, 0, 0, 0.5);
-}
-
-.navitem { /* About, Contact */
-    font-weight: normal;
-    padding: 0 0.5rem 0 1rem;
-}
-
-.headspace, .panspace, .footspace, .bodyspace {
-    flex-grow: 1; /* these elements expand on flex axis to fill space */
-}
-/* table styles ("items for sale") */
 table {
-    border-collapse: collapse; /* pixel-adjacent table cells */
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-th {
-    text-align: left;
+    border-collapse: collapse; 
+    width: auto;
+    margin-bottom: 0.1rem;
+    font-size:20px;
+    margin-left:10px;
 }
 
 tr {
-    margin: 4rem 0 0 0;
-    border-bottom: 0.15rem solid rgb(0, 0, 0, 0.2); /* horizontal rule */
+    
+
 }
 
 td, th {
-    padding: 0.5rem;
     vertical-align: top;
 }
 
-    td.price {
-        white-space: nowrap; /* white space in price does not wrap line */
-    }
-
-    td.qty, th.qty {
-        text-align: center;
-    }
-
-span.perunit {
-    opacity: 0.5;
-}
-
-#topPage{
+#header{
     background-image: url("../images/header.png");
     padding: 0px;
     margin: 30 px;
     color: white;
     height:7em;
+    align-items: center; 
+    justify-content: center;
+    display:flex;
+    flex-direction: row;
+}
+
+#networkImage{
+    height:70px;
+    width:70px;
 }
 
 #content{
@@ -285,14 +113,15 @@ span.perunit {
 }
 
 #actualValues{
-    margin-left:21%;
+    margin-left:18.3%;
     margin-right:20.5%;
+    margin-bottom: 4px;
     font-size: 32px;
     font-weight: bold;
 }
 
 #pollutionData{
-    margin-left:20.5%;
+    margin-left:17.5%;
     margin-right:20.5%;
     font-size: 20px;
     margin-bottom:50px;
@@ -305,7 +134,7 @@ span.perunit {
     position: relative;
   }
 
-#smog{
+#smogImage{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -321,22 +150,12 @@ span.perunit {
     font-size: 35px;
 }
 
-.listPollutant{
-    margin-top: 11px;
-    font-size:20px;
-    line-height: 28px;
-}
-
-.listPollutant ul li {
-    list-style: none;
-}
-
 .listMadrid{
     text-align: right;
     margin-top: -50px;
     font-size:22px;
     margin-left: auto;
-    line-height: 52px;
+    line-height: 53px;
     
 }
 
@@ -345,9 +164,10 @@ span.perunit {
 }
 
 #buttons{
-    margin-left:20.4%;
+    margin-left:17.2%;
     margin-bottom: -20px;
     font-size:larger;
+    color: #235c84;
 }
 
 button, input[type="submit"], input[type="reset"] {
@@ -358,6 +178,10 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 
+button:hover{
+    color:#404040;
+}
+
 .pollutant{
     font-size: larger;
     padding:0.5%;
@@ -365,42 +189,46 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .pollutantInfo{
-    margin-left:21.3%;
-    margin-bottom: -40px;
+    margin-left:18.5%;
+    margin-bottom: -20px;
     margin-top: 10px;
 }
 
 #pollutionCharts{
-    margin-left:18.4%;
+    margin-left:15.7%;
     display:flex;
     flex-direction: row; 
     align-items: center;
 }
 
+canvas{
+    width:768px;
+    height:400px;
+    margin:40px;
+}
 
-
-
-.my-legend .legend-title {
+/*AQI legend next to the charts.*/
+.legendTitle {
     text-align: left;
     margin-bottom: 5px;
     font-weight: bold;
-    font-size: 90%;
+    font-size: 18px;
 }
-.my-legend .legend-scale ul {
+.legend .scale ul {
     margin: 0;
     margin-bottom: 5px;
     padding: 0;
     float: left;
     list-style: none;
 }
-.my-legend .legend-scale ul li {
-    font-size: 80%;
+.legend .scale ul li {
+    font-size: 18px;
     list-style: none;
     margin-left: 0;
     line-height: 18px;
     margin-bottom: 2px;
 }
-.my-legend ul.legend-labels li span {
+.legend ul.labels li span {
     display: block;
     float: left;
     height: 16px;
@@ -409,47 +237,76 @@ button, input[type="submit"], input[type="reset"] {
     margin-left: 0;
     border: 1px solid #999;
 }
-.my-legend .legend-source {
-    font-size: 70%;
+.source {
+    font-size: 16px;
     color: #999;
     clear: both;
 }
-.my-legend a {
-    color: #777;
+.legend a {
+    color: #404040;
 }
 
+#information{
+    text-align: justify;
+    text-justify: inter-word;
+}
 
+/*Footer end page*/
+#footer{
+    background-image: url("../images/footer.png");
+    padding: 0px;
+    margin: 30 px;
+    color: white;
+    height:7em;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
 
-/* responsive styles applied in portrait mode */
-@media screen and (max-width: 45rem) { /* if viewport width < 45rem */
-    #panel.left {
-        grid-column-end: left; /* panel grid area shrinks to nothing */
+#usalImage{
+    height:80px;
+    width:230px;
+    padding:20px;
+}
+
+/* Responsive styles*/
+@media screen and (max-width: 1300px) { /* if viewport width < 1300px */
+    .title{
+        font-size:3rem;
     }
 
-    #panel.right {
-        grid-column-start: right; /* panel grid area shrinks to nothing */
+    #actualValues{
+        margin-left:5%;
     }
 
-    #partners.tall {
-        display: none; /* hide partners in panel (overwrites display: flex) */
+    #pollutionData{
+        margin-left:5%;
+        margin-right: 5%
     }
 
-    #partners.wide {
-        display: flex; /* show partners in body (overwrites display: none) */
+    .pollutantInfo{
+        margin-left:5%;
     }
 
-    #panel, /* these disappear from layout */
-    #header .placeholder,
-    .navitem {
-        display: none;
+    #buttons{
+        margin-left:5%;
     }
 
-    #mainbody {
-        grid-column-start: left; /* mainbody now starts at left edge */
-        grid-column-end: right; /* mainbody now ends at right edge */
+    #pollutionCharts{
+        margin-left:0%;
+        display:inline-block;
     }
 
-    #header h1.menubutton { /* display the header menu button */
-        display: inline; /* overwrites display: none */
+    .legend{
+        margin-left:7%;
+    }
+
+    p{
+        font-size:14px;
+    }
+
+    #information{
+        margin-left:5%;
+        margin-right: 5%;
     }
 }

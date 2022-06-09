@@ -1,18 +1,10 @@
 -meter modelo neural en web y sacar las variables de las api ahi
--Buscar modelos fisicos
+-Buscar modelos fisicos para comparar
 
--Integrar css.
--Decidir que graficas hacer, parecido a la temperatura de Google
 -API problema maximas diarios: Acceder a base de datos, guardar ahi los cambios si date//bbdd.bate. Si no, get de la base de datos, mandar esos.
--Cuadro de texto al lado del grafico explicando lo que es cada cosa(pm10, pm25...) y su influencia.
--Informacion de los datos: que es el AQI, fuentes, etc.
--Copiar diseño google: datos actuales arriba, barras colores, etc. Numeros en graficos mas grandes.
--Footer ocn logo usal y nombre?
-
+-Informacion de los datos bien copiada: que es el AQI, fuentes, etc.
 
 -Probar grafico con datos contaminacion modelo.
-logo red neural networks tutorial en header antes de atmospheric
-mi nombre por ahi
 continuous deployment
 
 
