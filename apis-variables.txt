@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:14b94c7feb562dadb0c75b64e4c8cc8c073e6926192e9ad4051adf6b3352f024
-size 805
+api real time: https://aqicn.org/api/es/
+token: fdfe8e5fc89f795e0e19ac42fc1277e97f4804da
+https://rapidapi.com/collection/list-of-free-apis
+
+apiwethaer
+token: 490922d9779269ae8928d35035e0677b
+https://openweathermap.org/api/one-call-api LEYENDA
+https://openweathermap.org/api/one-call-api#history DIAS PASADOS
+
+visualcrossing(yesterday y mas) MEJOR USAR ESTA
+https://www.visualcrossing.com/weather/weather-data-services#
+https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/madrid/yesterday?unitGroup=metric&key=SSV9Q7VEQD32YLW8WE85DXWZP&contentType=json
+
+
+https://www.computerhope.com/issues/ch002070.htm#preview-app
+https://rapidapi.com/blog/how-to-use-an-api-with-node-js/
+https://dev.to/isalevine/three-ways-to-retrieve-json-from-the-web-using-node-js-3c88

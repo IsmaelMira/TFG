@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:62b7da6d73a09ea1d796d0361115735ddc55c4d5b3f320c4a2fd426df689e424
-size 74
+-Quitar simbolos raros dataset
+-Poner los missing a unused
+-Quitar date?
+
+-Borrar outliers de dataset y probar a volver a entrenar.

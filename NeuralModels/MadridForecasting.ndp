@@ -1,3 +1,822 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:86be266297a66d45d27c1f8fa5c50937ffd0d3e4ad9ea6984d1066015a34ad3a
-size 45376
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Document created by Neural Engine-->
+<NeuralDesignerProject ProjectType="Forecasting">
+   <Description Id="f2Knqz"></Description>
+   <DataSet>
+      <DataFile>
+         <FileType>csv</FileType>
+         <DataFileName>HistoricalData.csv</DataFileName>
+         <Separator>Semicolon</Separator>
+         <ColumnsNames>1</ColumnsNames>
+         <RowsLabels>0</RowsLabels>
+         <MissingValuesLabel>NA</MissingValuesLabel>
+         <Channels>0</Channels>
+         <Width>0</Width>
+         <Height>0</Height>
+         <LagsNumber>2</LagsNumber>
+         <StepsAhead>1</StepsAhead>
+         <TimeColumn>DATE</TimeColumn>
+      </DataFile>
+      <Columns>
+         <ColumnsNumber>45</ColumnsNumber>
+         <Column Item="1">
+            <Name>DAY_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="2">
+            <Name>MONTH_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="3">
+            <Name>WEEKDAY_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="4">
+            <Name>PM2.5(AQI)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="5">
+            <Name>PM10(AQI)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="6">
+            <Name>O3(AQI)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="7">
+            <Name>NO2(AQI)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="8">
+            <Name>SO2(AQI)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="9">
+            <Name>PRECIPITATIONS(mm)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="10">
+            <Name>TAVG(C)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="11">
+            <Name>TMAX(C)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="12">
+            <Name>TMIN(C)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="13">
+            <Name>PRESSURE(hPa)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="14">
+            <Name>WINDSPEED(km/h)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="15">
+            <Name>HUMIDITY(percentage)_lag_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="16">
+            <Name>DAY_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="17">
+            <Name>MONTH_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="18">
+            <Name>WEEKDAY_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="19">
+            <Name>PM2.5(AQI)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="20">
+            <Name>PM10(AQI)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="21">
+            <Name>O3(AQI)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="22">
+            <Name>NO2(AQI)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="23">
+            <Name>SO2(AQI)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="24">
+            <Name>PRECIPITATIONS(mm)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="25">
+            <Name>TAVG(C)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="26">
+            <Name>TMAX(C)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="27">
+            <Name>TMIN(C)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="28">
+            <Name>PRESSURE(hPa)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="29">
+            <Name>WINDSPEED(km/h)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="30">
+            <Name>HUMIDITY(percentage)_lag_0</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="31">
+            <Name>DAY_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="32">
+            <Name>MONTH_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="33">
+            <Name>WEEKDAY_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="34">
+            <Name>PM2.5(AQI)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Target</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="35">
+            <Name>PM10(AQI)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Target</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="36">
+            <Name>O3(AQI)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Target</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="37">
+            <Name>NO2(AQI)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Target</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="38">
+            <Name>SO2(AQI)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Target</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="39">
+            <Name>PRECIPITATIONS(mm)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="40">
+            <Name>TAVG(C)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="41">
+            <Name>TMAX(C)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="42">
+            <Name>TMIN(C)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="43">
+            <Name>PRESSURE(hPa)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="44">
+            <Name>WINDSPEED(km/h)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+         <Column Item="45">
+            <Name>HUMIDITY(percentage)_ahead_1</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </Column>
+      </Columns>
+      <TimeSeriesColumns>
+         <TimeSeriesColumnsNumber>16</TimeSeriesColumnsNumber>
+         <TimeSeriesColumn Item="1">
+            <Name>DATE</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Unused</ColumnUse>
+            <Type>DateTime</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="2">
+            <Name>DAY</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="3">
+            <Name>MONTH</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="4">
+            <Name>WEEKDAY</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="5">
+            <Name>PM2.5(AQI)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="6">
+            <Name>PM10(AQI)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="7">
+            <Name>O3(AQI)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="8">
+            <Name>NO2(AQI)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="9">
+            <Name>SO2(AQI)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="10">
+            <Name>PRECIPITATIONS(mm)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="11">
+            <Name>TAVG(C)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="12">
+            <Name>TMAX(C)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="13">
+            <Name>TMIN(C)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="14">
+            <Name>PRESSURE(hPa)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="15">
+            <Name>WINDSPEED(km/h)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Input</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+         <TimeSeriesColumn Item="16">
+            <Name>HUMIDITY(percentage)</Name>
+            <Scaler>MeanStandardDeviation</Scaler>
+            <ColumnUse>Target</ColumnUse>
+            <Type>Numeric</Type>
+         </TimeSeriesColumn>
+      </TimeSeriesColumns>
+      <Samples>
+         <SamplesNumber>2908</SamplesNumber>
+         <SamplesUses>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2</SamplesUses>
+      </Samples>
+      <MissingValues>
+         <MissingValuesMethod>Mean</MissingValuesMethod>
+         <MissingValuesNumber>0</MissingValuesNumber>
+      </MissingValues>
+      <PreviewData>
+         <PreviewSize>4</PreviewSize>
+         <Row Item="1">DATE,DAY,MONTH,WEEKDAY,PM2.5(AQI),PM10(AQI),O3(AQI),NO2(AQI),SO2(AQI),PRECIPITATIONS(mm),TAVG(C),TMAX(C),TMIN(C),PRESSURE(hPa),WINDSPEED(km/h),HUMIDITY(percentage)</Row>
+         <Row Item="2">01/01/2014,1,1,3,34,11,21,22,2,5.5,8.2,9.9,7,1021.1,10.2,93.7</Row>
+         <Row Item="3">02/01/2014,2,1,4,36,14,23,25,1,5.4,10.9,12.7,9.3,1016.3,14.6,91.3</Row>
+         <Row Item="4">31/05/2022,31,5,2,63,40,24,8,2,0,18.8,24.1,11.2,1011.0,13.0,49.3</Row>
+      </PreviewData>
+   </DataSet>
+   <NeuralNetwork>
+      <Inputs>
+         <InputsNumber>40</InputsNumber>
+         <Input Index="1">DAY_lag_1</Input>
+         <Input Index="2">MONTH_lag_1</Input>
+         <Input Index="3">WEEKDAY_lag_1</Input>
+         <Input Index="4">PM2.5(AQI)_lag_1</Input>
+         <Input Index="5">PM10(AQI)_lag_1</Input>
+         <Input Index="6">O3(AQI)_lag_1</Input>
+         <Input Index="7">NO2(AQI)_lag_1</Input>
+         <Input Index="8">SO2(AQI)_lag_1</Input>
+         <Input Index="9">PRECIPITATIONS(mm)_lag_1</Input>
+         <Input Index="10">TAVG(C)_lag_1</Input>
+         <Input Index="11">TMAX(C)_lag_1</Input>
+         <Input Index="12">TMIN(C)_lag_1</Input>
+         <Input Index="13">PRESSURE(hPa)_lag_1</Input>
+         <Input Index="14">WINDSPEED(km/h)_lag_1</Input>
+         <Input Index="15">HUMIDITY(percentage)_lag_1</Input>
+         <Input Index="16">DAY_lag_0</Input>
+         <Input Index="17">MONTH_lag_0</Input>
+         <Input Index="18">WEEKDAY_lag_0</Input>
+         <Input Index="19">PM2.5(AQI)_lag_0</Input>
+         <Input Index="20">PM10(AQI)_lag_0</Input>
+         <Input Index="21">O3(AQI)_lag_0</Input>
+         <Input Index="22">NO2(AQI)_lag_0</Input>
+         <Input Index="23">SO2(AQI)_lag_0</Input>
+         <Input Index="24">PRECIPITATIONS(mm)_lag_0</Input>
+         <Input Index="25">TAVG(C)_lag_0</Input>
+         <Input Index="26">TMAX(C)_lag_0</Input>
+         <Input Index="27">TMIN(C)_lag_0</Input>
+         <Input Index="28">PRESSURE(hPa)_lag_0</Input>
+         <Input Index="29">WINDSPEED(km/h)_lag_0</Input>
+         <Input Index="30">HUMIDITY(percentage)_lag_0</Input>
+         <Input Index="31">DAY_ahead_1</Input>
+         <Input Index="32">MONTH_ahead_1</Input>
+         <Input Index="33">WEEKDAY_ahead_1</Input>
+         <Input Index="34">PRECIPITATIONS(mm)_ahead_1</Input>
+         <Input Index="35">TAVG(C)_ahead_1</Input>
+         <Input Index="36">TMAX(C)_ahead_1</Input>
+         <Input Index="37">TMIN(C)_ahead_1</Input>
+         <Input Index="38">PRESSURE(hPa)_ahead_1</Input>
+         <Input Index="39">WINDSPEED(km/h)_ahead_1</Input>
+         <Input Index="40">HUMIDITY(percentage)_ahead_1</Input>
+      </Inputs>
+      <Layers>
+         <LayersTypes>Scaling Perceptron Perceptron Unscaling Bounding</LayersTypes>
+         <ScalingLayer>
+            <ScalingNeuronsNumber>40</ScalingNeuronsNumber>
+            <ScalingNeuron Index="1">
+               <Descriptives>1\31\15.7194\8.80318</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="2">
+               <Descriptives>1\12\6.37139\3.48997</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="3">
+               <Descriptives>1\7\3.99175\1.99654</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="4">
+               <Descriptives>10\166\54.478\19.5014</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="5">
+               <Descriptives>4\344\24.6585\13.265</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="6">
+               <Descriptives>1\249\32.8064\14.5406</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="7">
+               <Descriptives>2\74\24.1602\10.2831</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="8">
+               <Descriptives>0\17\3.1097\2.05145</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="9">
+               <Descriptives>0\51\1.07235\3.71011</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="10">
+               <Descriptives>-3.3\32.9\15.3514\8.13242</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="11">
+               <Descriptives>0.6\42.7\21.9759\8.93777</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="12">
+               <Descriptives>-10.1\24\8.6553\6.90893</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="13">
+               <Descriptives>990.9\1043.7\1017.65\7.23776</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="14">
+               <Descriptives>2.5\36.8\10.5269\5.43129</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="15">
+               <Descriptives>16.8\98\58.6068\19.5077</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="16">
+               <Descriptives>1\31\15.7294\8.80293</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="17">
+               <Descriptives>1\12\6.37276\3.48864</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="18">
+               <Descriptives>1\7\3.99106\1.99723</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="19">
+               <Descriptives>10\166\54.49\19.4996</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="20">
+               <Descriptives>4\344\24.6668\13.264</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="21">
+               <Descriptives>1\249\32.8122\14.5392</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="22">
+               <Descriptives>2\74\24.1596\10.2834</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="23">
+               <Descriptives>0\17\3.1097\2.05145</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="24">
+               <Descriptives>0\51\1.07046\3.70926</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="25">
+               <Descriptives>-3.3\32.9\15.3569\8.13299</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="26">
+               <Descriptives>0.6\42.7\21.9834\8.93675</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="27">
+               <Descriptives>-10.1\24\8.65856\6.91039</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="28">
+               <Descriptives>990.9\1043.7\1017.65\7.24165</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="29">
+               <Descriptives>2.5\36.8\10.5306\5.43469</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="30">
+               <Descriptives>16.8\98\58.587\19.5013</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="31">
+               <Descriptives>1\31\15.7393\8.8038</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="32">
+               <Descriptives>1\12\6.37414\3.48731</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="33">
+               <Descriptives>1\7\3.99037\1.99757</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="34">
+               <Descriptives>0\51\1.0686\3.70844</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="35">
+               <Descriptives>-3.3\32.9\15.3596\8.13282</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="36">
+               <Descriptives>0.6\42.7\21.9873\8.93517</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="37">
+               <Descriptives>-10.1\24\8.65922\6.91054</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="38">
+               <Descriptives>990.9\1043.7\1017.65\7.24265</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="39">
+               <Descriptives>2.5\36.8\10.5301\5.43436</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+            <ScalingNeuron Index="40">
+               <Descriptives>16.8\98\58.5725\19.4926</Descriptives>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </ScalingNeuron>
+         </ScalingLayer>
+         <PerceptronLayer>
+            <LayerName>perceptron_layer_1</LayerName>
+            <InputsNumber>40</InputsNumber>
+            <NeuronsNumber>9</NeuronsNumber>
+            <ActivationFunction>HyperbolicTangent</ActivationFunction>
+            <Parameters>-6.33604e-05 0.000258138 4.63717e-05 0.000269929 -6.95864e-05 -0.00033454 -0.000697771 0.000203409 0.000223646 -4.76735e-05 -0.000499331 -1.39571e-05 -2.59803e-06 6.21179e-05 0.0017264 -0.000134244 -0.000101807 -0.000165684 -9.03952e-06 0.000135683 3.93121e-05 -1.62628e-05 4.98318e-05 -0.000178177 -2.43392e-06 -3.81882e-05 -5.82938e-05 -0.298724 -0.0935398 0.000500573 -0.0103054 -0.000429719 -1.0009e-05 0.00015463 0.00157038 0.000344241 1.28462e-07 -6.70364e-06 -0.00122493 -1.09827e-05 -0.000117451 -0.000266453 -0.00101429 -4.27425e-06 0.000101669 -8.16219e-05 -0.000418007 0.0747654 -0.016454 0.000165222 0.00150862 0.002081 0.000380195 -0.0096849 0.00259934 -0.0341859 -7.26294e-05 5.09041e-05 0.000171252 -0.000224879 6.83255e-05 -0.00110244 -5.03124e-05 0.000532066 -1.94912e-05 0.0157608 8.91493e-05 -6.43552e-05 0.624789 -5.02554e-05 0.00302695 0.0063226 -3.88512e-06 -0.000584806 3.81143e-05 -0.000217371 -0.00144187 0.0133559 0.000741692 0.000206928 0.00127119 -0.000253463 -0.0100397 -0.000283153 -0.000156405 -0.000111366 0.0650273 -0.0526544 0.000303103 0.000165886 -0.000214535 -0.000108779 0.00011754 9.2176e-05 -0.00016842 -5.30873e-05 -0.0179509 7.36082e-05 -8.53808e-05 8.59418e-05 0.000314179 -7.48299e-06 5.33973e-05 -0.000633328 -5.50983e-05 1.13524e-05 -7.91182e-06 -1.03061e-05 2.23184e-05 -2.53425e-05 1.80599e-05 -0.267228 0.000115265 0.00030605 0.000113333 -3.64582e-05 -9.35386e-05 -0.000507033 7.17744e-05 0.000427616 0.000280017 1.16211e-05 0.000692763 0.000146288 9.99929e-05 -0.000256614 0.000152604 -0.000222752 -0.000705546 -8.14501e-05 -0.000250591 -0.001144 1.23524e-05 0.000562618 0.000143472 1.20759e-05 -0.0886305 -0.000104848 4.78797e-06 0.00080626 0.000185405 0.000176788 -1.79341e-05 -0.000137451 -2.92976e-05 -2.29629e-05 2.70872e-05 -2.30962e-05 0.000173082 0.000519108 -0.000108874 -0.270191 5.50872e-05 -3.41945e-05 0.00274258 -5.00447e-05 -0.000420595 1.08374e-05 -0.00201815 0.000615539 4.96989e-05 7.18822e-05 0.000342971 0.000619182 0.00107076 -8.44384e-05 1.29661e-05 -0.00043658 -0.00492576 -3.505e-05 -0.00997471 -0.0195009 -0.000115776 0.0076387 -0.0004082 -1.54612e-05 0.0004072 -0.00244917 0.000690639 0.000101075 7.64873e-05 -3.99452e-05 -1.53893e-05 0.00021638 0.000139664 -0.0354728 -0.000649389 0.00101747 3.31952e-05 -0.0680623 -0.382439 -0.000709027 3.94581e-05 0.000390772 0.00368113 0.000549247 -0.000380423 -0.000261334 -6.03606e-05 -7.14938e-05 -0.000333473 0.046472 0.0470282 3.83151e-05 8.1333e-06 0.000572772 -0.114185 -0.00290495 -0.000179141 8.98018e-05 -8.90531e-05 -0.000217386 -0.000119004 -0.000328208 -9.63926e-05 9.88105e-05 2.85871e-05 0.000816816 -1.1909e-05 1.08644e-05 -0.000424324 0.000707659 -0.000336347 -0.000161841 -7.3141e-05 -0.00110668 1.70217e-05 -0.000274789 -0.215623 0.000563327 -0.000192724 -6.86568e-07 -0.000357004 -5.39303e-05 -0.000114403 -0.000142296 2.75352e-05 0.00011401 0.00012593 6.8864e-05 -4.44283e-05 -2.33906e-05 0.033809 9.33651e-05 -0.150024 -0.000129217 -0.000600389 5.15479e-05 3.97902e-06 -0.000155243 6.19485e-05 0.000601416 8.18465e-05 3.91899e-05 0.000219855 0.0115877 -3.36888e-06 0.000154589 -0.0018181 -0.00210487 -0.0131076 0.00169533 -0.00268249 0.0337184 -0.00333323 6.51307e-05 -5.90298e-05 8.68614e-05 0.000297216 -0.461404 0.0243438 0.00155286 -0.000311871 0.000732736 -0.0295033 -0.000367464 2.16881e-05 2.06446e-06 0.0244897 -0.0007892 0.0617227 -0.000485024 -0.000110573 -0.0808141 -0.000210755 -0.0580152 0.000296787 7.10962e-05 0.000310463 -0.000102259 -0.000686179 -0.00016329 -5.48831e-05 0.00147721 9.34043e-05 0.0314199 -0.0927818 0.000128127 0.00135668 0.000263043 0.000439918 6.12959e-05 -0.000794013 -0.000365735 1.33592e-05 -0.000565908 -0.000587379 0.000614521 0.000498072 0.000304272 6.25438e-05 -0.344128 0.000195484 -0.000279118 0.0129062 -0.000145289 0.000119499 -7.87312e-05 -0.00181938 1.04154e-05 -5.33782e-05 0.000175869 -0.00010831 0.00145422 0.000477287 0.000554873 -0.0429279 -0.0183063 -0.00754348 4.11856e-05 3.7103e-05 -0.000152353 -0.00016366 5.67169e-05 -0.000456146 0.000388712 0.000840292 0.000278649 -0.00052195 -1.4345e-07 -8.27745e-05 -3.36549e-05 0.000335349 -5.48345e-05 3.68333e-05 7.11566e-05 -0.00016742 0.000161045 -5.38496e-06 -0.287965 0.000375159 0.000159209 -3.19545e-05 -0.00113006 -7.62243e-05 -6.38456e-05 0.0004794 -4.9577e-05 0.000119661 2.04773e-05 -1.80382e-05 0.000281951 -0.000107771 -0.000486445 -0.000462131 -0.000127937 -3.04477e-05 5.3481e-05 0.000180369</Parameters>
+         </PerceptronLayer>
+         <PerceptronLayer>
+            <LayerName>perceptron_layer_2</LayerName>
+            <InputsNumber>9</InputsNumber>
+            <NeuronsNumber>5</NeuronsNumber>
+            <ActivationFunction>Linear</ActivationFunction>
+            <Parameters>-6.59855e-05 0.000912126 0.0141556 0.127314 0.0673393 -0.798402 1.24021 0.000159633 -7.25125e-05 -0.00430313 -0.00042547 0.142023 -0.000275182 0.000483765 -0.000159294 1.04213 5.04124e-05 7.07244e-05 -0.121259 -0.467641 -0.000235552 -0.00013591 0.000216735 4.59503e-06 2.65949e-05 -0.000104185 -5.20163e-05 -4.61245e-05 1.91477e-05 -1.29118 -1.9056e-05 -0.447462 -3.55708e-05 -0.000164817 -2.62519e-05 -0.000182439 -1.45261 -0.000217663 0.364961 -0.00177765 -0.000115644 -1.03591e-05 -0.000485573 -0.549743 -0.71804 6.07098e-05 0.000988408 4.65462e-05 -1.17088 6.82773e-05</Parameters>
+         </PerceptronLayer>
+         <UnscalingLayer>
+            <UnscalingNeuronsNumber>5</UnscalingNeuronsNumber>
+            <Descriptives Index="1">
+               <Minimum>10</Minimum>
+               <Maximum>166</Maximum>
+               <Mean>54.4993</Mean>
+               <StandardDeviation>19.4972</StandardDeviation>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </Descriptives>
+            <Descriptives Index="2">
+               <Minimum>4</Minimum>
+               <Maximum>344</Maximum>
+               <Mean>24.6757</Mean>
+               <StandardDeviation>13.2656</StandardDeviation>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </Descriptives>
+            <Descriptives Index="3">
+               <Minimum>1</Minimum>
+               <Maximum>249</Maximum>
+               <Mean>32.8126</Mean>
+               <StandardDeviation>14.539</StandardDeviation>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </Descriptives>
+            <Descriptives Index="4">
+               <Minimum>2</Minimum>
+               <Maximum>74</Maximum>
+               <Mean>24.1537</Mean>
+               <StandardDeviation>10.2877</StandardDeviation>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </Descriptives>
+            <Descriptives Index="5">
+               <Minimum>0</Minimum>
+               <Maximum>17</Maximum>
+               <Mean>3.11004</Mean>
+               <StandardDeviation>2.05118</StandardDeviation>
+               <Scaler>MeanStandardDeviation</Scaler>
+            </Descriptives>
+         </UnscalingLayer>
+         <BoundingLayer>
+            <BoundingNeuronsNumber>5</BoundingNeuronsNumber>
+            <Item Index="1">
+               <LowerBound>10</LowerBound>
+               <UpperBound>166</UpperBound>
+            </Item>
+            <Item Index="2">
+               <LowerBound>4</LowerBound>
+               <UpperBound>344</UpperBound>
+            </Item>
+            <Item Index="3">
+               <LowerBound>1</LowerBound>
+               <UpperBound>249</UpperBound>
+            </Item>
+            <Item Index="4">
+               <LowerBound>2</LowerBound>
+               <UpperBound>74</UpperBound>
+            </Item>
+            <Item Index="5">
+               <LowerBound>0</LowerBound>
+               <UpperBound>17</UpperBound>
+            </Item>
+            <UseBoundingLayer>1</UseBoundingLayer>
+         </BoundingLayer>
+      </Layers>
+      <Outputs>
+         <OutputsNumber>5</OutputsNumber>
+         <Output Index="1">PM2.5(AQI)_ahead_1</Output>
+         <Output Index="2">PM10(AQI)_ahead_1</Output>
+         <Output Index="3">O3(AQI)_ahead_1</Output>
+         <Output Index="4">NO2(AQI)_ahead_1</Output>
+         <Output Index="5">SO2(AQI)_ahead_1</Output>
+      </Outputs>
+   </NeuralNetwork>
+   <TrainingStrategy>
+      <LossIndex>
+         <LossMethod>NORMALIZED_SQUARED_ERROR</LossMethod>
+         <MeanSquaredError/>
+         <NormalizedSquaredError/>
+         <MinkowskiError>
+            <MinkowskiParameter>1.5</MinkowskiParameter>
+         </MinkowskiError>
+         <CrossEntropyError/>
+         <WeightedSquaredError>
+            <PositivesWeight>1</PositivesWeight>
+            <NegativesWeight>1</NegativesWeight>
+         </WeightedSquaredError>
+         <Regularization Type="L1_NORM">
+            <RegularizationWeight>0.01</RegularizationWeight>
+         </Regularization>
+      </LossIndex>
+      <OptimizationAlgorithm>
+         <OptimizationMethod>QUASI_NEWTON_METHOD</OptimizationMethod>
+         <GradientDescent>
+            <LearningRateAlgorithm>
+               <LearningRateMethod>BrentMethod</LearningRateMethod>
+               <LearningRateTolerance>0.001</LearningRateTolerance>
+            </LearningRateAlgorithm>
+            <MinimumLossDecrease>0</MinimumLossDecrease>
+            <LossGoal>0.001</LossGoal>
+            <MaximumSelectionErrorIncreases>100</MaximumSelectionErrorIncreases>
+            <MaximumEpochsNumber>1000</MaximumEpochsNumber>
+            <MaximumTime>3600</MaximumTime>
+            <HardwareUse>Multi-core</HardwareUse>
+         </GradientDescent>
+         <ConjugateGradient>
+            <TrainingDirectionMethod>FR</TrainingDirectionMethod>
+            <LearningRateAlgorithm>
+               <LearningRateMethod>BrentMethod</LearningRateMethod>
+               <LearningRateTolerance>0.001</LearningRateTolerance>
+            </LearningRateAlgorithm>
+            <MinimumLossDecrease>0</MinimumLossDecrease>
+            <LossGoal>0.001</LossGoal>
+            <MaximumSelectionErrorIncreases>100</MaximumSelectionErrorIncreases>
+            <MaximumEpochsNumber>1000</MaximumEpochsNumber>
+            <MaximumTime>3600</MaximumTime>
+            <HardwareUse>Multi-core</HardwareUse>
+         </ConjugateGradient>
+         <StochasticGradientDescent>
+            <BatchSize>1000</BatchSize>
+            <ApplyMomentum>0</ApplyMomentum>
+            <LossGoal>0.001</LossGoal>
+            <MaximumEpochsNumber>10000</MaximumEpochsNumber>
+            <MaximumTime>3600</MaximumTime>
+            <HardwareUse>Multi-core</HardwareUse>
+         </StochasticGradientDescent>
+         <AdaptiveMomentEstimation>
+            <BatchSize>1000</BatchSize>
+            <LossGoal>0.001</LossGoal>
+            <MaximumEpochsNumber>10000</MaximumEpochsNumber>
+            <MaximumTime>3600</MaximumTime>
+            <HardwareUse>Multi-core</HardwareUse>
+         </AdaptiveMomentEstimation>
+         <QuasiNewtonMethod>
+            <InverseHessianApproximationMethod>BFGS</InverseHessianApproximationMethod>
+            <LearningRateAlgorithm>
+               <LearningRateMethod>BrentMethod</LearningRateMethod>
+               <LearningRateTolerance>0.001</LearningRateTolerance>
+            </LearningRateAlgorithm>
+            <MinimumLossDecrease>0</MinimumLossDecrease>
+            <LossGoal>0.001</LossGoal>
+            <MaximumSelectionErrorIncreases>100</MaximumSelectionErrorIncreases>
+            <MaximumEpochsNumber>1000</MaximumEpochsNumber>
+            <MaximumTime>3600</MaximumTime>
+            <HardwareUse>Multi-core</HardwareUse>
+         </QuasiNewtonMethod>
+         <LevenbergMarquardt>
+            <DampingParameterFactor>10</DampingParameterFactor>
+            <MinimumLossDecrease>0</MinimumLossDecrease>
+            <LossGoal>0.001</LossGoal>
+            <MaximumSelectionErrorIncreases>100</MaximumSelectionErrorIncreases>
+            <MaximumEpochsNumber>1000</MaximumEpochsNumber>
+            <MaximumTime>3600</MaximumTime>
+            <HardwareUse>Multi-core</HardwareUse>
+         </LevenbergMarquardt>
+      </OptimizationAlgorithm>
+   </TrainingStrategy>
+   <ModelSelection>
+      <NeuronsSelection>
+         <NeuronsSelectionMethod>GROWING_NEURONS</NeuronsSelectionMethod>
+         <GrowingNeurons>
+            <MinimumNeurons>1</MinimumNeurons>
+            <MaximumNeurons>10</MaximumNeurons>
+            <Step>1</Step>
+            <TrialsNumber>3</TrialsNumber>
+            <SelectionErrorGoal>0</SelectionErrorGoal>
+            <MaximumSelectionFailures>100</MaximumSelectionFailures>
+            <MaximumTime>3600</MaximumTime>
+         </GrowingNeurons>
+      </NeuronsSelection>
+      <InputsSelection>
+         <InputsSelectionMethod>GROWING_INPUTS</InputsSelectionMethod>
+         <GrowingInputs>
+            <TrialsNumber>3</TrialsNumber>
+            <SelectionErrorGoal>0</SelectionErrorGoal>
+            <MaximumSelectionFailures>8</MaximumSelectionFailures>
+            <MinimumInputsNumber>1</MinimumInputsNumber>
+            <MaximumInputsNumber>40</MaximumInputsNumber>
+            <MinimumCorrelation>0</MinimumCorrelation>
+            <MaximumCorrelation>1</MaximumCorrelation>
+            <MaximumEpochsNumber>1000</MaximumEpochsNumber>
+            <MaximumTime>3600</MaximumTime>
+         </GrowingInputs>
+         <GeneticAlgorithm>
+            <PopulationSize>10</PopulationSize>
+            <ElitismSize>2</ElitismSize>
+            <MutationRate>0.1</MutationRate>
+            <SelectionErrorGoal>0</SelectionErrorGoal>
+            <MaximumGenerationsNumber>100</MaximumGenerationsNumber>
+            <MaximumTime>3600</MaximumTime>
+         </GeneticAlgorithm>
+      </InputsSelection>
+   </ModelSelection>
+</NeuralDesignerProject>
