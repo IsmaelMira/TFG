@@ -6,4 +6,5 @@
 -Probar grafico con datos contaminacion modelo.
 continuous deployment
 
+-Probar error con lstm+perceptron (nntutorial)
 
