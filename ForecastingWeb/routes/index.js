@@ -127,4 +127,8 @@ async function getPollutionData() {
   }
 }
 
+function neuralNetworkModel(){
+  
+}
+
 module.exports = router;
