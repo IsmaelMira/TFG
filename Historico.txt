@@ -1,5 +1,5 @@
 Datos contaminación:
-	https://aqicn.org/data-platform/register/es/ No nos da valores, sino que los convierte a AQI (0-50 verde, etc.) https://aqicn.org/calculator
+	https://aqicn.org/data-platform/ No nos da valores, sino que los convierte a AQI (0-50 verde, etc.) https://aqicn.org/calculator
 	AQI information: https://www.airnow.gov/aqi/aqi-basics/
 	Dióxido de azufre: SO2 
 	Dióxido de nitrógeno: NO2
