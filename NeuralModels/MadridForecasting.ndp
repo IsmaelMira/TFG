@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--Document created by Neural Engine-->
 <NeuralDesignerProject ProjectType="Forecasting">
-   <Description Id="ZeP01U"></Description>
+   <Description Id="t6wlaz"></Description>
    <DataSet>
       <DataFile>
          <FileType>csv</FileType>
@@ -10,9 +10,6 @@
          <ColumnsNames>1</ColumnsNames>
          <RowsLabels>0</RowsLabels>
          <MissingValuesLabel>NA</MissingValuesLabel>
-         <Channels>0</Channels>
-         <Width>0</Width>
-         <Height>0</Height>
          <LagsNumber>2</LagsNumber>
          <StepsAhead>7</StepsAhead>
          <TimeColumn>DATE</TimeColumn>
@@ -202,19 +199,19 @@
          <Column Item="31">
             <Name>DAY_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="32">
             <Name>MONTH_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="33">
             <Name>WEEKDAY_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="34">
@@ -250,61 +247,61 @@
          <Column Item="39">
             <Name>PRECIPITATIONS(mm)_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="40">
             <Name>TAVG(C)_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="41">
             <Name>TMAX(C)_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="42">
             <Name>TMIN(C)_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="43">
             <Name>PRESSURE(hPa)_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="44">
             <Name>WINDSPEED(km/h)_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="45">
             <Name>HUMIDITY(percentage)_ahead_1</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="46">
             <Name>DAY_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="47">
             <Name>MONTH_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="48">
             <Name>WEEKDAY_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="49">
@@ -340,61 +337,61 @@
          <Column Item="54">
             <Name>PRECIPITATIONS(mm)_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="55">
             <Name>TAVG(C)_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="56">
             <Name>TMAX(C)_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="57">
             <Name>TMIN(C)_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="58">
             <Name>PRESSURE(hPa)_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="59">
             <Name>WINDSPEED(km/h)_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="60">
             <Name>HUMIDITY(percentage)_ahead_2</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="61">
             <Name>DAY_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="62">
             <Name>MONTH_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="63">
             <Name>WEEKDAY_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="64">
@@ -430,61 +427,61 @@
          <Column Item="69">
             <Name>PRECIPITATIONS(mm)_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="70">
             <Name>TAVG(C)_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="71">
             <Name>TMAX(C)_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="72">
             <Name>TMIN(C)_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="73">
             <Name>PRESSURE(hPa)_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="74">
             <Name>WINDSPEED(km/h)_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="75">
             <Name>HUMIDITY(percentage)_ahead_3</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="76">
             <Name>DAY_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="77">
             <Name>MONTH_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="78">
             <Name>WEEKDAY_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="79">
@@ -520,61 +517,61 @@
          <Column Item="84">
             <Name>PRECIPITATIONS(mm)_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="85">
             <Name>TAVG(C)_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="86">
             <Name>TMAX(C)_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="87">
             <Name>TMIN(C)_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="88">
             <Name>PRESSURE(hPa)_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="89">
             <Name>WINDSPEED(km/h)_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="90">
             <Name>HUMIDITY(percentage)_ahead_4</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="91">
             <Name>DAY_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="92">
             <Name>MONTH_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="93">
             <Name>WEEKDAY_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="94">
@@ -610,61 +607,61 @@
          <Column Item="99">
             <Name>PRECIPITATIONS(mm)_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="100">
             <Name>TAVG(C)_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="101">
             <Name>TMAX(C)_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="102">
             <Name>TMIN(C)_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="103">
             <Name>PRESSURE(hPa)_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="104">
             <Name>WINDSPEED(km/h)_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="105">
             <Name>HUMIDITY(percentage)_ahead_5</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="106">
             <Name>DAY_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="107">
             <Name>MONTH_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="108">
             <Name>WEEKDAY_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="109">
@@ -700,61 +697,61 @@
          <Column Item="114">
             <Name>PRECIPITATIONS(mm)_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="115">
             <Name>TAVG(C)_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="116">
             <Name>TMAX(C)_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="117">
             <Name>TMIN(C)_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="118">
             <Name>PRESSURE(hPa)_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="119">
             <Name>WINDSPEED(km/h)_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="120">
             <Name>HUMIDITY(percentage)_ahead_6</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="121">
             <Name>DAY_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="122">
             <Name>MONTH_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="123">
             <Name>WEEKDAY_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="124">
@@ -790,43 +787,43 @@
          <Column Item="129">
             <Name>PRECIPITATIONS(mm)_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="130">
             <Name>TAVG(C)_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="131">
             <Name>TMAX(C)_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="132">
             <Name>TMIN(C)_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="133">
             <Name>PRESSURE(hPa)_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="134">
             <Name>WINDSPEED(km/h)_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
          <Column Item="135">
             <Name>HUMIDITY(percentage)_ahead_7</Name>
             <Scaler>MeanStandardDeviation</Scaler>
-            <ColumnUse>Input</ColumnUse>
+            <ColumnUse>Unused</ColumnUse>
             <Type>Numeric</Type>
          </Column>
       </Columns>
@@ -947,7 +944,7 @@
    </DataSet>
    <NeuralNetwork>
       <Inputs>
-         <InputsNumber>100</InputsNumber>
+         <InputsNumber>30</InputsNumber>
          <Input Index="1">DAY_lag_1</Input>
          <Input Index="2">MONTH_lag_1</Input>
          <Input Index="3">WEEKDAY_lag_1</Input>
@@ -978,81 +975,11 @@
          <Input Index="28">PRESSURE(hPa)_lag_0</Input>
          <Input Index="29">WINDSPEED(km/h)_lag_0</Input>
          <Input Index="30">HUMIDITY(percentage)_lag_0</Input>
-         <Input Index="31">DAY_ahead_1</Input>
-         <Input Index="32">MONTH_ahead_1</Input>
-         <Input Index="33">WEEKDAY_ahead_1</Input>
-         <Input Index="34">PRECIPITATIONS(mm)_ahead_1</Input>
-         <Input Index="35">TAVG(C)_ahead_1</Input>
-         <Input Index="36">TMAX(C)_ahead_1</Input>
-         <Input Index="37">TMIN(C)_ahead_1</Input>
-         <Input Index="38">PRESSURE(hPa)_ahead_1</Input>
-         <Input Index="39">WINDSPEED(km/h)_ahead_1</Input>
-         <Input Index="40">HUMIDITY(percentage)_ahead_1</Input>
-         <Input Index="41">DAY_ahead_2</Input>
-         <Input Index="42">MONTH_ahead_2</Input>
-         <Input Index="43">WEEKDAY_ahead_2</Input>
-         <Input Index="44">PRECIPITATIONS(mm)_ahead_2</Input>
-         <Input Index="45">TAVG(C)_ahead_2</Input>
-         <Input Index="46">TMAX(C)_ahead_2</Input>
-         <Input Index="47">TMIN(C)_ahead_2</Input>
-         <Input Index="48">PRESSURE(hPa)_ahead_2</Input>
-         <Input Index="49">WINDSPEED(km/h)_ahead_2</Input>
-         <Input Index="50">HUMIDITY(percentage)_ahead_2</Input>
-         <Input Index="51">DAY_ahead_3</Input>
-         <Input Index="52">MONTH_ahead_3</Input>
-         <Input Index="53">WEEKDAY_ahead_3</Input>
-         <Input Index="54">PRECIPITATIONS(mm)_ahead_3</Input>
-         <Input Index="55">TAVG(C)_ahead_3</Input>
-         <Input Index="56">TMAX(C)_ahead_3</Input>
-         <Input Index="57">TMIN(C)_ahead_3</Input>
-         <Input Index="58">PRESSURE(hPa)_ahead_3</Input>
-         <Input Index="59">WINDSPEED(km/h)_ahead_3</Input>
-         <Input Index="60">HUMIDITY(percentage)_ahead_3</Input>
-         <Input Index="61">DAY_ahead_4</Input>
-         <Input Index="62">MONTH_ahead_4</Input>
-         <Input Index="63">WEEKDAY_ahead_4</Input>
-         <Input Index="64">PRECIPITATIONS(mm)_ahead_4</Input>
-         <Input Index="65">TAVG(C)_ahead_4</Input>
-         <Input Index="66">TMAX(C)_ahead_4</Input>
-         <Input Index="67">TMIN(C)_ahead_4</Input>
-         <Input Index="68">PRESSURE(hPa)_ahead_4</Input>
-         <Input Index="69">WINDSPEED(km/h)_ahead_4</Input>
-         <Input Index="70">HUMIDITY(percentage)_ahead_4</Input>
-         <Input Index="71">DAY_ahead_5</Input>
-         <Input Index="72">MONTH_ahead_5</Input>
-         <Input Index="73">WEEKDAY_ahead_5</Input>
-         <Input Index="74">PRECIPITATIONS(mm)_ahead_5</Input>
-         <Input Index="75">TAVG(C)_ahead_5</Input>
-         <Input Index="76">TMAX(C)_ahead_5</Input>
-         <Input Index="77">TMIN(C)_ahead_5</Input>
-         <Input Index="78">PRESSURE(hPa)_ahead_5</Input>
-         <Input Index="79">WINDSPEED(km/h)_ahead_5</Input>
-         <Input Index="80">HUMIDITY(percentage)_ahead_5</Input>
-         <Input Index="81">DAY_ahead_6</Input>
-         <Input Index="82">MONTH_ahead_6</Input>
-         <Input Index="83">WEEKDAY_ahead_6</Input>
-         <Input Index="84">PRECIPITATIONS(mm)_ahead_6</Input>
-         <Input Index="85">TAVG(C)_ahead_6</Input>
-         <Input Index="86">TMAX(C)_ahead_6</Input>
-         <Input Index="87">TMIN(C)_ahead_6</Input>
-         <Input Index="88">PRESSURE(hPa)_ahead_6</Input>
-         <Input Index="89">WINDSPEED(km/h)_ahead_6</Input>
-         <Input Index="90">HUMIDITY(percentage)_ahead_6</Input>
-         <Input Index="91">DAY_ahead_7</Input>
-         <Input Index="92">MONTH_ahead_7</Input>
-         <Input Index="93">WEEKDAY_ahead_7</Input>
-         <Input Index="94">PRECIPITATIONS(mm)_ahead_7</Input>
-         <Input Index="95">TAVG(C)_ahead_7</Input>
-         <Input Index="96">TMAX(C)_ahead_7</Input>
-         <Input Index="97">TMIN(C)_ahead_7</Input>
-         <Input Index="98">PRESSURE(hPa)_ahead_7</Input>
-         <Input Index="99">WINDSPEED(km/h)_ahead_7</Input>
-         <Input Index="100">HUMIDITY(percentage)_ahead_7</Input>
       </Inputs>
       <Layers>
-         <LayersTypes>Scaling Perceptron Perceptron Unscaling Bounding</LayersTypes>
+         <LayersTypes>Scaling Perceptron Unscaling Bounding</LayersTypes>
          <ScalingLayer>
-            <ScalingNeuronsNumber>100</ScalingNeuronsNumber>
+            <ScalingNeuronsNumber>30</ScalingNeuronsNumber>
             <ScalingNeuron Index="1">
                <Descriptives>1\31\15.6971\8.79826</Descriptives>
                <Scaler>MeanStandardDeviation</Scaler>
@@ -1173,300 +1100,13 @@
                <Descriptives>16.8\98\58.6307\19.4961</Descriptives>
                <Scaler>MeanStandardDeviation</Scaler>
             </ScalingNeuron>
-            <ScalingNeuron Index="31">
-               <Descriptives>1\31\15.713\8.79339</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="32">
-               <Descriptives>1\12\6.37698\3.49035</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="33">
-               <Descriptives>1\7\3.99001\1.9973</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="34">
-               <Descriptives>0\51\1.07081\3.71196</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="35">
-               <Descriptives>-3.3\32.9\15.3469\8.13529</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="36">
-               <Descriptives>0.6\42.7\21.973\8.93722</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="37">
-               <Descriptives>-10.1\24\8.65127\6.9146</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="38">
-               <Descriptives>990.9\1043.7\1017.66\7.24191</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="39">
-               <Descriptives>2.5\36.8\10.5264\5.43518</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="40">
-               <Descriptives>16.8\98\58.6153\19.488</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="41">
-               <Descriptives>1\31\15.7209\8.79229</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="42">
-               <Descriptives>1\12\6.37836\3.48902</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="43">
-               <Descriptives>1\7\3.98966\1.99721</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="44">
-               <Descriptives>0\51\1.06816\3.70997</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="45">
-               <Descriptives>-3.3\32.9\15.3486\8.13505</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="46">
-               <Descriptives>0.6\42.7\21.9766\8.93586</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="47">
-               <Descriptives>-10.1\24\8.65055\6.9145</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="48">
-               <Descriptives>990.9\1043.7\1017.66\7.24232</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="49">
-               <Descriptives>2.5\36.8\10.5244\5.43253</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="50">
-               <Descriptives>16.8\98\58.599\19.4822</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="51">
-               <Descriptives>1\31\15.7288\8.79209</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="52">
-               <Descriptives>1\12\6.37974\3.48768</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="53">
-               <Descriptives>1\7\3.98932\1.99695</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="54">
-               <Descriptives>0\51\1.06616\3.70898</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="55">
-               <Descriptives>-3.3\32.9\15.3528\8.13476</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="56">
-               <Descriptives>0.6\42.7\21.9826\8.93449</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="57">
-               <Descriptives>-10.1\24\8.65338\6.91415</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="58">
-               <Descriptives>990.9\1043.7\1017.66\7.24245</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="59">
-               <Descriptives>2.5\36.8\10.5211\5.43006</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="60">
-               <Descriptives>16.8\98\58.581\19.4782</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="61">
-               <Descriptives>1\31\15.7367\8.79278</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="62">
-               <Descriptives>1\12\6.38112\3.48634</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="63">
-               <Descriptives>1\7\3.98897\1.99652</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="64">
-               <Descriptives>0\51\1.06599\3.70902</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="65">
-               <Descriptives>-3.3\32.9\15.3588\8.13454</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="66">
-               <Descriptives>0.6\42.7\21.9906\8.93338</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="67">
-               <Descriptives>-10.1\24\8.65665\6.91401</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="68">
-               <Descriptives>990.9\1043.7\1017.66\7.24254</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="69">
-               <Descriptives>2.5\36.8\10.5147\5.42295</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="70">
-               <Descriptives>16.8\98\58.566\19.4816</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="71">
-               <Descriptives>1\31\15.7447\8.79436</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="72">
-               <Descriptives>1\12\6.38249\3.48501</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="73">
-               <Descriptives>1\7\3.99104\1.99653</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="74">
-               <Descriptives>0\51\1.06599\3.70902</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="75">
-               <Descriptives>-3.3\32.9\15.3641\8.13561</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="76">
-               <Descriptives>0.6\42.7\21.9979\8.93371</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="77">
-               <Descriptives>-10.1\24\8.65917\6.91451</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="78">
-               <Descriptives>990.9\1043.7\1017.65\7.24413</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="79">
-               <Descriptives>2.5\36.8\10.5141\5.42315</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="80">
-               <Descriptives>16.8\98\58.5453\19.4791</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="81">
-               <Descriptives>1\31\15.7526\8.79684</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="82">
-               <Descriptives>1\12\6.38387\3.48367</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="83">
-               <Descriptives>1\7\3.9907\1.99696</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="84">
-               <Descriptives>0\51\1.06599\3.70902</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="85">
-               <Descriptives>-3.3\32.9\15.3689\8.13672</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="86">
-               <Descriptives>0.6\42.7\22.0038\8.93437</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="87">
-               <Descriptives>-10.1\24\8.66244\6.91598</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="88">
-               <Descriptives>990.9\1043.7\1017.65\7.24805</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="89">
-               <Descriptives>2.5\36.8\10.5182\5.42651</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="90">
-               <Descriptives>16.8\98\58.5298\19.4791</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="91">
-               <Descriptives>1\31\15.7605\8.80022</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="92">
-               <Descriptives>1\12\6.38525\3.48233</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="93">
-               <Descriptives>1\7\3.99035\1.99722</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="94">
-               <Descriptives>0\51\1.06599\3.70902</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="95">
-               <Descriptives>-3.3\32.9\15.3726\8.13578</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="96">
-               <Descriptives>0.6\42.7\22.007\8.93342</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="97">
-               <Descriptives>-10.1\24\8.66499\6.91555</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="98">
-               <Descriptives>990.9\1043.7\1017.64\7.24852</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="99">
-               <Descriptives>2.5\36.8\10.5209\5.42573</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
-            <ScalingNeuron Index="100">
-               <Descriptives>16.8\98\58.5183\19.4747</Descriptives>
-               <Scaler>MeanStandardDeviation</Scaler>
-            </ScalingNeuron>
          </ScalingLayer>
          <PerceptronLayer>
             <LayerName>perceptron_layer_1</LayerName>
-            <InputsNumber>100</InputsNumber>
-            <NeuronsNumber>9</NeuronsNumber>
-            <ActivationFunction>HyperbolicTangent</ActivationFunction>
-            <Parameters>-3.49082e-05 0.0660088 -4.84716e-05 0.0003004 -0.0934268 4.65791e-05 -0.13017 -0.10492 -0.137469 -0.000594089 -0.260157 0.00062384 0.000130416 0.000856505 0.0514128 -0.0188966 -9.11424e-05 7.75652e-05 4.20064e-05 -3.83391e-05 2.85674e-05 -0.0412845 8.91795e-05 -0.0207401 4.27587e-05 -0.000166002 6.66829e-05 -2.79877e-05 -7.86768e-05 0.0769538 -0.025659 4.34016e-05 0.00214172 -2.37138e-07 0.000202411 1.36545e-05 -0.000480466 -2.90816e-06 -0.00778872 1.84594e-05 -0.000256627 -8.18247e-05 0.00922502 0.00011648 0.00621414 -9.7203e-06 -0.000122161 3.26758e-05 -0.000923147 9.75184e-05 -8.95361e-05 -0.00870103 0.0220721 1.54428e-06 2.16398e-05 -0.000231451 -0.00121656 0.000346898 -0.000290049 0.013996 -7.95383e-05 -3.47685e-05 0.0113215 -3.30702e-05 -5.95815e-05 0.000118091 1.89439e-06 -3.78141e-05 -0.00490591 0.0011644 9.74041e-05 0.000146172 0.00318119 0.000170292 0.000219496 2.9031e-05 -2.66147e-05 -0.053325 -0.000352639 2.80881e-05 -0.0011962 0.0480792 0.000628087 0.00109251 7.35923e-05 -0.000303234 -0.00135181 -0.0675527 -0.0093866 0.000436512 -0.000383736 0.0887968 5.94025e-06 0.00372209 1.35465e-05 0.00478676 4.44206e-06 6.83909e-05 -0.122375 -0.00172674 -0.00021254 0.0520827 -0.0125483 0.353006 -0.000391974 0.0446919 -0.116643 0.00647802 -0.287835 -0.00289589 -0.0898862 6.10198e-05 -0.00778545 -0.00267058 -4.70887e-05 -0.00017016 -0.000812814 0.0201901 -7.74469e-06 0.0188864 2.97176e-05 -0.0135533 -2.22644e-05 -0.00195933 -0.00354337 5.98038e-06 0.000174694 -0.000979838 -0.171341 -0.0162031 0.0393412 -0.00883715 0.00687826 8.97308e-05 0.131055 -9.27564e-05 -0.000248037 -0.0174615 -0.000339905 -7.53466e-05 -2.96545e-05 -0.000794634 0.00011733 -2.7574e-05 0.107173 -8.27587e-06 -0.00112411 -0.0110156 9.16278e-06 0.000278083 -0.000517599 -0.0609778 0.000277932 0.000180674 0.0031849 -6.74043e-05 -0.0242067 0.000233492 -4.34291e-05 5.14103e-05 -0.000183304 -0.0158314 0.000485614 0.000281611 0.000479589 -1.39991e-05 -0.000121505 3.21299e-05 1.72556e-05 0.000124548 -0.00232842 -7.36449e-06 -3.0473e-05 0.000553191 0.000228325 -1.46775e-05 0.000133038 -0.000254341 5.44145e-06 0.0222694 -0.000179037 0.0110721 0.0295708 0.000216382 -6.78609e-06 0.0467117 -0.00321549 1.73778e-05 2.69843e-05 1.11775e-05 2.32823e-05 0.0824481 0.0946694 6.58658e-05 -0.322695 0.0473361 -0.0114687 0.108852 0.0672336 -0.0248422 -0.000409226 0.0777216 0.0399559 -9.8584e-05 -0.289021 0.0876913 -0.0835198 0.445394 0.000289783 -3.54849e-05 0.000875521 -0.000165613 -5.3128e-05 -0.0264535 -0.0308367 0.0641367 0.00321953 0.019986 -0.00171019 -0.000182343 -0.000112231 -8.93367e-05 -2.08624e-05 0.000210045 0.000572837 0.000695054 0.129172 -0.00141207 -0.0571948 -5.61318e-05 0.0209489 0.00298827 0.00205733 -0.000178933 -0.00141584 -3.31755e-05 0.000150576 -1.66575e-05 3.55041e-05 6.10155e-07 5.24346e-05 0.0733812 9.23266e-05 -4.6456e-05 -0.000412283 -0.000136911 3.09422e-05 -0.000169924 0.00674679 7.10964e-05 0.00036598 -8.73214e-05 0.0175529 2.28723e-07 -0.00792796 -6.053e-05 -9.73951e-05 -2.85707e-05 0.054023 0.00020306 0.000232674 -2.41612e-05 0.0240985 -0.000345292 -0.00993472 2.36794e-05 -8.19198e-05 0.00141309 0.00189853 -0.0141881 -1.2883e-05 -0.000190468 -2.2539e-05 -2.59672e-05 -3.34296e-06 -0.0111967 9.68169e-05 0.134486 0.000179633 -6.40376e-06 3.37709e-05 -0.160124 -0.0054562 1.56245e-05 0.23031 -0.312675 -4.2153e-05 -0.0252183 -0.0974076 0.000301862 0.00142997 -0.0729591 0.00012474 -4.0421e-05 0.0117586 -0.0206467 -3.36217e-05 -0.28003 -0.00439192 0.000457313 0.00116499 0.0122278 0.00404986 -0.000270321 -0.000560903 -0.000407692 -0.00843366 0.000442434 0.000215731 0.0019399 0.000436789 9.51719e-06 0.0067813 -0.128617 0.000860385 -0.021933 -3.67133e-05 -0.000164881 -8.8314e-05 -0.001342 0.000333661 -3.29859e-05 0.00505674 -3.53272e-05 -8.97842e-05 0.00945602 9.76595e-05 0.193345 0.575103 -2.45018e-05 0.000163499 0.00871776 -0.000192003 -9.46282e-05 -0.0263301 5.69133e-05 -2.40735e-05 0.0178463 5.2419e-05 2.59258e-05 0.000206987 -8.28065e-06 -0.00321789 -8.38854e-05 0.000297402 1.5623e-05 0.000865076 -0.014158 -6.86255e-05 0.00391776 0.000478657 0.00608722 -5.49151e-05 -0.000110598 -1.03554e-05 6.08293e-05 0.000103354 -0.11386 0.00385874 -9.81081e-05 1.77928e-05 0.000140809 -0.000206771 -5.83694e-05 1.95179e-06 0.00954422 -0.0001933 0.0156184 0.00811789 0.000355367 0.000133205 4.15304e-06 0.000257861 -0.000604484 -1.00448e-05 -0.000126678 2.49712e-06 0.00589346 0.0207239 7.99567e-06 0.000481726 -0.000798119 1.79274e-05 0.000136567 0.000413282 0.000886556 0.00346048 2.4188e-05 0.000488114 0.00013302 0.000502103 0.000111823 -5.75234e-05 -4.53464e-05 2.02493e-05 0.000331714 -8.10081e-05 -7.01015e-05 8.24532e-05 -2.967e-05 -6.19165e-06 -0.00240193 -0.000169534 0.000181556 0.000144425 0.000246116 5.08107e-06 -1.18054e-05 -1.08337e-07 0.00262622 0.0135901 0.00109682 0.0969626 0.101413 0.0328201 -0.0940941 0.000324014 -0.0167565 -0.000318427 -0.190745 -7.71468e-05 0.0330423 0.0342148 -7.68743e-05 0.000141005 0.011613 0.013877 0.0475631 0.14884 0.0879882 -0.0318662 0.0175841 -0.00452521 -0.00291623 -0.0375986 1.08026e-06 0.0123694 0.0164744 -0.0302135 -0.000518776 0.00198685 0.026554 -0.0216239 -0.020159 -0.0326688 -3.94054e-05 0.000343298 0.00620742 -0.000269321 -0.00392252 0.001162 8.2287e-05 -0.0543469 -0.00229108 -3.65423e-05 -0.000467006 0.000585543 6.51436e-05 -0.00297109 -4.2316e-05 6.01357e-05 -0.0332909 -0.103762 -1.4101e-06 0.03766 -2.81813e-05 0.0567704 -0.0325102 -0.067525 0.000111204 0.000199057 -0.0674467 -0.0622873 -0.000744042 0.365421 -0.0681585 -0.000124682 -0.236765 -5.94509e-05 0.00111376 0.000699579 -7.55655e-05 -0.0300817 2.99779e-05 0.285347 -6.20606e-05 0.000363352 -0.295419 0.00065261 0.0227481 0.000102213 0.0577886 8.28314e-05 -0.000215737 0.00091906 -0.000393689 3.80226e-05 -0.101406 0.102653 0.00119092 0.00416191 0.038435 0.0128344 -0.00738646 -3.54858e-05 -8.82861e-05 0.0695577 0.0102026 0.208311 -0.000463772 -0.000734702 0.000790722 8.17122e-05 1.71183e-05 0.000133831 -0.023226 1.99503e-05 0.0086075 -4.55528e-05 8.48671e-05 2.7723e-05 -0.000935936 0.00235092 -1.24977e-05 1.35644e-05 -0.000105956 5.37446e-05 -2.77623e-05 -1.99011e-05 0.370315 -0.00781586 -0.0055097 0.0102742 -6.15884e-05 -5.17532e-05 0.000155252 -0.000144378 0.000142111 2.97015e-05 0.000248055 -0.00203687 -0.000147234 0.0250286 0.000309211 1.20354e-05 0.000205087 -0.000180171 -0.000971554 0.0229518 -0.000109176 -0.000457138 0.0178168 0.00386132 0.00516555 0.00071657 0.00125177 -0.0386766 -6.57848e-06 0.00121038 7.34648e-05 -0.000300317 4.72274e-05 -0.00185202 0.0014436 0.000140572 0.000867033 -0.0263784 0.000437758 -0.258453 -0.000131402 -0.000284861 -0.0174965 -0.000656473 0.00118066 3.76461e-05 -2.27898e-05 -0.000115577 -0.00177836 -0.0292755 5.26933e-05 -0.00127846 2.45404e-05 0.000584589 0.00193456 0.000377705 8.96915e-05 -0.000400894 -2.74087e-05 -0.00061024 7.14115e-06 -0.000933147 0.000955645 3.54541e-05 -2.03544e-05 0.000126886 0.000593115 -0.00625964 0.000120284 -0.000208789 0.000159192 8.16823e-05 3.41557e-05 0.000164816 0.00117334 0.000344693 0.000874673 -0.000431517 0.000162201 3.02631e-05 0.00145765 0.064002 0.00145935 -0.00678361 -0.00732682 0.0180258 -0.0580677 0.2664 -0.0019385 0.00515796 5.50837e-05 0.000738096 -3.16347e-05 0.0166732 3.57083e-05 -0.000137676 0.00371924 -0.00112227 -0.015639 -0.0368496 0.00637606 -0.0722609 0.40547 -7.25429e-05 0.000666765 -0.0076659 0.0477877 0.000746415 0.00769747 -0.000106154 -0.000688001 -8.78395e-05 0.000108207 -2.52804e-06 0.000125455 -0.0085466 0.0448333 -0.000412663 0.0232907 0.0460729 -3.28139e-05 -0.000142006 2.90134e-05 -0.000120543 -3.08373e-05 -9.09899e-06 -4.4485e-05 -0.000319482 0.0108124 0.0161434 6.91028e-05 7.00083e-06 6.61024e-05 8.17569e-05 1.58047e-06 0.000191427 -0.023786 0.000680421 0.0122863 -0.000559158 0.000529322 -8.38559e-05 -0.000264487 9.16541e-05 -1.4787e-05 0.00315095 -0.0239804 0.0311226 -0.00910006 -0.01001 0.000674733 -0.0352503 -0.000118645 0.000895792 -0.000250972 0.00677738 -0.0182856 0.000312144 -0.00165982 7.88367e-05 -0.00101331 -0.0017325 3.25693e-05 0.00278715 -0.00019257 0.0173956 -0.0259643 -3.27823e-05 -3.21971e-05 -3.49558e-05 -0.000157002 -0.00072584 -1.52e-05 -0.00394701 -1.78369e-05 0.0104401 -0.0490428 0.0297711 -0.00068867 -0.000109254 -4.73147e-05 0.00304502 0.0931236 -0.000200912 -0.00633725 -0.0160828 0.000687676 -0.00392915 9.30806e-05 -0.000176694 -0.0241189 -4.07366e-05 4.09482e-05 -0.000422926 0.043247 -0.000814307 8.4742e-05 -0.000106237 -0.000104229 -0.0424158 -0.038437 0.112655 -0.011419 -7.19732e-05 -0.00351695 -0.00452831 -0.000277275 -0.000488717 0.000190676 0.0146534 -0.00995074 0.000279158 -0.00871368 -9.97116e-06 -0.000750987 -0.00388975 -5.55067e-05 -0.000111463 0.0202386 3.44751e-05 -0.000444949 0.000114707 -0.0403501 0.000392812 -0.064678 -3.27913e-05 -0.00106075 0.000228252 0.00291827 -0.000224357 7.42376e-05 3.80333e-05 -0.0609512 -9.70792e-05 -0.0357836 4.85682e-05 -0.0738482 0.00014876 9.16241e-05 0.000550532 0.000155514 -4.18133e-05 -0.0464664 4.33007e-07 -8.47574e-05 6.86746e-05 -0.159181 0.0156252 -0.110474 0.0799456 0.000110944 0.00030137 0.029771 0.000130622 -0.00141988 0.000444439 -0.0371657 0.00894245 -0.105001 0.144906 8.5749e-06 0.00159465 0.000635432 -0.000580287 -5.77468e-05 -4.73944e-05 -0.131933 0.00401344 0.000270476 -4.82533e-05 0.000174194 0.174362 0.000852823 -0.000109117 -0.0198986 1.90243e-05 -0.0079698 0.0187109 0.00194654 -0.000366733 3.5704e-05 0.000375053 -2.58413e-05 0.0429862 -0.000187979 0.0499116 -7.85572e-05 -4.55026e-05 -0.00121714 -0.000368685 -0.01014 -0.000142188 4.81917e-05 0.000349302 -0.000106306 -0.000204014 1.42823e-06 9.59883e-05 0.000455782 0.106227 0.0915963 0.223067 0.0210003 -0.000566813 -0.000550782 -0.129658 -0.000319289 0.000254264 0.00208334 -0.000200205 -0.00128179 6.84752e-05 -0.000204507 -0.0383853 -0.000132709 -8.2957e-06 -7.07545e-05 0.000128402 0.0856397 -0.000778362 7.37209e-05 -0.000193473 -0.127064 -0.0333846 0.000103811 0.428844 -0.188513 0.0575079 -0.146573 -0.004062 0.00257891 -2.10077e-05 -0.0554314 -0.000661913 7.37014e-05 0.145004 -0.0326896 -0.000290863 -0.372963 -4.91927e-05 0.00205355 0.00018441 0.0986041 0.00171041 -0.000446696 0.000192088 -0.000151698 -0.00122055 -8.57461e-05 0.0275557 0.0172664 -2.4833e-05 0.0351608 0.00959361 -0.000767203 -9.48009e-05 -3.92803e-05 0.000220142 0.0256088 0.0469059 -0.000154714 0.000218787 -2.42729e-05 5.42921e-05 -0.0017893 -1.60335e-05 -0.000991544 0.0609259 0.00070194 0.00123618 -2.61112e-05 0.00068065 0.000424775 0.0020682 -0.00135989 -0.0412184 -0.000122503 0.000164047 0.00440404 2.5313e-05</Parameters>
-         </PerceptronLayer>
-         <PerceptronLayer>
-            <LayerName>perceptron_layer_2</LayerName>
-            <InputsNumber>9</InputsNumber>
+            <InputsNumber>30</InputsNumber>
             <NeuronsNumber>35</NeuronsNumber>
             <ActivationFunction>Linear</ActivationFunction>
-            <Parameters>0.000412192 0.0138495 7.5223e-05 0.280492 0.271138 0.000225279 0.00261543 9.02152e-05 0.299462 0.270419 -3.75223e-05 0.00273186 -0.000105054 0.300211 0.279397 0.00326101 0.00798415 -6.29903e-06 0.285002 0.262471 1.72726e-05 0.000211177 0.000209824 0.257241 0.264412 5.64199e-06 0.000125732 4.78588e-05 0.258364 0.268521 1.89874e-05 0.00040001 0.000177059 0.257894 0.271175 -0.00135071 -0.000281286 -6.93831e-06 1.76586 0.000639756 -0.0760492 0.00187101 0.000833924 -2.60148e-05 0.0784865 0.000345817 -0.00391662 0.988328 6.28605e-05 0.0010065 -0.0007068 -0.00543313 0.487418 0.00206403 2.02274e-05 -0.000382247 -6.40569e-05 -0.000229829 1.39283 -0.00691362 -0.195322 4.64894e-06 -0.209639 -5.11155e-05 0.000483837 0.0468403 -0.144747 -0.0322394 -1.65752e-05 0.324328 1.06502 -0.025909 0.000364635 -1.67788e-05 0.00338269 0.000115771 5.32514e-06 1.57485 0.000710792 0.332825 -0.00132828 -4.24423e-05 0.000366263 0.990196 -0.000292985 -0.0444567 0.000715081 0.0298291 0.583725 0.0064163 3.21659e-05 -0.0949932 0.23633 0.267182 0.00457526 -0.00326325 -0.0150663 0.723944 0.209875 0.000292365 -4.19629e-05 -0.000206989 -1.0829e-05 0.690991 -0.000775663 -0.529161 -0.000229151 -0.036904 -0.000132543 -4.26494e-05 -0.113686 0.0268656 -0.00015332 5.87751e-05 0.555467 0.911005 -0.0348537 9.99826e-05 0.000153395 2.53198e-05 0.0402388 -0.00037578 1.50467 0.00551762 0.227277 -0.0544319 0.000153685 -0.0133216 0.201719 0.277757 -0.00550764 2.63192e-05 0.0586486 0.839277 -0.000343552 -0.00054333 -0.199021 0.0352983 0.812327 -1.96621e-05 -0.00012733 5.74483e-05 0.222053 0.398802 4.9795e-05 -3.79224e-05 -0.000115887 0.000167725 0.219802 -1.41793e-05 -0.705211 -5.23235e-05 0.000121217 0.00283117 4.20572e-05 -0.0492224 0.637653 -1.4e-05 0.000789768 0.707816 0.0932185 0.00513277 0.000154562 8.78731e-06 -7.12748e-05 0.225737 0.000137625 1.49656 0.109013 -0.000142707 0.000659843 -0.000640196 -0.269589 0.0132133 0.903991 -0.000517404 4.96607e-05 0.28505 0.210871 0.000176232 -0.0066489 2.25341e-05 0.039274 0.987039 0.000924176 -3.10538e-05 -2.86597e-05 0.00116156 0.690133 -1.76707e-05 -0.0298446 -6.32372e-05 -0.00211785 0.00592123 6.23251e-05 -0.577801 1.07944e-06 -0.000894367 0.00138562 0.67664 -0.000104822 0.586582 -0.000175176 0.000832951 0.515695 -1.1056e-05 0.000285876 -0.00935881 0.210823 7.37076e-05 0.177782 -0.000759275 1.42022 0.0566817 -0.000336315 -0.000359053 -0.0419378 0.00274615 0.0183821 1.01201 0.000133431 5.81409e-05 0.229035 7.39406e-05 0.000836524 -0.416204 0.176778 0.0236463 0.612911 0.00115608 -0.000794476 -0.005588 6.06437e-05 0.899754 0.000185656 -0.119283 0.000123396 -0.0619779 0.0293955 -0.000164868 -0.308425 -1.00356e-05 -0.170746 -0.444265 0.815101 4.84151e-05 0.13835 -9.04954e-05 -2.40559e-05 0.283946 -1.76263e-05 -0.0820899 -0.16989 0.200823 -0.000238605 0.000155018 -0.000265525 1.41507 0.000344353 -0.000804689 -0.0733873 -0.432476 0.391794 0.00212315 0.633514 -1.40568e-05 -0.000156996 0.0549033 -0.000178377 8.96417e-06 -0.894751 -6.78704e-05 0.0278063 0.174115 9.31522e-05 -8.57586e-05 -0.000338392 8.74201e-05 0.80473 0.0280494 -0.000340867 4.70993e-05 -0.00367944 0.0614605 -3.5437e-05 -0.376497 -8.50654e-05 -0.539825 -0.945211 0.0341631 -6.99814e-05 -0.044739 -1.27233e-05 0.000423401 0.124353 -0.00063095 -0.169144 -0.274679 -6.24001e-05 -0.000512294 -0.000266322 0.00013931 1.38115 -9.32754e-05 -0.00282207 -0.234662 -0.977124 0.00013426 -8.78919e-06 0.225472 -1.83083e-05 0.000626125 2.56e-05 7.83294e-05 -7.02644e-05 -0.842134 -0.117087 0.00896075 0.0684702 9.30136e-05 -0.000258688 -0.000191632 0.00104085 0.647318 0.00078535 -0.000282454 2.19983e-06 -0.000308105 0.114482 -0.000159914 -0.470157 -0.000154293 -0.397621 -0.635564 -0.000267652 0.000347594 -0.034868 -0.000134469 -3.86195e-05 0.216375 0.00704279 -0.154556 -0.147175 8.51749e-05 6.55359e-05 -2.47139e-05 -0.000115254 1.35238 -1.60108e-05 2.57149e-06</Parameters>
+            <Parameters>-0.0786759 0.0103493 0.00572876 0.0895649 0.0874795 -0.0722474 0.034227 -0.00385365 0.131418 0.121121 -0.044052 0.0518747 -0.00865205 0.142572 0.136611 -0.025805 0.0587554 -0.0153913 0.151556 0.150705 -0.0221026 0.0621574 -0.0134576 0.162434 0.168459 -0.025743 0.0597442 -0.0164509 0.157058 0.161858 -0.0256514 0.0518001 -0.0146183 0.161621 0.164721 0.00587978 -0.0112718 0.0003122 0.0170299 -0.127433 0.0188698 -0.0294896 -0.00434184 -0.00951627 -0.00951992 -0.0237807 0.0507563 -0.00995837 -0.00477679 -0.0321572 0.0195492 0.0608951 0.00481376 0.302334 0.605131 -0.0399215 0.169159 0.0334292 -0.0286635 -0.028903 -0.0319307 0.005033 0.0469656 -0.0198744 0.00890792 0.0219277 0.0301372 0.0381063 0.00427269 -0.0122049 -0.0160109 -0.0913213 -0.0116092 -0.00925397 -0.0164423 0.0403136 0.067024 -0.00503051 -0.0286555 0.0036941 -0.018079 0.0761719 0.0110252 0.0045551 0.462203 0.0695099 0.170722 0.0344136 -0.0309196 -0.0532888 0.0379947 -0.000318851 0.0883977 0.00942344 -0.0372232 0.00745791 -0.0260422 -0.0235558 -0.0138386 0.000390069 0.0799849 -0.0649369 0.0629508 0.0102027 0.0265299 0.0713279 0.0264263 -0.0162892 0.0451738 -0.0729885 0.00784514 -0.0567068 0.0089736 -0.0136341 -0.0288935 0.42701 -0.012621 -0.0547659 0.0126733 0.0360978 0.0817364 0.0270725 0.0107117 -0.0322982 -0.0622339 0.0204387 0.0783811 0.0644484 -0.00365388 -0.0201376 0.00272606 -0.00498305 -0.0837831 0.0129465 0.0107081 0.0169041 0.00578806 0.000473876 -0.0388248 0.0209912 -0.0398188 0.0675499 -0.0100715 -0.00434595 0.0306188 0.0469592 0.505879 0.149963 -0.0295531 -0.0715296 -0.0552792 -0.0174685 0.0829971 0.0101242 0.0386672 -0.00667276 0.0541718 0.0154076 0.00516746 -0.0727706 0.0263733 -0.0849094 0.292865 -0.00318799 0.0364633 -0.00933627 -0.00727741 -0.00625685 0.0171308 0.0105785 0.00312706 0.00264243 -0.00576344 0.0607552 -0.0332639 -0.00598451 0.0381204 0.585003 -0.0012302 -0.0110127 -0.0805883 0.03466 0.052725 0.0321304 0.0275727 0.00848448 0.0487464 0.0319989 0.00365419 -0.102165 -0.00540473 -0.10784 -0.0150808 -0.00205865 -0.00675326 0.015654 0.04342 0.0148751 -0.0359487 0.011208 0.0182559 0.111786 0.00267502 0.167204 0.350034 0.0299219 0.235789 0.0766176 -0.0475534 -0.0844372 -0.0321788 0.0358671 0.0933372 -0.000580293 -0.0494363 -0.00321006 0.0601156 0.0638251 0.0334095 -0.00147525 -0.039564 -0.0301125 -0.0741983 -0.00496049 -0.0101701 -0.00976003 0.0872291 0.0186594 -0.0292337 0.00164276 0.00723238 0.103673 0.0307214 -0.0132909 0.203314 0.0846279 0.0725505 0.107261 -0.0499684 -0.0491712 0.0655948 0.0247693 0.0998349 -0.00784635 -0.047259 -0.00414927 -0.0455449 -0.0424021 0.0244219 0.00362906 0.0896903 -0.0423405 0.0387079 0.0106719 0.044459 0.0758727 0.0236767 -0.0484523 0.0440902 -0.124808 0.0252559 -0.069979 -0.00778118 -0.0415322 -0.0259878 0.251661 -0.057087 -0.015147 0.00626601 0.0495803 0.131757 0.0245177 0.0336958 0.000406803 -0.0651795 -0.0112262 0.116649 0.147291 -0.0255366 0.00510946 -0.0192266 0.0859909 -0.0370317 0.0148032 0.0258167 0.0290757 0.0581531 0.00238657 -0.023066 0.0613565 -0.0126629 0.0945586 0.0394095 -0.0178516 -0.00898441 0.0484618 0.227073 0.113488 -0.0115299 -0.0962639 -0.101492 -0.0176977 0.118388 0.00181373 0.0347768 -0.0189365 0.0838139 0.0506583 -0.0364553 -0.0560409 0.0807156 -0.0321019 0.314985 -0.00155988 0.0402242 -0.0227954 -0.0233882 0.0176761 -0.00534391 0.0193468 0.00944069 0.0198762 0.00534734 0.0728512 -0.06993 -0.0226217 -0.051048 0.525434 -0.00428676 0.00978298 -0.114137 0.0501619 0.040088 0.066797 0.0683567 -0.0207088 0.0740933 0.0416641 0.0628968 -0.0999717 0.00539561 -0.0474252 -0.063646 -0.0124948 0.0047998 0.0103328 0.0926909 0.0176355 -0.0237425 0.0225979 0.0359403 0.149406 0.0181235 0.0803967 0.176707 0.0368355 0.104763 0.135502 -0.0425594 -0.0900413 -0.0102287 -0.00749373 0.126295 -0.0238588 -0.0287727 -0.0113021 0.0725132 0.0983474 0.0337262 0.022979 -0.0272654 0.00682295 -0.090491 0.00179772 -0.024043 -0.0482958 0.0509557 0.0781064 0.0344773 -0.0141873 0.0138268 0.120971 0.0493396 0.0150261 0.0700639 0.0549434 0.0375934 0.0975949 -0.0390999 -0.000269493 0.04249 0.0949181 0.0770866 -0.0225386 -0.0541254 0.0336135 -0.0756858 -0.0660779 0.0129533 0.0147267 0.045975 -0.0716067 0.0389364 0.021028 0.0464 0.113137 0.0148463 -0.0658206 0.0556155 -0.087328 -0.00456919 -0.0718542 -0.0278997 0.00246321 -0.0391579 0.199476 -0.0440718 -0.00581615 0.00237048 0.0736359 0.13549 0.0162058 0.0279652 0.00014652 -0.125437 -0.0318347 0.116408 0.235012 -0.00274337 0.00549438 0.0120978 0.139352 -0.0323147 0.0108895 -0.00544144 -0.0773304 0.0815982 0.0322915 -0.0306042 0.0570034 -0.00208485 0.114079 0.110516 -0.0309253 -0.0256783 -0.00604976 0.143307 0.0981766 -0.00463971 -0.0608851 -0.0728652 0.0473187 0.0917362 0.0367249 0.0430159 -0.0172954 0.0767733 0.0894984 -0.0329197 -0.0271083 0.122945 -0.0186089 0.350881 -0.0135869 0.0444397 -0.0807218 0.00998856 0.0690726 0.0213948 0.0291069 0.00264009 0.0561872 0.0315837 0.0276566 -0.077047 -0.00982333 -0.062663 0.459431 0.0118747 0.024081 -0.146959 0.0553843 0.00512105 0.0470277 0.0904024 -0.0267546 0.0871186 0.0881244 0.0400388 -0.0627706 0.00192698 -0.028718 -0.0531317 0.00659594 -0.0191307 -0.0608712 0.0833251 0.0553625 -0.0218101 0.014533 0.0282943 0.167239 0.0215522 0.129336 0.0304252 0.0386588 0.0668905 0.11006 -0.0470862 -0.0538006 0.00187504 0.0529441 0.108868 -0.00495551 -0.0313455 0.0274859 0.0780547 0.0202486 0.0107796 0.0349897 -0.0261594 0.0294903 -0.0802178 -0.02319 -0.0289834 -0.0577743 0.105055 0.0341116 0.0787084 -0.0216004 -0.0168778 0.132596 0.108797 0.0231592 0.0528232 0.0392439 0.0246607 0.0585553 -0.0176505 0.0108704 0.00506391 0.0799957 0.142084 -0.000443987 -0.0542241 -0.00067069 -0.0876845 -0.0317479 0.0188633 -0.000525894 0.0715551 -0.0711098 0.0531092 0.0362835 0.0291153 0.119766 0.0247168 -0.061753 0.0139938 -0.0826017 0.0354436 -0.0904281 -0.0645606 0.00017606 -0.00179327 0.1384 -0.0520731 -0.00635606 -0.00106965 0.0825102 0.1893 -0.00883168 0.00534527 0.0312618 -0.111545 0.00534693 0.115991 0.0663165 0.0404193 0.000507117 -0.0153302 0.164116 -0.0126795 -0.039065 -0.0380493 -0.133209 0.0782303 0.0363298 0.0221349 0.0139464 -0.0418423 0.131391 0.244595 -0.0463545 -0.0320226 0.0137873 0.103811 0.0637149 0.00681666 -0.0199461 -0.131139 0.127073 0.0752274 0.00559342 0.0678449 -0.0105594 0.0755669 0.0352862 0.0226375 -0.040829 0.0864356 0.0137993 0.328257 -0.0374859 0.0512056 -0.0948314 -0.0116596 0.102815 0.0383617 0.015085 -0.00659371 0.0751936 0.0837383 -0.0192426 -0.0640276 0.0530096 -0.0853045 0.448968 0.0125649 0.0399006 -0.197104 0.0949477 -0.013217 0.0591975 0.116153 0.00909805 0.111016 0.0551253 0.0105345 -0.0532034 -0.0188648 0.0103738 -0.0522531 -0.0252798 -0.0422016 -0.121464 0.112832 0.0288302 0.0373286 0.00938359 -0.00785355 0.160526 0.0785362 0.124136 0.0282045 0.038293 0.0268001 0.0918854 -0.0165881 -0.0154006 -0.035619 0.0979266 0.137671 -0.031401 -0.0428179 -0.0091662 0.102831 -0.0921993 0.0184879 0.0594759 -0.00881904 -0.0150576 -0.0354678 -0.0302976 -0.0211021 -0.0326476 0.0988666 -0.0571511 0.0584325 0.0041794 0.0247465 0.120536 0.0648968 -0.00111824 0.0524661 0.0115283 0.0301538 0.013821 -0.0488993 -0.0237923 -0.025961 0.10988 0.193274 0.0418823 -0.0558647 -0.0272418 -0.0936993 -0.00834915 0.0108864 -0.00385282 0.0611384 -0.107452 0.0278113 0.0262253 0.05524 0.112401 0.00357165 -0.0501384 0.0234577 -0.0720215 0.0488248 -0.110338 -0.0469114 0.0256794 -0.00490821 0.142939 -0.033258 0.0276232 0.0154776 0.0748177 0.203655 0.00540893 -0.0118037 -0.00937461 -0.102123 0.00488571 0.153806 -0.165677 -0.00736361 0.00372764 -0.0370407 0.206447 -0.00598941 -0.0362469 -0.0164156 -0.131638 0.0989 0.0320881 -0.00457972 0.00967288 -0.0318209 0.113592 0.162024 -0.0108178 -0.0348881 -0.00291806 0.034704 0.0444495 -0.0295356 -0.0408789 -0.177128 0.133423 0.07345 0.0402269 0.0424899 0.00639161 0.0820375 -0.0599576 -0.0122124 0.00331161 0.0431227 -0.00879026 0.379231 0.0060698 0.062877 -0.106477 -0.0133803 0.124927 0.0471135 0.0358483 -0.0180805 0.0796529 0.0636926 0.0153109 -0.108702 0.0510033 -0.0916329 0.374348 0.000841505 0.0618397 -0.195259 0.0836633 -0.00681636 0.0675838 0.07219 -0.0346282 0.130147 -0.0429328 0.0196042 -0.00282079 -0.0171979 0.00641276 -0.036022 -0.0250181 -0.0282463 -0.0539027 0.0771135 -0.0389271 0.0410046 0.0172951 0.0379533 0.163047 0.0838329 0.056016 0.029415 0.0142798 0.0260822 0.0678376 -0.0507109 -0.0369767 -0.0933254 0.12458 0.16781 0.0103359 -0.0342566 -0.00296519 0.102461 -0.0533302 0.00340849 0.0368189 -0.0148807 0.0296679 -0.0527147 -0.0209241 0.0465898 -0.0150178 0.127505 0.0136337 0.0834083 0.00483884 0.0159845 0.124937 -0.0679494 0.00562212 0.0702998 0.00997553 -0.0281231 0.0350575 -0.0594632 -0.0575893 -0.0451682 0.0805273 0.0910721 0.0386395 -0.0166406 0.0360772 -0.121009 0.00631124 0.0245746 0.0357597 0.0435003 -0.0738825 0.0101802 0.0209891 0.0392288 0.111224 0.0219278 -0.103842 0.0241289 -0.0661628 -0.0156676 -0.106694 -0.0152014 -0.0153401 0.00239334 0.144525 -0.0612422 0.0433074 0.010065 0.109345 0.190056 -0.00961585 0.0315797 -0.0164833 -0.0932901 0.010264 0.142096 -0.101824 -0.0327873 0.00724998 -0.0451027 0.194973 0.0312201 -0.0129557 0.0409751 -0.111117 0.0912705 0.111593 0.027714 0.0392727 -0.0248098 0.130323 -0.103743 -0.0468937 -0.0155901 -0.0340028 0.0681509 0.000406472 -0.0287543 -0.0387023 -0.20381 0.135397 0.0098369 0.0230115 0.0161444 0.0112432 0.084275 -0.0225727 -0.0224962 0.00338904 0.0821124 -0.00325841 0.43665 0.00168718 0.0585311 -0.119406 -0.00623773 0.156592 0.0570983 0.0309281 -0.00910985 0.0876861 -0.0418466 -0.0145901 -0.060073 0.00203013 -0.105183 0.321012 0.035626 0.0855152 -0.19034 0.0823946 -0.0106591 0.0813385 0.0817538 -0.0185412 0.118839 -0.0493551 -0.00289569 -0.00828726 -0.0202013 0.045783 -0.04059 -0.0116538 0.0398547 -0.0508059 0.101829 0.0352484 0.0526019 0.00813133 0.0154572 0.183285 -0.0151288 0.0506882 0.0404573 -0.00714882 -0.0147576 0.0641981 -0.0475839 -0.0622937 -0.0802656 0.0702197 0.0747769 0.032161 -0.00438584 -0.032483 0.123208 -0.00917479 -0.0240094 0.0518838 -0.058425 0.0085776 -0.0585484 -0.0162543 0.0892445 -0.0258636 0.167429 0.0771831 0.0793037 0.0318831 0.0395631 0.0951914 -0.0657619 -0.022996 0.0600194 0.010377 0.0246456 0.0323388 -0.0302209 -0.0203689 -0.0650325 0.0718641 0.0438885 0.0586444 -0.0296229 0.0404316 -0.123868 -0.00156926 0.012529 0.0219996 0.00177865 -0.093427 0.0276839 0.0314491 -0.00802878 0.112277 0.00442959 -0.0936004 0.0223246 -0.0510197 -0.00458909 -0.125479 0.00630506 0.016022 0.0212272 0.148986 -0.0438123 0.0233274 -0.00175843 0.127134 0.220531 0.0136251 -0.004432 -0.0108993 -0.107997 0.0278439 0.185241 -0.039797 -0.0417057 0.00064243 -0.0503906 0.0535146 -0.000350661 -0.00811406 0.0739965 -0.10243 0.094219 0.124216 0.0427417 0.0394227 -0.028934 0.097156 -0.116266 -0.0642342 -0.0109404 -0.0605205 0.187714 0.0324042 0.00663288 0.00198847 -0.176616 0.0785484 0.0222755 0.0192622 0.0284773 -0.0069977 0.134629 -0.0236688 -0.0372426 -0.00218647 0.0392078 -0.0895683 0.393667 -0.00101868 0.0791423 -0.102479 -0.00594863 0.146179 0.0571146 0.0429284 0.0140701 0.0514225 -0.0314154 -0.00580985 -0.0506295 0.0255927 -0.0598958 0.374459 0.0355294 0.0765833 -0.188289 0.0634727 0.0087802 0.074906 0.0672788</Parameters>
          </PerceptronLayer>
          <UnscalingLayer>
             <UnscalingNeuronsNumber>35</UnscalingNeuronsNumber>
@@ -1902,7 +1542,7 @@
    </NeuralNetwork>
    <TrainingStrategy>
       <LossIndex>
-         <LossMethod>MINKOWSKI_ERROR</LossMethod>
+         <LossMethod>NORMALIZED_SQUARED_ERROR</LossMethod>
          <MeanSquaredError/>
          <NormalizedSquaredError/>
          <MinkowskiError>
@@ -1913,12 +1553,12 @@
             <PositivesWeight>1</PositivesWeight>
             <NegativesWeight>1</NegativesWeight>
          </WeightedSquaredError>
-         <Regularization Type="L1_NORM">
-            <RegularizationWeight>0.001</RegularizationWeight>
+         <Regularization Type="L2_NORM">
+            <RegularizationWeight>0.01</RegularizationWeight>
          </Regularization>
       </LossIndex>
       <OptimizationAlgorithm>
-         <OptimizationMethod>QUASI_NEWTON_METHOD</OptimizationMethod>
+         <OptimizationMethod>ADAPTIVE_MOMENT_ESTIMATION</OptimizationMethod>
          <GradientDescent>
             <LearningRateAlgorithm>
                <LearningRateMethod>BrentMethod</LearningRateMethod>
@@ -2001,9 +1641,9 @@
          <GrowingInputs>
             <TrialsNumber>3</TrialsNumber>
             <SelectionErrorGoal>0</SelectionErrorGoal>
-            <MaximumSelectionFailures>20</MaximumSelectionFailures>
+            <MaximumSelectionFailures>100</MaximumSelectionFailures>
             <MinimumInputsNumber>1</MinimumInputsNumber>
-            <MaximumInputsNumber>100</MaximumInputsNumber>
+            <MaximumInputsNumber>30</MaximumInputsNumber>
             <MinimumCorrelation>0</MinimumCorrelation>
             <MaximumCorrelation>1</MaximumCorrelation>
             <MaximumEpochsNumber>1000</MaximumEpochsNumber>
@@ -2012,7 +1652,7 @@
          <GeneticAlgorithm>
             <PopulationSize>10</PopulationSize>
             <ElitismSize>2</ElitismSize>
-            <MutationRate>0.1</MutationRate>
+            <MutationRate>0.01</MutationRate>
             <SelectionErrorGoal>0</SelectionErrorGoal>
             <MaximumGenerationsNumber>100</MaximumGenerationsNumber>
             <MaximumTime>3600</MaximumTime>
