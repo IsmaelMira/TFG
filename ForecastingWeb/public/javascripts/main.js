@@ -1,18 +1,3 @@
-/*var PM25Chart;
-var PM10Chart;
-var O3Chart;
-var NO2Chart;
-var SO2Chart;
-var PM25Button;
-var PM10Button;
-var NO2Button;
-var SO2Button;
-
-function initializeVariables(){
-    PM25Chart= document.getElementById("PM25Chart");
-}*/
-
-
 function togglePM25() {
     var PM25Chart = document.getElementById("PM25Chart");
     var PM10Chart = document.getElementById("PM10Chart");

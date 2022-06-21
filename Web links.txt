@@ -5,3 +5,4 @@ https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
 https://stackoverflow.com/questions/4413590/javascript-get-array-of-dates-between-2-dates?page=1&tab=scoredesc#tab-top
 https://tilemill-project.github.io/tilemill/docs/guides/advanced-legends/
 https://htmlcolorcodes.com/es/tabla-de-colores/
+https://devhacksandgoodies.wordpress.com/2014/03/11/javascript-dategetday-starting-at-sunday-instead-of-monday/comment-page-1/
