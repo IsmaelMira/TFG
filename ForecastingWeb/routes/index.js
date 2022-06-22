@@ -10,9 +10,9 @@ var today_weekday;
 router.get('/', async function(req, res, next) {
   
   //Get weather and pollution data
-  /*const yesterdayWeather= await getYesterdayWeatherData();
+  const yesterdayWeather= await getYesterdayWeatherData();
   const todayWeather= await getTodayWeatherData();
-  const pollutionData= await getPollutionData();*/
+  const pollutionData= await getPollutionData();
 
   //Get dates
   var startDate = new Date();
@@ -21,46 +21,25 @@ router.get('/', async function(req, res, next) {
   const getDaysArray = getDates(startDate, finishDate);
 
   //Calculate outputs using the model
-  neuralNetworkModel(/*yesterdayWeather.days[0].precip, yesterdayWeather.days[0].temp, yesterdayWeather.days[0].tempmax, yesterdayWeather.days[0].tempmin, 
+  const contaminationPrediction=neuralNetworkModel(yesterdayWeather.days[0].precip, yesterdayWeather.days[0].temp, yesterdayWeather.days[0].tempmax, yesterdayWeather.days[0].tempmin, 
     yesterdayWeather.days[0].pressure, yesterdayWeather.days[0].windspeed, yesterdayWeather.days[0].humidity, today_day, today_month, today_weekday, 
     pollutionData.iaqi.pm25.v, pollutionData.iaqi.pm10.v, pollutionData.iaqi.o3.v, pollutionData.iaqi.no2.v, pollutionData.iaqi.so2.v,
     todayWeather.days[0].precip, todayWeather.days[0].temp, todayWeather.days[0].tempmax, todayWeather.days[0].tempmin, 
-    todayWeather.days[0].pressure, todayWeather.days[0].windspeed, todayWeather.days[0].humidity*/);
+    todayWeather.days[0].pressure, todayWeather.days[0].windspeed, todayWeather.days[0].humidity);
 
   res.render('index', { title: "Air contamination forecast", 
-  /*tMin0: futureWeather.days[0].tempmin, tMax0: futureWeather.days[0].tempmax, tAvg0: futureWeather.days[0].temp,  pressure0: futureWeather.days[0].pressure, humidity0: futureWeather.days[0].humidity, windSpeed0: futureWeather.days[0].windspeed, precipitations0: futureWeather.days[0].precip,
-  tMin1: futureWeather.days[1].tempmin, tMax1: futureWeather.days[1].tempmax, tAvg1: futureWeather.days[1].temp,  pressure1: futureWeather.days[1].pressure, humidity1: futureWeather.days[1].humidity, windSpeed1: futureWeather.days[1].windspeed, precipitations1: futureWeather.days[1].precip,
-  tMin2: futureWeather.days[2].tempmin, tMax2: futureWeather.days[2].tempmax, tAvg2: futureWeather.days[2].temp,  pressure2: futureWeather.days[2].pressure, humidity2: futureWeather.days[2].humidity, windSpeed2: futureWeather.days[2].windspeed, precipitations2: futureWeather.days[2].precip,
-  tMin3: futureWeather.days[3].tempmin, tMax3: futureWeather.days[3].tempmax, tAvg3: futureWeather.days[3].temp,  pressure3: futureWeather.days[3].pressure, humidity3: futureWeather.days[3].humidity, windSpeed3: futureWeather.days[3].windspeed, precipitations3: futureWeather.days[3].precip,
-  tMin4: futureWeather.days[4].tempmin, tMax4: futureWeather.days[4].tempmax, tAvg4: futureWeather.days[4].temp,  pressure4: futureWeather.days[4].pressure, humidity4: futureWeather.days[4].humidity, windSpeed4: futureWeather.days[4].windspeed, precipitations4: futureWeather.days[4].precip,
-  tMin5: futureWeather.days[5].tempmin, tMax5: futureWeather.days[5].tempmax, tAvg5: futureWeather.days[5].temp,  pressure5: futureWeather.days[5].pressure, humidity5: futureWeather.days[5].humidity, windSpeed5: futureWeather.days[5].windspeed, precipitations5: futureWeather.days[5].precip,
-  tMin6: futureWeather.days[6].tempmin, tMax6: futureWeather.days[6].tempmax, tAvg6: futureWeather.days[6].temp,  pressure6: futureWeather.days[6].pressure, humidity6: futureWeather.days[6].humidity, windSpeed6: futureWeather.days[6].windspeed, precipitations6: futureWeather.days[6].precip,
-  tMin7: futureWeather.days[7].tempmin, tMax7: futureWeather.days[7].tempmax, tAvg7: futureWeather.days[7].temp,  pressure7: futureWeather.days[7].pressure, humidity7: futureWeather.days[7].humidity, windSpeed7: futureWeather.days[7].windspeed, precipitations7: futureWeather.days[7].precip,
-  tMinMinus1: pastWeather.days[0].tempmin, tMaxMinus1: pastWeather.days[0].tempmax, tAvgMinus1: pastWeather.days[0].temp, pressureMinus1:pastWeather.days[0].pressure, humidityMinus1:pastWeather.days[0].humidity, windSpeedMinus1:pastWeather.days[0].windspeed, precipitationsMinus1: pastWeather.days[0].precip,
-  currentTemperature: futureWeather.currentConditions.temp, condition: futureWeather.currentConditions.conditions,*/
+  currentTemperature: todayWeather.currentConditions.temp, condition: todayWeather.currentConditions.conditions,
   date0: getDaysArray[0], date1: getDaysArray[1], date2: getDaysArray[2], date3: getDaysArray[3], date4: getDaysArray[4], date5: getDaysArray[5], date6: getDaysArray[6], date7: getDaysArray[7],
-  //totalAQI: responsePollution.aqi, actualPM25: responsePollution.iaqi.pm25.v, actualPM10: responsePollution.iaqi.pm10.v, actualO3: responsePollution.iaqi.o3.v, actualNO2: responsePollution.iaqi.no2.v, actualSO2: responsePollution.iaqi.so2.v //SEND POLLUTION DATA*/
+  totalAQI: pollutionData.aqi, actualPM25: pollutionData.iaqi.pm25.v, actualPM10: pollutionData.iaqi.pm10.v, actualO3: pollutionData.iaqi.o3.v, actualNO2: pollutionData.iaqi.no2.v, actualSO2: pollutionData.iaqi.so2.v,
+  PM25_ahead_1: contaminationPrediction[0], PM10_ahead_1: contaminationPrediction[1], O3_ahead_1: contaminationPrediction[2], NO2_ahead_1: contaminationPrediction[3], SO2_ahead_1: contaminationPrediction[4],
+  PM25_ahead_2: contaminationPrediction[5], PM10_ahead_2: contaminationPrediction[6], O3_ahead_2: contaminationPrediction[7], NO2_ahead_2: contaminationPrediction[8], SO2_ahead_2: contaminationPrediction[9],
+  PM25_ahead_3: contaminationPrediction[10], PM10_ahead_3: contaminationPrediction[11], O3_ahead_3: contaminationPrediction[12], NO2_ahead_3: contaminationPrediction[13], SO2_ahead_3: contaminationPrediction[14],
+  PM25_ahead_4: contaminationPrediction[15], PM10_ahead_4: contaminationPrediction[16], O3_ahead_4: contaminationPrediction[17], NO2_ahead_4: contaminationPrediction[18], SO2_ahead_4: contaminationPrediction[19],
+  PM25_ahead_5: contaminationPrediction[20], PM10_ahead_5: contaminationPrediction[21], O3_ahead_5: contaminationPrediction[22], NO2_ahead_5: contaminationPrediction[23], SO2_ahead_5: contaminationPrediction[24],
+  PM25_ahead_6: contaminationPrediction[25], PM10_ahead_6: contaminationPrediction[26], O3_ahead_6: contaminationPrediction[27], NO2_ahead_6: contaminationPrediction[28], SO2_ahead_6: contaminationPrediction[29],
+  PM25_ahead_7: contaminationPrediction[30], PM10_ahead_7: contaminationPrediction[31], O3_ahead_7: contaminationPrediction[32], NO2_ahead_7: contaminationPrediction[33], SO2_ahead_7: contaminationPrediction[34],
   });
 });
-
-/*async function getFutureWeatherForecast() {
-  try {
-    const response = await axios.get('https://api.openweathermap.org/data/2.5/onecall', 
-      {params: {
-          lat: '40.42',
-          lon: '-3.7',
-          exclude: 'current,minutely,hourly',
-          lang: 'es',
-          units: 'metric',
-          appid: '45bd9e741eba4b3938082a76011bbb27'
-    }});
-    //console.log(response.data.daily[0].temp.min)
-    return response.data
-  }
-  catch (error) {
-    console.log(error);
-  }
-}*/
 
 function getDates(start, end) {
   var flag=0;
@@ -90,7 +69,6 @@ async function getYesterdayWeatherData() {
           key: 'SSV9Q7VEQD32YLW8WE85DXWZP',
           contentType: 'json'
     }});
-    //console.log(response.data.days[0].tempmax)
     return response.data
   }
   catch (error) {
@@ -106,7 +84,6 @@ async function getTodayWeatherData() {
         key: 'SSV9Q7VEQD32YLW8WE85DXWZP',
         contentType: 'json'
     }});
-    //console.log(response.data.daily[0].temp.min)
     return response.data
   }
   catch (error) {
@@ -114,28 +91,12 @@ async function getTodayWeatherData() {
   }
 }
 
-/*function getYesterdayUnixDate(){
-  /*var today = new Date();
-  var dd = String(today.getDate()).padStart(2, '0');
-  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-  var yyyy = today.getFullYear();
-  today = mm + '/' + dd + '/' + yyyy;
-
-  const today = new Date()
-  const yesterday = new Date(today)
-  yesterday.setDate(yesterday.getDate() - 1)
-  var unixDate=Math.floor(new Date(yesterday).getTime() / 1000)
-  return unixDate;
-}*/
-
-
 async function getPollutionData() {
   try {
     const response = await axios.get('https://api.waqi.info/feed/madrid', 
       {params: {
           token: 'fdfe8e5fc89f795e0e19ac42fc1277e97f4804da'
     }});
-    //console.log(response.data.data.aqi)
     return response.data.data
   }
   catch (error) {
@@ -143,334 +104,167 @@ async function getPollutionData() {
   }
 }
 
-function neuralNetworkModel(/*PRECIPITATIONS_lag_1, TAVG_lag_1, TMAX_lag_1, TMIN_lag_1, PRESSURE_lag_1, 
-  WINDSPEED_lag_1, HUMIDITY_lag_1, DAY_lag_0, MONTH_lag_0, WEEKDAY_lag_0, PM25_lag_0, PM10_lag_0, O3_lag_0, NO2_lag_0, SO2_lag_0, PRECIPITATIONS_lag_0, 
-  TAVG_lag_0, TMAX_lag_0, TMIN_lag_0, PRESSURE_lag_0, WINDSPEED_lag_0, HUMIDITY_lag_0*/){
+function neuralNetworkModel(PRECIPITATIONS_lag_1, TAVG_lag_1, TMAX_lag_1, TMIN_lag_1, PRESSURE_lag_1, WINDSPEED_lag_1, 
+  HUMIDITY_lag_1, DAY_lag_0, MONTH_lag_0, WEEKDAY_lag_0, PM25_lag_0, PM10_lag_0, O3_lag_0, NO2_lag_0, SO2_lag_0, 
+  PRECIPITATIONS_lag_0, TAVG_lag_0, TMAX_lag_0, TMIN_lag_0, PRESSURE_lag_0, WINDSPEED_lag_0, HUMIDITY_lag_0){
 
+  var inputs=[];
+  var outputs=[];
 
-  /*console.log(PRECIPITATIONS_lag_1, TAVG_lag_1, TMAX_lag_1, TMIN_lag_1, PRESSURE_lag_1, 
-    WINDSPEED_lag_1, HUMIDITY_lag_1, DAY_lag_0, MONTH_lag_0, WEEKDAY_lag_0, PM25_lag_0, PM10_lag_0, O3_lag_0, NO2_lag_0, SO2_lag_0, PRECIPITATIONS_lag_0, 
-    TAVG_lag_0, TMAX_lag_0, TMIN_lag_0, PRESSURE_lag_0, WINDSPEED_lag_0, HUMIDITY_lag_0);*/
-  var PRECIPITATIONS_lag_1= 0;
-  var TAVG_lag_1= 20.2;
-  var TMAX_lag_1= 26.6;
-  var TMIN_lag_1= 16.3;
-  var PRESSURE_lag_1=1011.9;
-  var WINDSPEED_lag_1=36;
-  var HUMIDITY_lag_1=43.3;
-  var DAY_lag_0=21;
-  var MONTH_lag_0=6;
-  var WEEKDAY_lag_0=2;
-  var PM25_lag_0=5;
-  var PM10_lag_0=3;
-  var O3_lag_0=37;
-  var NO2_lag_0=9.2;
-  var SO2_lag_0=3.1;
-  var PRECIPITATIONS_lag_0=0;
-  var TAVG_lag_0=20.2;
-  var TMAX_lag_0=27.9;
-  var TMIN_lag_0=12;
-  var PRESSURE_lag_0=1011.9;
-  var WINDSPEED_lag_0=36;
-  var HUMIDITY_lag_0=37.2;
+  inputs.push(PRECIPITATIONS_lag_1, TAVG_lag_1, TMAX_lag_1, TMIN_lag_1, PRESSURE_lag_1, WINDSPEED_lag_1, 
+    HUMIDITY_lag_1, DAY_lag_0, MONTH_lag_0, WEEKDAY_lag_0, PM25_lag_0, PM10_lag_0, O3_lag_0, NO2_lag_0, SO2_lag_0, 
+    PRECIPITATIONS_lag_0, TAVG_lag_0, TMAX_lag_0, TMIN_lag_0, PRESSURE_lag_0, WINDSPEED_lag_0, HUMIDITY_lag_0);  
+  
+  outputs = scalingLayer(inputs);
+	outputs = perceptronLayer1(outputs);
+	outputs = perceptronLayer2(outputs);
+	outputs = unscalingLayer(outputs);
 
-  /*prueba1 = (PRECIPITATIONS_lag_1-1.074939966)/3.714220047;
-	outputs[1] = (scaled_TAVG_lag_1-15.34309959)/8.136810303;
-	outputs[2] = (scaled_TMAX_lag_1-21.96590042)/8.941390038;
-	outputs[3] = (scaled_TMIN_lag_1-8.650710106)/6.915160179;
-	outputs[4] = (scaled_PRESSURE_lag_1-1017.659973)/7.241010189;
-	outputs[5] = (scaled_WINDSPEED_lag_1-10.52610016)/5.435560226;
-	outputs[6] = (scaled_HUMIDITY_lag_1-58.64630127)/19.50839996;
-	outputs[7] = (scaled_DAY_lag_0-15.70559978)/8.796839714;
-	outputs[8] = (scaled_MONTH_lag_0-6.37677002)/3.491719961;
-	outputs[9] = (scaled_WEEKDAY_lag_0-3.991379976)/1.996790051;
-	outputs[10] = (scaled_PM25_lag_0-54.49160004)/19.51469994;
-	outputs[11] = (scaled_PM10_lag_0-24.5359993)/11.86429977;
-	prueba2 = (O3_lag_0-32.80110168)/14.55000019;
-	outputs[13] = (scaled_NO2_lag_0-24.17860031)/10.28530025;
-	outputs[14] = (scaled_SO2_lag_0-3.112720013)/2.052930117;
-	outputs[15] = (scaled_PRECIPITATIONS_lag_0-1.073040009)/3.713360071;
-	outputs[16] = (scaled_TAVG_lag_0-15.34749985)/8.136360168;
-	outputs[17] = (scaled_TMAX_lag_0-21.9720993)/8.939259529;
-	outputs[18] = (scaled_TMIN_lag_0-8.652810097)/6.915589809;
-	prueba3 = (PRESSURE_lag_0-1017.659973)/7.242730141;
-	//outputs[20] = (scaled_WINDSPEED_lag_0-10.52620029)/5.435550213;
-	//outputs[21] = (scaled_HUMIDITY_lag_0-58.62919998)/19.4993;*/
+  return outputs;
+}
 
+function scalingLayer(inputs){
+  var outputs=[];
 
+  outputs[0] = (inputs[0]-1.077389956)/3.715929985;
+	outputs[1] = (inputs[1]-15.34119987)/8.136030197;
+	outputs[2] = (inputs[2]-21.96080017)/8.944169998;
+	outputs[3] = (inputs[3]-8.99958992)/20.02560043;
+	outputs[4] = (inputs[4]-1017.309998)/20.05410004;
+	outputs[5] = (inputs[5]-10.55480003)/5.649680138;
+	outputs[6] = (inputs[6]-58.62670135)/19.5333004;
+	outputs[7] = (inputs[7]-15.70059967)/8.799559593;
+	outputs[8] = (inputs[8]-6.37594986)/3.491400003;
+	outputs[9] = (inputs[9]-4.002409935)/2.082989931;
+	outputs[10] = (inputs[10]-54.4776001)/19.5258007;
+	outputs[11] = (inputs[11]-24.53549957)/11.86229992;
+	outputs[12] = (inputs[12]-32.79840088)/14.54819965;
+	outputs[13] = (inputs[13]-24.17060089)/10.29259968;
+	outputs[14] = (inputs[14]-3.113509893)/2.05302;
+	outputs[15] = (inputs[15]-1.076429963)/3.717200041;
+	outputs[16] = (inputs[16]-15.34659958)/8.135100365;
+	outputs[17] = (inputs[17]-21.96769905)/8.94081974;
+	outputs[18] = (inputs[18]-9.000029564)/19.94210052;
+	outputs[19] = (inputs[19]-1017.309998)/19.97850037;
+	outputs[20] = (inputs[20]-10.5539999)/5.63767004;
+	outputs[21] = (inputs[21]-58.61009979)/19.52330017;
 
-  var scaled_PRECIPITATIONS_lag_1 = (PRECIPITATIONS_lag_1-1.074939966)/3.714220047;
-  var scaled_TAVG_lag_1 = (TAVG_lag_1-15.34309959)/8.136810303;
-  var scaled_TMAX_lag_1 = (TMAX_lag_1-21.96590042)/8.941390038;
-  var scaled_TMIN_lag_1 = (TMIN_lag_1-8.650710106)/6.915160179;
-  var scaled_PRESSURE_lag_1 = (PRESSURE_lag_1-1017.659973)/7.241010189;
-  var scaled_WINDSPEED_lag_1 = (WINDSPEED_lag_1-10.52610016)/5.435560226;
-  var scaled_HUMIDITY_lag_1 = (HUMIDITY_lag_1-58.64630127)/19.50839996;
-  var scaled_DAY_lag_0 = (DAY_lag_0-15.70559978)/8.796839714;
-  var scaled_MONTH_lag_0 = (MONTH_lag_0-6.37677002)/3.491719961;
-  var scaled_WEEKDAY_lag_0 = (WEEKDAY_lag_0-3.991379976)/1.996790051;
-  var scaled_PM25_lag_0 = (PM25_lag_0-54.49160004)/19.51469994;
-  var scaled_PM10_lag_0 = (PM10_lag_0-24.5359993)/11.86429977;
-  var scaled_O3_lag_0 = (O3_lag_0-32.80110168)/14.55000019;
-  var scaled_NO2_lag_0 = (NO2_lag_0-24.17860031)/10.28530025;
-  var scaled_SO2_lag_0 = (SO2_lag_0-3.112720013)/2.052930117;
-  var scaled_PRECIPITATIONS_lag_0 = (PRECIPITATIONS_lag_0-1.073040009)/3.713360071;
-  var scaled_TAVG_lag_0 = (TAVG_lag_0-15.34749985)/8.136360168;
-  var scaled_TMAX_lag_0 = (TMAX_lag_0-21.9720993)/8.939259529;
-  var scaled_TMIN_lag_0 = (TMIN_lag_0-8.652810097)/6.915589809;
-  var scaled_PRESSURE_lag_0 = (PRESSURE_lag_0-1017.659973)/7.242730141;
-  var scaled_WINDSPEED_lag_0 = (WINDSPEED_lag_0-10.52620029)/5.435550213;
-  var scaled_HUMIDITY_lag_0 = (HUMIDITY_lag_0-58.62919998)/19.4993;
+	return outputs;
+}
 
-  //console.log(scaled_PRECIPITATIONS_lag_1, scaled_TAVG_lag_1, scaled_TMAX_lag_1, scaled_TMIN_lag_1, scaled_PRESSURE_lag_1);
-  //console.log(scaled_WINDSPEED_lag_1, scaled_HUMIDITY_lag_1, scaled_DAY_lag_0, scaled_MONTH_lag_0);
-  //console.log(scaled_WEEKDAY_lag_0, scaled_PM25_lag_0, scaled_PM10_lag_0, scaled_O3_lag_0,scaled_NO2_lag_0);
-  //console.log(scaled_SO2_lag_0, scaled_PRECIPITATIONS_lag_0, scaled_TAVG_lag_0, scaled_TMAX_lag_0);
-  //console.log( scaled_TMIN_lag_0, scaled_PRESSURE_lag_0, scaled_WINDSPEED_lag_0, scaled_HUMIDITY_lag_0);
+function perceptronLayer1(inputs){
+  var combinations=[];
+  var activations=[];
 
-  /*var perceptron_layer_1_output_0 = Math.tanh( 0.748729 + (scaled_PRECIPITATIONS_lag_1*-0.0266187) + (scaled_TAVG_lag_1*0.546072) + (scaled_TMAX_lag_1*-0.534654) + (scaled_TMIN_lag_1*-0.281487) + (scaled_PRESSURE_lag_1*0.0988471) + (scaled_WINDSPEED_lag_1*-0.0462336) + (scaled_HUMIDITY_lag_1*0.0831667) + (scaled_DAY_lag_0*0.0598321) + (scaled_MONTH_lag_0*0.123732) + (scaled_WEEKDAY_lag_0*0.053093) + (scaled_PM25_lag_0*-0.326849) + (scaled_PM10_lag_0*0.199533) + (scaled_O3_lag_0*-0.183352) + (scaled_NO2_lag_0*0.0293667) + (scaled_SO2_lag_0*0.366551) + (scaled_PRECIPITATIONS_lag_0*-0.0246935) + (scaled_TAVG_lag_0*0.446503) + (scaled_TMAX_lag_0*-0.648738) + (scaled_TMIN_lag_0*-0.184787) + (scaled_PRESSURE_lag_0*-0.0422924) + (scaled_WINDSPEED_lag_0*-0.193681) + (scaled_HUMIDITY_lag_0*-0.0298389) );
-  var perceptron_layer_1_output_1 = Math.tanh( 0.422928 + (scaled_PRECIPITATIONS_lag_1*0.00781069) + (scaled_TAVG_lag_1*0.560394) + (scaled_TMAX_lag_1*-0.275308) + (scaled_TMIN_lag_1*-0.152949) + (scaled_PRESSURE_lag_1*0.0224417) + (scaled_WINDSPEED_lag_1*0.010371) + (scaled_HUMIDITY_lag_1*0.0509056) + (scaled_DAY_lag_0*-0.0750207) + (scaled_MONTH_lag_0*-0.0418926) + (scaled_WEEKDAY_lag_0*-0.00177951) + (scaled_PM25_lag_0*-0.10242) + (scaled_PM10_lag_0*-0.159697) + (scaled_O3_lag_0*0.318706) + (scaled_NO2_lag_0*0.115512) + (scaled_SO2_lag_0*0.0457017) + (scaled_PRECIPITATIONS_lag_0*0.00256751) + (scaled_TAVG_lag_0*0.207437) + (scaled_TMAX_lag_0*-0.107807) + (scaled_TMIN_lag_0*-0.140817) + (scaled_PRESSURE_lag_0*0.0263342) + (scaled_WINDSPEED_lag_0*-0.0216186) + (scaled_HUMIDITY_lag_0*-0.0210207) );
-  var perceptron_layer_1_output_2 = Math.tanh( 0.210519 + (scaled_PRECIPITATIONS_lag_1*-0.0134152) + (scaled_TAVG_lag_1*-0.396918) + (scaled_TMAX_lag_1*0.248167) + (scaled_TMIN_lag_1*0.23199) + (scaled_PRESSURE_lag_1*0.0300114) + (scaled_WINDSPEED_lag_1*-0.031099) + (scaled_HUMIDITY_lag_1*-0.0588599) + (scaled_DAY_lag_0*-0.00309225) + (scaled_MONTH_lag_0*-0.209103) + (scaled_WEEKDAY_lag_0*0.114991) + (scaled_PM25_lag_0*-0.245431) + (scaled_PM10_lag_0*0.350996) + (scaled_O3_lag_0*-0.383681) + (scaled_NO2_lag_0*-0.395128) + (scaled_SO2_lag_0*0.249171) + (scaled_PRECIPITATIONS_lag_0*-0.0211148) + (scaled_TAVG_lag_0*-0.20601) + (scaled_TMAX_lag_0*-0.0757152) + (scaled_TMIN_lag_0*0.318761) + (scaled_PRESSURE_lag_0*0.0339537) + (scaled_WINDSPEED_lag_0*-0.0527031) + (scaled_HUMIDITY_lag_0*-0.0178776) );
-  var perceptron_layer_1_output_3 = Math.tanh( -1.08828 + (scaled_PRECIPITATIONS_lag_1*-0.624464) + (scaled_TAVG_lag_1*-0.915644) + (scaled_TMAX_lag_1*0.322456) + (scaled_TMIN_lag_1*-0.708638) + (scaled_PRESSURE_lag_1*-0.663222) + (scaled_WINDSPEED_lag_1*-0.0128406) + (scaled_HUMIDITY_lag_1*-0.138655) + (scaled_DAY_lag_0*-0.366684) + (scaled_MONTH_lag_0*0.42304) + (scaled_WEEKDAY_lag_0*-0.174586) + (scaled_PM25_lag_0*1.29139) + (scaled_PM10_lag_0*-0.278742) + (scaled_O3_lag_0*0.755765) + (scaled_NO2_lag_0*0.113535) + (scaled_SO2_lag_0*0.44887) + (scaled_PRECIPITATIONS_lag_0*-2.6867) + (scaled_TAVG_lag_0*0.0952437) + (scaled_TMAX_lag_0*0.756211) + (scaled_TMIN_lag_0*-0.618249) + (scaled_PRESSURE_lag_0*0.0976544) + (scaled_WINDSPEED_lag_0*0.236902) + (scaled_HUMIDITY_lag_0*-0.112758) );
-  var perceptron_layer_1_output_4 = Math.tanh( -0.225697 + (scaled_PRECIPITATIONS_lag_1*0.0183002) + (scaled_TAVG_lag_1*-0.199975) + (scaled_TMAX_lag_1*0.15097) + (scaled_TMIN_lag_1*0.0128636) + (scaled_PRESSURE_lag_1*-0.0949914) + (scaled_WINDSPEED_lag_1*0.0357681) + (scaled_HUMIDITY_lag_1*-0.0208924) + (scaled_DAY_lag_0*-0.0101172) + (scaled_MONTH_lag_0*-0.146686) + (scaled_WEEKDAY_lag_0*0.0217939) + (scaled_PM25_lag_0*0.0404426) + (scaled_PM10_lag_0*-0.0186956) + (scaled_O3_lag_0*0.354251) + (scaled_NO2_lag_0*-0.185823) + (scaled_SO2_lag_0*0.38382) + (scaled_PRECIPITATIONS_lag_0*0.0249576) + (scaled_TAVG_lag_0*0.529437) + (scaled_TMAX_lag_0*-0.0414755) + (scaled_TMIN_lag_0*-0.164664) + (scaled_PRESSURE_lag_0*0.0441035) + (scaled_WINDSPEED_lag_0*0.0323441) + (scaled_HUMIDITY_lag_0*-0.0223405) );
-  var perceptron_layer_1_output_5 = Math.tanh( -0.341546 + (scaled_PRECIPITATIONS_lag_1*0.00773454) + (scaled_TAVG_lag_1*0.767167) + (scaled_TMAX_lag_1*-0.165092) + (scaled_TMIN_lag_1*-0.197953) + (scaled_PRESSURE_lag_1*-0.0126345) + (scaled_WINDSPEED_lag_1*0.00940837) + (scaled_HUMIDITY_lag_1*-0.0148063) + (scaled_DAY_lag_0*-0.0343222) + (scaled_MONTH_lag_0*-0.0984154) + (scaled_WEEKDAY_lag_0*-0.0999983) + (scaled_PM25_lag_0*-0.0906683) + (scaled_PM10_lag_0*-0.229746) + (scaled_O3_lag_0*0.0283444) + (scaled_NO2_lag_0*0.214492) + (scaled_SO2_lag_0*0.477662) + (scaled_PRECIPITATIONS_lag_0*1.42723e-05) + (scaled_TAVG_lag_0*-0.0234358) + (scaled_TMAX_lag_0*-0.0913749) + (scaled_TMIN_lag_0*0.0390777) + (scaled_PRESSURE_lag_0*0.0672403) + (scaled_WINDSPEED_lag_0*0.00232897) + (scaled_HUMIDITY_lag_0*0.0182657) );
-  var perceptron_layer_1_output_6 = Math.tanh( -0.231893 + (scaled_PRECIPITATIONS_lag_1*-0.0295497) + (scaled_TAVG_lag_1*0.450918) + (scaled_TMAX_lag_1*-0.436988) + (scaled_TMIN_lag_1*-0.344781) + (scaled_PRESSURE_lag_1*0.198719) + (scaled_WINDSPEED_lag_1*0.0637861) + (scaled_HUMIDITY_lag_1*0.119392) + (scaled_DAY_lag_0*-0.0822505) + (scaled_MONTH_lag_0*0.269136) + (scaled_WEEKDAY_lag_0*-0.130456) + (scaled_PM25_lag_0*0.284251) + (scaled_PM10_lag_0*-0.288229) + (scaled_O3_lag_0*0.0552019) + (scaled_NO2_lag_0*-0.221381) + (scaled_SO2_lag_0*0.190319) + (scaled_PRECIPITATIONS_lag_0*-0.00234716) + (scaled_TAVG_lag_0*0.655606) + (scaled_TMAX_lag_0*-0.414451) + (scaled_TMIN_lag_0*-0.360362) + (scaled_PRESSURE_lag_0*-0.140593) + (scaled_WINDSPEED_lag_0*0.10087) + (scaled_HUMIDITY_lag_0*0.0944479) );
-  var perceptron_layer_1_output_7 = Math.tanh( 0.000245101 + (scaled_PRECIPITATIONS_lag_1*-0.00258948) + (scaled_TAVG_lag_1*-0.483645) + (scaled_TMAX_lag_1*0.274426) + (scaled_TMIN_lag_1*0.0704776) + (scaled_PRESSURE_lag_1*-0.0264077) + (scaled_WINDSPEED_lag_1*0.00436645) + (scaled_HUMIDITY_lag_1*-0.0224051) + (scaled_DAY_lag_0*0.0257676) + (scaled_MONTH_lag_0*0.0140236) + (scaled_WEEKDAY_lag_0*0.0245347) + (scaled_PM25_lag_0*0.108726) + (scaled_PM10_lag_0*-0.270966) + (scaled_O3_lag_0*-0.208041) + (scaled_NO2_lag_0*-0.145577) + (scaled_SO2_lag_0*-0.0326737) + (scaled_PRECIPITATIONS_lag_0*0.00839847) + (scaled_TAVG_lag_0*-0.0324367) + (scaled_TMAX_lag_0*0.113047) + (scaled_TMIN_lag_0*0.0451814) + (scaled_PRESSURE_lag_0*-0.0352984) + (scaled_WINDSPEED_lag_0*0.0368902) + (scaled_HUMIDITY_lag_0*0.00646428) );
-  var perceptron_layer_1_output_8 = Math.tanh( -2.16577 + (scaled_PRECIPITATIONS_lag_1*0.405555) + (scaled_TAVG_lag_1*0.230976) + (scaled_TMAX_lag_1*0.074005) + (scaled_TMIN_lag_1*-0.800558) + (scaled_PRESSURE_lag_1*-0.652733) + (scaled_WINDSPEED_lag_1*0.226836) + (scaled_HUMIDITY_lag_1*0.40582) + (scaled_DAY_lag_0*2.45069) + (scaled_MONTH_lag_0*3.62215) + (scaled_WEEKDAY_lag_0*0.0578529) + (scaled_PM25_lag_0*-0.56407) + (scaled_PM10_lag_0*-0.465572) + (scaled_O3_lag_0*0.635116) + (scaled_NO2_lag_0*-0.061197) + (scaled_SO2_lag_0*0.400092) + (scaled_PRECIPITATIONS_lag_0*0.809057) + (scaled_TAVG_lag_0*0.295951) + (scaled_TMAX_lag_0*0.782559) + (scaled_TMIN_lag_0*-0.255066) + (scaled_PRESSURE_lag_0*0.613042) + (scaled_WINDSPEED_lag_0*-0.48323) + (scaled_HUMIDITY_lag_0*-0.0842927) );
-  var perceptron_layer_1_output_9 = Math.tanh( -0.887206 + (scaled_PRECIPITATIONS_lag_1*0.00966743) + (scaled_TAVG_lag_1*-0.76238) + (scaled_TMAX_lag_1*0.267776) + (scaled_TMIN_lag_1*0.261702) + (scaled_PRESSURE_lag_1*-0.0721652) + (scaled_WINDSPEED_lag_1*-0.0237281) + (scaled_HUMIDITY_lag_1*0.0095891) + (scaled_DAY_lag_0*-0.0131208) + (scaled_MONTH_lag_0*0.0118307) + (scaled_WEEKDAY_lag_0*0.283062) + (scaled_PM25_lag_0*0.0398136) + (scaled_PM10_lag_0*0.0255655) + (scaled_O3_lag_0*0.0438906) + (scaled_NO2_lag_0*0.0545683) + (scaled_SO2_lag_0*0.122534) + (scaled_PRECIPITATIONS_lag_0*0.0137832) + (scaled_TAVG_lag_0*-0.0142049) + (scaled_TMAX_lag_0*0.0144254) + (scaled_TMIN_lag_0*0.0456167) + (scaled_PRESSURE_lag_0*0.0912792) + (scaled_WINDSPEED_lag_0*0.0299137) + (scaled_HUMIDITY_lag_0*0.0520957) );
-*/
-  var perceptron_layer_1_combinations_0 = -0.346637 -0.0441849*scaled_PRECIPITATIONS_lag_1 +1.05292*scaled_TAVG_lag_1 -0.831433*scaled_TMAX_lag_1 -0.626594*scaled_TMIN_lag_1 +0.107856*scaled_PRESSURE_lag_1 +0.0125538*scaled_WINDSPEED_lag_1 -0.103813*scaled_HUMIDITY_lag_1 +0.154938*scaled_DAY_lag_0 +1.24721*scaled_MONTH_lag_0 -0.143869*scaled_WEEKDAY_lag_0 -0.177797*scaled_PM25_lag_0 -0.0521652*scaled_PM10_lag_0 +0.145478*scaled_O3_lag_0 -0.48542*scaled_NO2_lag_0 +1.18975*scaled_SO2_lag_0 -0.0156739*scaled_PRECIPITATIONS_lag_0 +1.21353*scaled_TAVG_lag_0 -1.05205*scaled_TMAX_lag_0 -0.273978*scaled_TMIN_lag_0 -0.241094*scaled_PRESSURE_lag_0 -0.169633*scaled_WINDSPEED_lag_0 +0.0527748*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_1 = 0.0425986 +0.00343028*scaled_PRECIPITATIONS_lag_1 -0.196673*scaled_TAVG_lag_1 +0.129786*scaled_TMAX_lag_1 -0.00632853*scaled_TMIN_lag_1 -0.0749024*scaled_PRESSURE_lag_1 +0.00806534*scaled_WINDSPEED_lag_1 -0.00650671*scaled_HUMIDITY_lag_1 +0.0632948*scaled_DAY_lag_0 +0.0111115*scaled_MONTH_lag_0 +0.0336547*scaled_WEEKDAY_lag_0 +0.05322*scaled_PM25_lag_0 +0.0628366*scaled_PM10_lag_0 +0.361727*scaled_O3_lag_0 -0.33123*scaled_NO2_lag_0 +0.29585*scaled_SO2_lag_0 +0.00427932*scaled_PRECIPITATIONS_lag_0 +0.373282*scaled_TAVG_lag_0 -0.0189687*scaled_TMAX_lag_0 -0.118783*scaled_TMIN_lag_0 +0.0466251*scaled_PRESSURE_lag_0 +0.0718744*scaled_WINDSPEED_lag_0 -0.0225012*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_2 = 0.246285 -0.0365745*scaled_PRECIPITATIONS_lag_1 +0.284916*scaled_TAVG_lag_1 -0.342186*scaled_TMAX_lag_1 -0.24604*scaled_TMIN_lag_1 -0.142189*scaled_PRESSURE_lag_1 -0.0356778*scaled_WINDSPEED_lag_1 -0.00110732*scaled_HUMIDITY_lag_1 +0.295999*scaled_DAY_lag_0 +0.286897*scaled_MONTH_lag_0 +0.0654988*scaled_WEEKDAY_lag_0 +0.0797368*scaled_PM25_lag_0 +0.564487*scaled_PM10_lag_0 +0.12958*scaled_O3_lag_0 -0.11137*scaled_NO2_lag_0 -0.474527*scaled_SO2_lag_0 -0.00976152*scaled_PRECIPITATIONS_lag_0 +0.332489*scaled_TAVG_lag_0 -0.111639*scaled_TMAX_lag_0 -0.356498*scaled_TMIN_lag_0 -0.0182123*scaled_PRESSURE_lag_0 +0.0908593*scaled_WINDSPEED_lag_0 +0.111337*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_3 = 0.634233 +0.0232833*scaled_PRECIPITATIONS_lag_1 -0.817331*scaled_TAVG_lag_1 +0.253038*scaled_TMAX_lag_1 +0.282561*scaled_TMIN_lag_1 -0.130065*scaled_PRESSURE_lag_1 -0.0255798*scaled_WINDSPEED_lag_1 -0.0280793*scaled_HUMIDITY_lag_1 +0.0399491*scaled_DAY_lag_0 -0.131321*scaled_MONTH_lag_0 +0.373385*scaled_WEEKDAY_lag_0 +0.0389286*scaled_PM25_lag_0 -0.133932*scaled_PM10_lag_0 +0.127419*scaled_O3_lag_0 +0.00765754*scaled_NO2_lag_0 +0.0496958*scaled_SO2_lag_0 +0.0198496*scaled_PRECIPITATIONS_lag_0 -0.104173*scaled_TAVG_lag_0 +0.360696*scaled_TMAX_lag_0 +0.0647542*scaled_TMIN_lag_0 +0.0537974*scaled_PRESSURE_lag_0 +0.0104921*scaled_WINDSPEED_lag_0 -0.0650983*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_4 = 0.0103413 +0.0186729*scaled_PRECIPITATIONS_lag_1 -0.237878*scaled_TAVG_lag_1 +0.102495*scaled_TMAX_lag_1 +0.0696742*scaled_TMIN_lag_1 -0.103967*scaled_PRESSURE_lag_1 -0.0278385*scaled_WINDSPEED_lag_1 -0.0201828*scaled_HUMIDITY_lag_1 +0.0490018*scaled_DAY_lag_0 +0.0173524*scaled_MONTH_lag_0 +0.143964*scaled_WEEKDAY_lag_0 +0.0394173*scaled_PM25_lag_0 +0.10306*scaled_PM10_lag_0 +0.158129*scaled_O3_lag_0 +0.118696*scaled_NO2_lag_0 +0.112769*scaled_SO2_lag_0 +0.00734638*scaled_PRECIPITATIONS_lag_0 -0.17127*scaled_TAVG_lag_0 +0.22555*scaled_TMAX_lag_0 +0.0660015*scaled_TMIN_lag_0 +0.0764167*scaled_PRESSURE_lag_0 +0.00563322*scaled_WINDSPEED_lag_0 -0.0220356*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_5 = 4.70904 +0.0553398*scaled_PRECIPITATIONS_lag_1 +0.3469*scaled_TAVG_lag_1 -0.493825*scaled_TMAX_lag_1 +0.939083*scaled_TMIN_lag_1 -0.177738*scaled_PRESSURE_lag_1 -0.182096*scaled_WINDSPEED_lag_1 -0.674914*scaled_HUMIDITY_lag_1 +0.0950511*scaled_DAY_lag_0 -0.731387*scaled_MONTH_lag_0 -0.221718*scaled_WEEKDAY_lag_0 +0.202811*scaled_PM25_lag_0 +0.207156*scaled_PM10_lag_0 -0.0479088*scaled_O3_lag_0 -0.551825*scaled_NO2_lag_0 -0.690397*scaled_SO2_lag_0 +0.315262*scaled_PRECIPITATIONS_lag_0 +1.77664*scaled_TAVG_lag_0 +0.297884*scaled_TMAX_lag_0 -0.0896825*scaled_TMIN_lag_0 -0.565442*scaled_PRESSURE_lag_0 -0.0895788*scaled_WINDSPEED_lag_0 -0.723777*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_6 = -0.373749 +0.00642064*scaled_PRECIPITATIONS_lag_1 +1.89088*scaled_TAVG_lag_1 -1.01489*scaled_TMAX_lag_1 -1.03759*scaled_TMIN_lag_1 -0.104676*scaled_PRESSURE_lag_1 +0.0461583*scaled_WINDSPEED_lag_1 +0.0546048*scaled_HUMIDITY_lag_1 +0.420407*scaled_DAY_lag_0 +0.849822*scaled_MONTH_lag_0 -0.183607*scaled_WEEKDAY_lag_0 -0.0959196*scaled_PM25_lag_0 -0.177751*scaled_PM10_lag_0 +0.257162*scaled_O3_lag_0 -0.190973*scaled_NO2_lag_0 +0.586336*scaled_SO2_lag_0 +0.0132492*scaled_PRECIPITATIONS_lag_0 +1.14248*scaled_TAVG_lag_0 -0.855701*scaled_TMAX_lag_0 -0.486636*scaled_TMIN_lag_0 -0.10482*scaled_PRESSURE_lag_0 -0.0225176*scaled_WINDSPEED_lag_0 +0.0601152*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_7 = 0.00291251 +0.0846519*scaled_PRECIPITATIONS_lag_1 +0.0080739*scaled_TAVG_lag_1 +0.34674*scaled_TMAX_lag_1 -0.0838019*scaled_TMIN_lag_1 -0.038851*scaled_PRESSURE_lag_1 -0.0261845*scaled_WINDSPEED_lag_1 +0.00991936*scaled_HUMIDITY_lag_1 -0.0392795*scaled_DAY_lag_0 +0.180076*scaled_MONTH_lag_0 +0.0282114*scaled_WEEKDAY_lag_0 -0.0582974*scaled_PM25_lag_0 -0.893278*scaled_PM10_lag_0 -0.0243617*scaled_O3_lag_0 +0.542637*scaled_NO2_lag_0 +0.205699*scaled_SO2_lag_0 +0.0309974*scaled_PRECIPITATIONS_lag_0 -0.625391*scaled_TAVG_lag_0 +0.341046*scaled_TMAX_lag_0 +0.214731*scaled_TMIN_lag_0 +0.110719*scaled_PRESSURE_lag_0 -0.114876*scaled_WINDSPEED_lag_0 -0.0760541*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_8 = 0.440711 +0.0203499*scaled_PRECIPITATIONS_lag_1 +0.128834*scaled_TAVG_lag_1 -0.0951416*scaled_TMAX_lag_1 +0.0528857*scaled_TMIN_lag_1 +0.00403846*scaled_PRESSURE_lag_1 -0.0259612*scaled_WINDSPEED_lag_1 -0.0507026*scaled_HUMIDITY_lag_1 -0.0209599*scaled_DAY_lag_0 +0.17338*scaled_MONTH_lag_0 -0.0277537*scaled_WEEKDAY_lag_0 -0.0490982*scaled_PM25_lag_0 -0.00209834*scaled_PM10_lag_0 +0.0199502*scaled_O3_lag_0 +0.160181*scaled_NO2_lag_0 -0.396723*scaled_SO2_lag_0 +0.00162496*scaled_PRECIPITATIONS_lag_0 -0.298693*scaled_TAVG_lag_0 +0.205586*scaled_TMAX_lag_0 +0.0987165*scaled_TMIN_lag_0 -0.0328049*scaled_PRESSURE_lag_0 -0.0877363*scaled_WINDSPEED_lag_0 -0.080501*scaled_HUMIDITY_lag_0;
-	var perceptron_layer_1_combinations_9 = -0.0985322 +0.0284023*scaled_PRECIPITATIONS_lag_1 +0.335518*scaled_TAVG_lag_1 +0.192009*scaled_TMAX_lag_1 -0.535832*scaled_TMIN_lag_1 -0.168389*scaled_PRESSURE_lag_1 -0.393743*scaled_WINDSPEED_lag_1 +0.0210615*scaled_HUMIDITY_lag_1 +0.181233*scaled_DAY_lag_0 +2.11379*scaled_MONTH_lag_0 +0.0140374*scaled_WEEKDAY_lag_0 +0.229176*scaled_PM25_lag_0 +0.245178*scaled_PM10_lag_0 +0.337717*scaled_O3_lag_0 -0.102571*scaled_NO2_lag_0 -0.40904*scaled_SO2_lag_0 -0.0076523*scaled_PRECIPITATIONS_lag_0 -0.494657*scaled_TAVG_lag_0 -0.10198*scaled_TMAX_lag_0 -0.669617*scaled_TMIN_lag_0 +0.475586*scaled_PRESSURE_lag_0 -0.00418163*scaled_WINDSPEED_lag_0 +0.16812*scaled_HUMIDITY_lag_0;
+  combinations[0] = -2.02123 +0.0338929*inputs[0] -0.411994*inputs[1] +0.391274*inputs[2] +0.728711*inputs[3] +0.392377*inputs[4] -0.463761*inputs[5] -0.440257*inputs[6] -0.310097*inputs[7] +0.335254*inputs[8] +0.062457*inputs[9] +0.299843*inputs[10] +0.273871*inputs[11] -0.520249*inputs[12] +0.11948*inputs[13] -0.752178*inputs[14] -0.101714*inputs[15] -0.4688*inputs[16] -0.0788592*inputs[17] -0.617514*inputs[18] -1.1142*inputs[19] -0.0650599*inputs[20] +0.157926*inputs[21];
+	combinations[1] = 0.492875 -9.10331e-05*inputs[0] -0.0324468*inputs[1] -0.101602*inputs[2] -0.412209*inputs[3] +0.179728*inputs[4] +0.0422834*inputs[5] -0.0176361*inputs[6] -0.0120101*inputs[7] +0.270194*inputs[8] +0.207023*inputs[9] +0.0513616*inputs[10] -0.112572*inputs[11] +0.0851651*inputs[12] -0.4249*inputs[13] +0.128098*inputs[14] -0.00352874*inputs[15] +0.707942*inputs[16] -0.185338*inputs[17] -0.472779*inputs[18] -0.154508*inputs[19] -0.0342609*inputs[20] -0.0974361*inputs[21];
+	combinations[2] = 0.430842 -0.754014*inputs[0] +0.648864*inputs[1] +0.674728*inputs[2] -0.449052*inputs[3] +0.734738*inputs[4] -0.0988615*inputs[5] -0.134291*inputs[6] +0.105161*inputs[7] +0.818673*inputs[8] -0.825957*inputs[9] +0.490684*inputs[10] +0.790902*inputs[11] -0.385802*inputs[12] +0.730734*inputs[13] +1.36741*inputs[14] +0.583046*inputs[15] +0.772462*inputs[16] -0.241621*inputs[17] -0.23732*inputs[18] -1.04073*inputs[19] +0.0247589*inputs[20] +0.0469635*inputs[21];
+	combinations[3] = -0.848953 +0.179186*inputs[0] -0.176006*inputs[1] +0.162784*inputs[2] -0.234277*inputs[3] +0.512174*inputs[4] -0.742885*inputs[5] -0.132084*inputs[6] -0.193059*inputs[7] +2.2561*inputs[8] +0.094073*inputs[9] +0.177604*inputs[10] +0.0359634*inputs[11] -0.58049*inputs[12] +0.239862*inputs[13] -0.4695*inputs[14] +0.0622808*inputs[15] -1.15508*inputs[16] +0.276045*inputs[17] -0.559359*inputs[18] +0.599823*inputs[19] -0.21457*inputs[20] +0.0127678*inputs[21];
+	combinations[4] = 0.415118 +0.00956743*inputs[0] -0.137719*inputs[1] -0.0792056*inputs[2] +0.273453*inputs[3] -0.0460255*inputs[4] -0.0314126*inputs[5] -0.00260653*inputs[6] -0.0122176*inputs[7] +0.0547448*inputs[8] +0.0420766*inputs[9] +0.00591373*inputs[10] +0.085763*inputs[11] -0.124683*inputs[12] +0.118485*inputs[13] -0.682055*inputs[14] -0.0138053*inputs[15] -0.363715*inputs[16] +0.198334*inputs[17] +0.184153*inputs[18] +0.0794382*inputs[19] -0.0206218*inputs[20] -0.0380483*inputs[21];
+	combinations[5] = -0.30851 +0.060174*inputs[0] -0.736821*inputs[1] +0.0381199*inputs[2] +0.775626*inputs[3] +0.0406248*inputs[4] +0.0151941*inputs[5] -0.0726788*inputs[6] +0.10613*inputs[7] +0.0435059*inputs[8] +0.918917*inputs[9] -0.000680052*inputs[10] +0.262926*inputs[11] +0.960905*inputs[12] +0.895816*inputs[13] +0.119478*inputs[14] -0.656272*inputs[15] +0.228284*inputs[16] +0.155673*inputs[17] +0.369841*inputs[18] +0.252548*inputs[19] -0.272702*inputs[20] -0.17676*inputs[21];
+	combinations[6] = 1.33097 +0.0971543*inputs[0] -0.259203*inputs[1] -0.0335226*inputs[2] -0.250438*inputs[3] -0.254782*inputs[4] -0.106326*inputs[5] +0.193652*inputs[6] -0.00684006*inputs[7] +0.0741473*inputs[8] +0.0590215*inputs[9] -0.353014*inputs[10] +0.214223*inputs[11] -0.802816*inputs[12] +0.0256968*inputs[13] +0.0971361*inputs[14] -0.111882*inputs[15] +0.847823*inputs[16] -0.902162*inputs[17] -0.95025*inputs[18] +0.174837*inputs[19] -0.156633*inputs[20] -0.0966519*inputs[21];
+	combinations[7] = -1.53168 -0.319955*inputs[0] +0.0280642*inputs[1] -1.11567*inputs[2] -0.705694*inputs[3] +0.0472933*inputs[4] -0.0795358*inputs[5] +0.187385*inputs[6] +0.117595*inputs[7] +0.368673*inputs[8] +0.341458*inputs[9] +0.860947*inputs[10] -0.263197*inputs[11] -0.845723*inputs[12] -0.502984*inputs[13] -0.197295*inputs[14] +0.0679869*inputs[15] -0.655264*inputs[16] -0.943308*inputs[17] +0.734939*inputs[18] -0.191049*inputs[19] +0.0646869*inputs[20] +0.402303*inputs[21];
+	combinations[8] = -0.562577 +0.0140289*inputs[0] +0.407051*inputs[1] -0.339589*inputs[2] -0.518093*inputs[3] -0.21391*inputs[4] +0.0178015*inputs[5] +0.0804048*inputs[6] +0.0560022*inputs[7] +0.0172874*inputs[8] +0.00355931*inputs[9] +0.0707851*inputs[10] +0.744401*inputs[11] -0.00185703*inputs[12] -0.270686*inputs[13] +0.0796156*inputs[14] -0.337567*inputs[15] +0.380639*inputs[16] -0.375547*inputs[17] -0.265739*inputs[18] +0.241685*inputs[19] +0.0274216*inputs[20] -0.00690999*inputs[21];
+	combinations[9] = 2.26874 -0.000788276*inputs[0] +0.444053*inputs[1] +0.404976*inputs[2] -0.0418703*inputs[3] -0.539812*inputs[4] -0.0878698*inputs[5] -0.0999681*inputs[6] +0.44595*inputs[7] -0.0244304*inputs[8] -0.469572*inputs[9] -0.0194883*inputs[10] -0.119941*inputs[11] -0.0625266*inputs[12] -0.452739*inputs[13] -0.418219*inputs[14] -0.00636572*inputs[15] +0.306131*inputs[16] +0.250097*inputs[17] +0.202051*inputs[18] -0.900295*inputs[19] -0.156608*inputs[20] -0.332999*inputs[21];
 
-  /*console.log(perceptron_layer_1_combinations_0);
-  console.log(perceptron_layer_1_combinations_1);
-  console.log(perceptron_layer_1_combinations_2);
-  console.log(perceptron_layer_1_combinations_3);
-  console.log(perceptron_layer_1_combinations_4);
-  console.log(perceptron_layer_1_combinations_5);
-  console.log(perceptron_layer_1_combinations_6);
-  console.log(perceptron_layer_1_combinations_7);
-  console.log(perceptron_layer_1_combinations_8);
-  console.log(perceptron_layer_1_combinations_9);*/
+  activations[0] = Math.tanh(combinations[0]);
+	activations[1] = Math.tanh(combinations[1]);
+	activations[2] = Math.tanh(combinations[2]);
+	activations[3] = Math.tanh(combinations[3]);
+	activations[4] = Math.tanh(combinations[4]);
+	activations[5] = Math.tanh(combinations[5]);
+	activations[6] = Math.tanh(combinations[6]);
+	activations[7] = Math.tanh(combinations[7]);
+	activations[8] = Math.tanh(combinations[8]);
+	activations[9] = Math.tanh(combinations[9]);
 
-  var perceptron_layer_1_output_0=Math.tanh(perceptron_layer_1_combinations_0);
-  var perceptron_layer_1_output_1=Math.tanh(perceptron_layer_1_combinations_1);
-  var perceptron_layer_1_output_2=Math.tanh(perceptron_layer_1_combinations_2);
-  var perceptron_layer_1_output_3=Math.tanh(perceptron_layer_1_combinations_3);
-  var perceptron_layer_1_output_4=Math.tanh(perceptron_layer_1_combinations_4);
-  var perceptron_layer_1_output_5=Math.tanh(perceptron_layer_1_combinations_5);
-  var perceptron_layer_1_output_6=Math.tanh(perceptron_layer_1_combinations_6);
-  var perceptron_layer_1_output_7=Math.tanh(perceptron_layer_1_combinations_7);
-  var perceptron_layer_1_output_8=Math.tanh(perceptron_layer_1_combinations_8);
-  var perceptron_layer_1_output_9=Math.tanh(perceptron_layer_1_combinations_9);
+  return activations;
+}
 
-  /*console.log(perceptron_layer_1_output_0);
-  console.log(perceptron_layer_1_output_1);
-  console.log(perceptron_layer_1_output_2);
-  console.log(perceptron_layer_1_output_3);
-  console.log(perceptron_layer_1_output_4);
-  console.log(perceptron_layer_1_output_5);
-  console.log(perceptron_layer_1_output_6);
-  console.log(perceptron_layer_1_output_7);
-  console.log(perceptron_layer_1_output_8);
-  console.log(perceptron_layer_1_output_9)*/
+function perceptronLayer2(inputs){
+  var outputs=[];
 
+  outputs[0] = 0.96769 +0.279869*inputs[0] -0.412671*inputs[1] +0.232407*inputs[2] +0.0977992*inputs[3] +0.116731*inputs[4] +0.213226*inputs[5] -0.151479*inputs[6] -0.0232102*inputs[7] +1.12721*inputs[8] -0.163324*inputs[9];
+	outputs[1] = 0.596161 -0.154287*inputs[0] -0.293931*inputs[1] +0.134578*inputs[2] +0.186548*inputs[3] +0.162356*inputs[4] +0.208505*inputs[5] -0.308397*inputs[6] -0.213127*inputs[7] +0.956293*inputs[8] -0.187132*inputs[9];
+	outputs[2] = -0.103605 -0.00466895*inputs[0] +0.242357*inputs[1] -0.0261949*inputs[2] -0.254908*inputs[3] +0.0445601*inputs[4] +0.132919*inputs[5] -0.553429*inputs[6] -0.214923*inputs[7] -0.122888*inputs[8] +0.263453*inputs[9];
+	outputs[3] = 0.633331 -0.332578*inputs[0] -1.03081*inputs[1] +0.00279285*inputs[2] +0.510729*inputs[3] -0.186513*inputs[4] +0.320639*inputs[5] -0.107675*inputs[6] -0.134981*inputs[7] -0.200663*inputs[8] -0.28927*inputs[9];
+	outputs[4] = 0.6417 -0.213903*inputs[0] -0.0908153*inputs[1] -0.0232336*inputs[2] +0.20852*inputs[3] -1.50341*inputs[4] +0.039286*inputs[5] +0.282915*inputs[6] +0.0275298*inputs[7] +0.229981*inputs[8] -0.357046*inputs[9];
+	outputs[5] = 0.751347 -0.0927236*inputs[0] -0.362946*inputs[1] +0.096533*inputs[2] +0.28526*inputs[3] +0.00863145*inputs[4] +0.16444*inputs[5] -0.350254*inputs[6] -0.0795655*inputs[7] +0.772175*inputs[8] -0.282741*inputs[9];
+	outputs[6] = 0.484372 -0.319657*inputs[0] -0.0920606*inputs[1] +0.00517271*inputs[2] +0.325871*inputs[3] +0.0514382*inputs[4] +0.149318*inputs[5] -0.499416*inputs[6] -0.189042*inputs[7] +0.596785*inputs[8] -0.290697*inputs[9];
+	outputs[7] = -0.0441518 +0.129371*inputs[0] +0.2543*inputs[1] +0.0485011*inputs[2] -0.328509*inputs[3] +0.0992037*inputs[4] +0.0596742*inputs[5] -0.467206*inputs[6] -0.250818*inputs[7] -0.0614275*inputs[8] +0.210164*inputs[9];
+	outputs[8] = 0.56031 -0.438342*inputs[0] -0.523209*inputs[1] -0.152455*inputs[2] +0.594758*inputs[3] -0.181362*inputs[4] +0.172872*inputs[5] -0.164124*inputs[6] -0.121192*inputs[7] -0.109463*inputs[8] -0.379682*inputs[9];
+	outputs[9] = 0.648804 -0.236839*inputs[0] +0.0751441*inputs[1] -0.0759383*inputs[2] +0.244813*inputs[3] -1.43516*inputs[4] -0.0470345*inputs[5] +0.212339*inputs[6] +0.0424632*inputs[7] +0.244532*inputs[8] -0.384429*inputs[9];
+	outputs[10] = 0.612824 -0.275081*inputs[0] -0.14517*inputs[1] -0.0338063*inputs[2] +0.393134*inputs[3] -0.0590654*inputs[4] +0.101806*inputs[5] -0.467208*inputs[6] -0.0761629*inputs[7] +0.552657*inputs[8] -0.354647*inputs[9];
+	outputs[11] = 0.300705 -0.386761*inputs[0] +0.219657*inputs[1] -0.0233652*inputs[2] +0.306692*inputs[3] +0.109972*inputs[4] +0.139236*inputs[5] -0.466633*inputs[6] -0.140169*inputs[7] +0.53567*inputs[8] -0.341696*inputs[9];
+	outputs[12] = -0.101229 +0.0883752*inputs[0] +0.197703*inputs[1] +0.0505425*inputs[2] -0.344527*inputs[3] +0.0823077*inputs[4] +0.0146735*inputs[5] -0.405012*inputs[6] -0.308941*inputs[7] -0.0117186*inputs[8] +0.211708*inputs[9];
+	outputs[13] = 0.424986 -0.373849*inputs[0] -0.0912349*inputs[1] -0.129308*inputs[2] +0.487961*inputs[3] -0.0961299*inputs[4] +0.168859*inputs[5] -0.0787357*inputs[6] -0.00984418*inputs[7] -0.102349*inputs[8] -0.419328*inputs[9];
+	outputs[14] = 0.533097 -0.276577*inputs[0] +0.184958*inputs[1] -0.0516257*inputs[2] +0.220255*inputs[3] -1.34479*inputs[4] -0.0642673*inputs[5] +0.229364*inputs[6] +0.0873744*inputs[7] +0.209736*inputs[8] -0.384628*inputs[9];
+	outputs[15] = 0.462502 -0.354744*inputs[0] +0.0916269*inputs[1] -0.0694819*inputs[2] +0.431599*inputs[3] -0.00667381*inputs[4] +0.0729328*inputs[5] -0.466928*inputs[6] -0.0767889*inputs[7] +0.445009*inputs[8] -0.430915*inputs[9];
+	outputs[16] = 0.196827 -0.487532*inputs[0] +0.406181*inputs[1] -0.0549783*inputs[2] +0.322606*inputs[3] +0.166495*inputs[4] +0.118793*inputs[5] -0.454535*inputs[6] -0.141309*inputs[7] +0.533495*inputs[8] -0.419158*inputs[9];
+	outputs[17] = -0.0682455 +0.101216*inputs[0] +0.113329*inputs[1] +0.0516636*inputs[2] -0.350166*inputs[3] +0.0602067*inputs[4] -0.00650541*inputs[5] -0.41271*inputs[6] -0.317063*inputs[7] +0.0157194*inputs[8] +0.247127*inputs[9];
+	outputs[18] = 0.332371 -0.386734*inputs[0] +0.144965*inputs[1] -0.14192*inputs[2] +0.444395*inputs[3] +0.00710021*inputs[4] +0.220422*inputs[5] -0.0895097*inputs[6] +0.101072*inputs[7] -0.127611*inputs[8] -0.440902*inputs[9];
+	outputs[19] = 0.476077 -0.315775*inputs[0] +0.279661*inputs[1] -0.0539868*inputs[2] +0.220261*inputs[3] -1.27381*inputs[4] -0.0561788*inputs[5] +0.246008*inputs[6] +0.11859*inputs[7] +0.246665*inputs[8] -0.387505*inputs[9];
+	outputs[20] = 0.311197 -0.530131*inputs[0] +0.308562*inputs[1] -0.11921*inputs[2] +0.452457*inputs[3] +0.0433208*inputs[4] +0.0631601*inputs[5] -0.465893*inputs[6] -0.0720334*inputs[7] +0.466857*inputs[8] -0.487175*inputs[9];
+	outputs[21] = 0.125144 -0.709962*inputs[0] +0.275951*inputs[1] -0.0666649*inputs[2] +0.370794*inputs[3] +0.179683*inputs[4] -0.0223315*inputs[5] -0.565036*inputs[6] -0.183021*inputs[7] +0.558563*inputs[8] -0.40082*inputs[9];
+	outputs[22] = -0.135176 +0.0867198*inputs[0] +0.141278*inputs[1] +0.055838*inputs[2] -0.377102*inputs[3] +0.0477032*inputs[4] +0.0736793*inputs[5] -0.368953*inputs[6] -0.258769*inputs[7] -0.00855712*inputs[8] +0.283299*inputs[9];
+	outputs[23] = 0.436387 -0.390277*inputs[0] -0.0266522*inputs[1] -0.100109*inputs[2] +0.501816*inputs[3] -0.0431542*inputs[4] +0.0458818*inputs[5] -0.187641*inputs[6] +0.0334009*inputs[7] -0.122079*inputs[8] -0.42973*inputs[9];
+	outputs[24] = 0.529133 -0.332683*inputs[0] +0.218461*inputs[1] -0.0555196*inputs[2] +0.259335*inputs[3] -1.24656*inputs[4] -0.141074*inputs[5] +0.175652*inputs[6] +0.0896225*inputs[7] +0.257166*inputs[8] -0.390713*inputs[9];
+	outputs[25] = 0.262566 -0.633901*inputs[0] +0.272133*inputs[1] -0.150627*inputs[2] +0.468425*inputs[3] +0.0587128*inputs[4] -0.0475191*inputs[5] -0.481957*inputs[6] -0.128334*inputs[7] +0.512056*inputs[8] -0.493107*inputs[9];
+	outputs[26] = 0.186205 -0.774641*inputs[0] +0.0370339*inputs[1] -0.0393552*inputs[2] +0.440435*inputs[3] +0.111924*inputs[4] -0.199175*inputs[5] -0.663026*inputs[6] -0.238327*inputs[7] +0.581996*inputs[8] -0.333206*inputs[9];
+	outputs[27] = -0.221902 +0.0977886*inputs[0] +0.290483*inputs[1] +0.0801369*inputs[2] -0.435497*inputs[3] +0.128794*inputs[4] +0.112856*inputs[5] -0.292404*inputs[6] -0.230602*inputs[7] -0.00394454*inputs[8] +0.2408*inputs[9];
+	outputs[28] = 0.570096 -0.409022*inputs[0] -0.469899*inputs[1] -0.00377324*inputs[2] +0.569282*inputs[3] -0.10191*inputs[4] -0.206366*inputs[5] -0.292181*inputs[6] -0.0747497*inputs[7] -0.0625529*inputs[8] -0.298836*inputs[9];
+	outputs[29] = 0.589352 -0.252871*inputs[0] +0.105941*inputs[1] +0.00314619*inputs[2] +0.246429*inputs[3] -1.23842*inputs[4] -0.196854*inputs[5] +0.174178*inputs[6] +0.0821726*inputs[7] +0.216*inputs[8] -0.359011*inputs[9];
+	outputs[30] = 0.303663 -0.652729*inputs[0] +0.0780449*inputs[1] -0.122216*inputs[2] +0.535273*inputs[3] -0.00240566*inputs[4] -0.16876*inputs[5] -0.567207*inputs[6] -0.170926*inputs[7] +0.469881*inputs[8] -0.428561*inputs[9];
+	outputs[31] = 0.155161 -0.730179*inputs[0] -0.0397704*inputs[1] -0.000705431*inputs[2] +0.433752*inputs[3] +0.11534*inputs[4] -0.243814*inputs[5] -0.648561*inputs[6] -0.274306*inputs[7] +0.468207*inputs[8] -0.299346*inputs[9];
+	outputs[32] = -0.253668 +0.0553226*inputs[0] +0.27021*inputs[1] +0.10781*inputs[2] -0.472666*inputs[3] +0.160711*inputs[4] +0.136042*inputs[5] -0.268529*inputs[6] -0.209316*inputs[7] +0.0312257*inputs[8] +0.227294*inputs[9];
+	outputs[33] = 0.491955 -0.406924*inputs[0] -0.532375*inputs[1] +0.0343631*inputs[2] +0.528349*inputs[3] -0.0774815*inputs[4] -0.160527*inputs[5] -0.19966*inputs[6] -0.0968171*inputs[7] -0.0367916*inputs[8] -0.26042*inputs[9];
+	outputs[34] = 0.629882 -0.123032*inputs[0] +0.125966*inputs[1] -0.00825328*inputs[2] +0.222614*inputs[3] -1.25002*inputs[4] -0.148869*inputs[5] +0.254173*inputs[6] +0.0746073*inputs[7] +0.2139*inputs[8] -0.313356*inputs[9];
 
-  //console.log(perceptron_layer_1_output_0);
+  return outputs;
+}
 
-  var perceptron_layer_2_output_0 = ( 0.621401 + (perceptron_layer_1_output_0*0.192234) + (perceptron_layer_1_output_1*-0.556372) + (perceptron_layer_1_output_2*0.0639733) + (perceptron_layer_1_output_3*-1.21128) + (perceptron_layer_1_output_4*2.37786) + (perceptron_layer_1_output_5*-0.136409) + (perceptron_layer_1_output_6*-0.296417) + (perceptron_layer_1_output_7*-0.590384) + (perceptron_layer_1_output_8*-0.127255) + (perceptron_layer_1_output_9*0.00993221) );
-  var perceptron_layer_2_output_1 = ( 0.574554 + (perceptron_layer_1_output_0*-0.31874) + (perceptron_layer_1_output_1*-0.318262) + (perceptron_layer_1_output_2*-0.624989) + (perceptron_layer_1_output_3*-0.883731) + (perceptron_layer_1_output_4*2.19861) + (perceptron_layer_1_output_5*-0.1707) + (perceptron_layer_1_output_6*0.267933) + (perceptron_layer_1_output_7*-0.886003) + (perceptron_layer_1_output_8*0.287651) + (perceptron_layer_1_output_9*0.228101) );
-  var perceptron_layer_2_output_2 = ( -0.360303 + (perceptron_layer_1_output_0*-0.199449) + (perceptron_layer_1_output_1*1.23849) + (perceptron_layer_1_output_2*0.037612) + (perceptron_layer_1_output_3*-0.119401) + (perceptron_layer_1_output_4*0.150788) + (perceptron_layer_1_output_5*0.0911803) + (perceptron_layer_1_output_6*0.0465003) + (perceptron_layer_1_output_7*0.211039) + (perceptron_layer_1_output_8*0.77993) + (perceptron_layer_1_output_9*-0.202606) );
-  var perceptron_layer_2_output_3 = ( 0.710379 + (perceptron_layer_1_output_0*-0.451323) + (perceptron_layer_1_output_1*-0.879527) + (perceptron_layer_1_output_2*-0.415494) + (perceptron_layer_1_output_3*-0.676561) + (perceptron_layer_1_output_4*1.69033) + (perceptron_layer_1_output_5*-0.130368) + (perceptron_layer_1_output_6*0.428789) + (perceptron_layer_1_output_7*0.115844) + (perceptron_layer_1_output_8*-0.123278) + (perceptron_layer_1_output_9*0.147464) );
-  var perceptron_layer_2_output_4 = ( 0.983458 + (perceptron_layer_1_output_0*0.256724) + (perceptron_layer_1_output_1*-0.138763) + (perceptron_layer_1_output_2*-0.557245) + (perceptron_layer_1_output_3*-0.455019) + (perceptron_layer_1_output_4*1.17076) + (perceptron_layer_1_output_5*-0.119359) + (perceptron_layer_1_output_6*0.16872) + (perceptron_layer_1_output_7*-0.0886412) + (perceptron_layer_1_output_8*-1.216) + (perceptron_layer_1_output_9*0.0217616) );
-  var perceptron_layer_2_output_5 = ( 0.596076 + (perceptron_layer_1_output_0*-0.214757) + (perceptron_layer_1_output_1*-0.419049) + (perceptron_layer_1_output_2*-0.451094) + (perceptron_layer_1_output_3*-0.749979) + (perceptron_layer_1_output_4*1.89671) + (perceptron_layer_1_output_5*-0.348603) + (perceptron_layer_1_output_6*0.259471) + (perceptron_layer_1_output_7*-0.707736) + (perceptron_layer_1_output_8*0.195706) + (perceptron_layer_1_output_9*0.161648) );
-  var perceptron_layer_2_output_6 = ( 0.5086 + (perceptron_layer_1_output_0*-0.654099) + (perceptron_layer_1_output_1*0.0487039) + (perceptron_layer_1_output_2*-0.963192) + (perceptron_layer_1_output_3*-0.293345) + (perceptron_layer_1_output_4*1.47046) + (perceptron_layer_1_output_5*-0.38574) + (perceptron_layer_1_output_6*0.605389) + (perceptron_layer_1_output_7*-0.920651) + (perceptron_layer_1_output_8*0.439396) + (perceptron_layer_1_output_9*0.499093) );
-  var perceptron_layer_2_output_7 = ( -0.317745 + (perceptron_layer_1_output_0*-0.182006) + (perceptron_layer_1_output_1*0.999882) + (perceptron_layer_1_output_2*-0.116722) + (perceptron_layer_1_output_3*-0.230452) + (perceptron_layer_1_output_4*0.291896) + (perceptron_layer_1_output_5*0.12168) + (perceptron_layer_1_output_6*0.117173) + (perceptron_layer_1_output_7*0.0513359) + (perceptron_layer_1_output_8*0.855907) + (perceptron_layer_1_output_9*-0.279133) );
-  var perceptron_layer_2_output_8 = ( 0.643958 + (perceptron_layer_1_output_0*-0.584107) + (perceptron_layer_1_output_1*-0.59263) + (perceptron_layer_1_output_2*-0.747544) + (perceptron_layer_1_output_3*0.067545) + (perceptron_layer_1_output_4*0.807892) + (perceptron_layer_1_output_5*-0.321284) + (perceptron_layer_1_output_6*0.635223) + (perceptron_layer_1_output_7*-0.268033) + (perceptron_layer_1_output_8*-0.0120055) + (perceptron_layer_1_output_9*0.444454) );
-  var perceptron_layer_2_output_9 = ( 0.937465 + (perceptron_layer_1_output_0*0.245419) + (perceptron_layer_1_output_1*-0.0719921) + (perceptron_layer_1_output_2*-0.593464) + (perceptron_layer_1_output_3*-0.20446) + (perceptron_layer_1_output_4*0.76503) + (perceptron_layer_1_output_5*-0.190208) + (perceptron_layer_1_output_6*0.230683) + (perceptron_layer_1_output_7*-0.208161) + (perceptron_layer_1_output_8*-1.10041) + (perceptron_layer_1_output_9*0.0827217) );
-  var perceptron_layer_2_output_10 = ( 0.561255 + (perceptron_layer_1_output_0*-0.531964) + (perceptron_layer_1_output_1*-0.128872) + (perceptron_layer_1_output_2*-0.80465) + (perceptron_layer_1_output_3*-0.254486) + (perceptron_layer_1_output_4*1.24572) + (perceptron_layer_1_output_5*-0.492209) + (perceptron_layer_1_output_6*0.614593) + (perceptron_layer_1_output_7*-0.801821) + (perceptron_layer_1_output_8*0.323767) + (perceptron_layer_1_output_9*0.424522) );
-  var perceptron_layer_2_output_11 = ( 0.337495 + (perceptron_layer_1_output_0*-0.754933) + (perceptron_layer_1_output_1*-0.0284598) + (perceptron_layer_1_output_2*-1.28882) + (perceptron_layer_1_output_3*0.367507) + (perceptron_layer_1_output_4*1.09017) + (perceptron_layer_1_output_5*-0.513718) + (perceptron_layer_1_output_6*0.905888) + (perceptron_layer_1_output_7*-1.22209) + (perceptron_layer_1_output_8*0.704578) + (perceptron_layer_1_output_9*0.60246) );
-  var perceptron_layer_2_output_12 = ( -0.246985 + (perceptron_layer_1_output_0*-0.20562) + (perceptron_layer_1_output_1*0.967297) + (perceptron_layer_1_output_2*-0.144635) + (perceptron_layer_1_output_3*-0.432998) + (perceptron_layer_1_output_4*0.391225) + (perceptron_layer_1_output_5*0.157563) + (perceptron_layer_1_output_6*0.113299) + (perceptron_layer_1_output_7*0.0792008) + (perceptron_layer_1_output_8*0.823203) + (perceptron_layer_1_output_9*-0.312071) );
-  var perceptron_layer_2_output_13 = ( 0.388416 + (perceptron_layer_1_output_0*-0.436414) + (perceptron_layer_1_output_1*-0.687686) + (perceptron_layer_1_output_2*-0.893869) + (perceptron_layer_1_output_3*0.78024) + (perceptron_layer_1_output_4*0.441459) + (perceptron_layer_1_output_5*-0.393272) + (perceptron_layer_1_output_6*0.619344) + (perceptron_layer_1_output_7*-0.551113) + (perceptron_layer_1_output_8*0.182257) + (perceptron_layer_1_output_9*0.520881) );
-  var perceptron_layer_2_output_14 = ( 0.850979 + (perceptron_layer_1_output_0*0.269956) + (perceptron_layer_1_output_1*-0.140283) + (perceptron_layer_1_output_2*-0.666314) + (perceptron_layer_1_output_3*0.0532611) + (perceptron_layer_1_output_4*0.6082) + (perceptron_layer_1_output_5*-0.22579) + (perceptron_layer_1_output_6*0.292643) + (perceptron_layer_1_output_7*-0.33787) + (perceptron_layer_1_output_8*-0.958673) + (perceptron_layer_1_output_9*0.100306) );
-  var perceptron_layer_2_output_15 = ( 0.426892 + (perceptron_layer_1_output_0*-0.624961) + (perceptron_layer_1_output_1*-0.131273) + (perceptron_layer_1_output_2*-1.07876) + (perceptron_layer_1_output_3*0.294481) + (perceptron_layer_1_output_4*0.838994) + (perceptron_layer_1_output_5*-0.590085) + (perceptron_layer_1_output_6*0.825932) + (perceptron_layer_1_output_7*-1.01234) + (perceptron_layer_1_output_8*0.533915) + (perceptron_layer_1_output_9*0.558071) );
-  var perceptron_layer_2_output_16 = ( 0.228357 + (perceptron_layer_1_output_0*-0.811423) + (perceptron_layer_1_output_1*-0.136295) + (perceptron_layer_1_output_2*-1.47461) + (perceptron_layer_1_output_3*0.790793) + (perceptron_layer_1_output_4*0.883481) + (perceptron_layer_1_output_5*-0.588856) + (perceptron_layer_1_output_6*1.07062) + (perceptron_layer_1_output_7*-1.42603) + (perceptron_layer_1_output_8*0.850904) + (perceptron_layer_1_output_9*0.65934) );
-  var perceptron_layer_2_output_17 = ( -0.23151 + (perceptron_layer_1_output_0*-0.15058) + (perceptron_layer_1_output_1*0.975191) + (perceptron_layer_1_output_2*-0.039091) + (perceptron_layer_1_output_3*-0.560525) + (perceptron_layer_1_output_4*0.399828) + (perceptron_layer_1_output_5*0.191717) + (perceptron_layer_1_output_6*0.0256637) + (perceptron_layer_1_output_7*0.145112) + (perceptron_layer_1_output_8*0.751457) + (perceptron_layer_1_output_9*-0.374579) );
-  var perceptron_layer_2_output_18 = ( 0.161073 + (perceptron_layer_1_output_0*-0.354467) + (perceptron_layer_1_output_1*-0.786546) + (perceptron_layer_1_output_2*-0.923316) + (perceptron_layer_1_output_3*1.3551) + (perceptron_layer_1_output_4*0.248445) + (perceptron_layer_1_output_5*-0.439833) + (perceptron_layer_1_output_6*0.588365) + (perceptron_layer_1_output_7*-0.695834) + (perceptron_layer_1_output_8*0.256511) + (perceptron_layer_1_output_9*0.583001) );
-  var perceptron_layer_2_output_19 = ( 0.774495 + (perceptron_layer_1_output_0*0.275345) + (perceptron_layer_1_output_1*-0.185833) + (perceptron_layer_1_output_2*-0.726143) + (perceptron_layer_1_output_3*0.269387) + (perceptron_layer_1_output_4*0.498452) + (perceptron_layer_1_output_5*-0.237878) + (perceptron_layer_1_output_6*0.333431) + (perceptron_layer_1_output_7*-0.45232) + (perceptron_layer_1_output_8*-0.893044) + (perceptron_layer_1_output_9*0.145963) );
-  var perceptron_layer_2_output_20 = ( 0.337341 + (perceptron_layer_1_output_0*-0.704011) + (perceptron_layer_1_output_1*-0.245545) + (perceptron_layer_1_output_2*-1.28915) + (perceptron_layer_1_output_3*0.721962) + (perceptron_layer_1_output_4*0.665515) + (perceptron_layer_1_output_5*-0.661799) + (perceptron_layer_1_output_6*1.05447) + (perceptron_layer_1_output_7*-1.26092) + (perceptron_layer_1_output_8*0.672889) + (perceptron_layer_1_output_9*0.625224) );
-  var perceptron_layer_2_output_21 = ( 0.297083 + (perceptron_layer_1_output_0*-0.919708) + (perceptron_layer_1_output_1*-0.145216) + (perceptron_layer_1_output_2*-1.56004) + (perceptron_layer_1_output_3*0.722447) + (perceptron_layer_1_output_4*0.732313) + (perceptron_layer_1_output_5*-0.619502) + (perceptron_layer_1_output_6*1.26076) + (perceptron_layer_1_output_7*-1.48086) + (perceptron_layer_1_output_8*0.953213) + (perceptron_layer_1_output_9*0.630386) );
-  var perceptron_layer_2_output_22 = ( -0.293921 + (perceptron_layer_1_output_0*-0.163849) + (perceptron_layer_1_output_1*0.913626) + (perceptron_layer_1_output_2*-0.0992459) + (perceptron_layer_1_output_3*-0.405816) + (perceptron_layer_1_output_4*0.437979) + (perceptron_layer_1_output_5*0.215232) + (perceptron_layer_1_output_6*0.0559462) + (perceptron_layer_1_output_7*0.116367) + (perceptron_layer_1_output_8*0.727201) + (perceptron_layer_1_output_9*-0.340746) );
-  var perceptron_layer_2_output_23 = ( 0.352617 + (perceptron_layer_1_output_0*-0.448585) + (perceptron_layer_1_output_1*-0.724612) + (perceptron_layer_1_output_2*-0.977666) + (perceptron_layer_1_output_3*1.00365) + (perceptron_layer_1_output_4*0.155626) + (perceptron_layer_1_output_5*-0.430691) + (perceptron_layer_1_output_6*0.729415) + (perceptron_layer_1_output_7*-0.721822) + (perceptron_layer_1_output_8*0.288136) + (perceptron_layer_1_output_9*0.559195) );
-  var perceptron_layer_2_output_24 = ( 0.862917 + (perceptron_layer_1_output_0*0.247276) + (perceptron_layer_1_output_1*-0.112622) + (perceptron_layer_1_output_2*-0.713438) + (perceptron_layer_1_output_3*0.122981) + (perceptron_layer_1_output_4*0.367126) + (perceptron_layer_1_output_5*-0.251008) + (perceptron_layer_1_output_6*0.342287) + (perceptron_layer_1_output_7*-0.446207) + (perceptron_layer_1_output_8*-0.876249) + (perceptron_layer_1_output_9*0.160066) );
-  var perceptron_layer_2_output_25 = ( 0.322364 + (perceptron_layer_1_output_0*-0.80268) + (perceptron_layer_1_output_1*-0.329738) + (perceptron_layer_1_output_2*-1.4211) + (perceptron_layer_1_output_3*0.821442) + (perceptron_layer_1_output_4*0.543896) + (perceptron_layer_1_output_5*-0.68148) + (perceptron_layer_1_output_6*1.25075) + (perceptron_layer_1_output_7*-1.37333) + (perceptron_layer_1_output_8*0.791143) + (perceptron_layer_1_output_9*0.617086) );
-  var perceptron_layer_2_output_26 = ( 0.548947 + (perceptron_layer_1_output_0*-1.01458) + (perceptron_layer_1_output_1*-0.0481566) + (perceptron_layer_1_output_2*-1.55956) + (perceptron_layer_1_output_3*0.148794) + (perceptron_layer_1_output_4*0.617321) + (perceptron_layer_1_output_5*-0.56842) + (perceptron_layer_1_output_6*1.39396) + (perceptron_layer_1_output_7*-1.44146) + (perceptron_layer_1_output_8*0.948628) + (perceptron_layer_1_output_9*0.570128) );
-  var perceptron_layer_2_output_27 = ( -0.375643 + (perceptron_layer_1_output_0*-0.0996491) + (perceptron_layer_1_output_1*0.888047) + (perceptron_layer_1_output_2*-0.0528825) + (perceptron_layer_1_output_3*-0.206753) + (perceptron_layer_1_output_4*0.411609) + (perceptron_layer_1_output_5*0.177252) + (perceptron_layer_1_output_6*-0.0382841) + (perceptron_layer_1_output_7*0.107866) + (perceptron_layer_1_output_8*0.718912) + (perceptron_layer_1_output_9*-0.341559) );
-  var perceptron_layer_2_output_28 = ( 0.80778 + (perceptron_layer_1_output_0*-0.552607) + (perceptron_layer_1_output_1*-0.579393) + (perceptron_layer_1_output_2*-0.966037) + (perceptron_layer_1_output_3*-0.115016) + (perceptron_layer_1_output_4*0.170879) + (perceptron_layer_1_output_5*-0.341568) + (perceptron_layer_1_output_6*0.842093) + (perceptron_layer_1_output_7*-0.595914) + (perceptron_layer_1_output_8*0.269539) + (perceptron_layer_1_output_9*0.42853) );
-  var perceptron_layer_2_output_29 = ( 1.00726 + (perceptron_layer_1_output_0*0.25276) + (perceptron_layer_1_output_1*-0.0165742) + (perceptron_layer_1_output_2*-0.582816) + (perceptron_layer_1_output_3*-0.284129) + (perceptron_layer_1_output_4*0.333693) + (perceptron_layer_1_output_5*-0.190081) + (perceptron_layer_1_output_6*0.274097) + (perceptron_layer_1_output_7*-0.297165) + (perceptron_layer_1_output_8*-0.954085) + (perceptron_layer_1_output_9*0.130467) );
-  var perceptron_layer_2_output_30 = ( 0.503006 + (perceptron_layer_1_output_0*-0.918922) + (perceptron_layer_1_output_1*-0.349506) + (perceptron_layer_1_output_2*-1.53322) + (perceptron_layer_1_output_3*0.44735) + (perceptron_layer_1_output_4*0.50914) + (perceptron_layer_1_output_5*-0.644058) + (perceptron_layer_1_output_6*1.43648) + (perceptron_layer_1_output_7*-1.41581) + (perceptron_layer_1_output_8*0.842555) + (perceptron_layer_1_output_9*0.577331) );
-  var perceptron_layer_2_output_31 = ( 0.600378 + (perceptron_layer_1_output_0*-1.02741) + (perceptron_layer_1_output_1*-0.050134) + (perceptron_layer_1_output_2*-1.59333) + (perceptron_layer_1_output_3*-0.0776184) + (perceptron_layer_1_output_4*0.595686) + (perceptron_layer_1_output_5*-0.482043) + (perceptron_layer_1_output_6*1.4004) + (perceptron_layer_1_output_7*-1.38056) + (perceptron_layer_1_output_8*0.949357) + (perceptron_layer_1_output_9*0.553891) );
-  var perceptron_layer_2_output_32 = ( -0.387516 + (perceptron_layer_1_output_0*-0.070843) + (perceptron_layer_1_output_1*0.841296) + (perceptron_layer_1_output_2*0.0362966) + (perceptron_layer_1_output_3*-0.177361) + (perceptron_layer_1_output_4*0.447524) + (perceptron_layer_1_output_5*0.16901) + (perceptron_layer_1_output_6*-0.0537989) + (perceptron_layer_1_output_7*0.103507) + (perceptron_layer_1_output_8*0.664109) + (perceptron_layer_1_output_9*-0.39072) );
-  var perceptron_layer_2_output_33 = ( 0.834291 + (perceptron_layer_1_output_0*-0.569296) + (perceptron_layer_1_output_1*-0.686698) + (perceptron_layer_1_output_2*-0.950588) + (perceptron_layer_1_output_3*-0.393605) + (perceptron_layer_1_output_4*0.426888) + (perceptron_layer_1_output_5*-0.212806) + (perceptron_layer_1_output_6*0.878678) + (perceptron_layer_1_output_7*-0.522014) + (perceptron_layer_1_output_8*0.25014) + (perceptron_layer_1_output_9*0.366697) );
-  var perceptron_layer_2_output_34 = ( 0.984376 + (perceptron_layer_1_output_0*0.323755) + (perceptron_layer_1_output_1*-0.0435371) + (perceptron_layer_1_output_2*-0.50982) + (perceptron_layer_1_output_3*-0.326851) + (perceptron_layer_1_output_4*0.418442) + (perceptron_layer_1_output_5*-0.153067) + (perceptron_layer_1_output_6*0.20021) + (perceptron_layer_1_output_7*-0.223065) + (perceptron_layer_1_output_8*-0.966197) + (perceptron_layer_1_output_9*0.0972789) );
+function unscalingLayer(inputs){
+  var outputs=[];
 
-  /*console.log(perceptron_layer_2_output_0);
-  console.log(perceptron_layer_2_output_1);
-  console.log(perceptron_layer_2_output_2);
-  console.log(perceptron_layer_2_output_3);
-  console.log(perceptron_layer_2_output_4);
-  console.log(perceptron_layer_2_output_5);
-  console.log(perceptron_layer_2_output_6);
-  console.log(perceptron_layer_2_output_7);
-  console.log(perceptron_layer_2_output_8);
-  console.log(perceptron_layer_2_output_9);
-  console.log(perceptron_layer_2_output_10);
-  console.log(perceptron_layer_2_output_11);
-  console.log(perceptron_layer_2_output_12);
-  console.log(perceptron_layer_2_output_13);
-  console.log(perceptron_layer_2_output_14);
-  console.log(perceptron_layer_2_output_15);
-  console.log(perceptron_layer_2_output_16);
-  console.log(perceptron_layer_2_output_17);
-  console.log(perceptron_layer_2_output_18);
-  console.log(perceptron_layer_2_output_19);
-  console.log(perceptron_layer_2_output_20);
-  console.log(perceptron_layer_2_output_21);
-  console.log(perceptron_layer_2_output_22);
-  console.log(perceptron_layer_2_output_23);
-  console.log(perceptron_layer_2_output_24);
-  console.log(perceptron_layer_2_output_25);
-  console.log(perceptron_layer_2_output_26);
-  console.log(perceptron_layer_2_output_27);
-  console.log(perceptron_layer_2_output_28);
-  console.log(perceptron_layer_2_output_29);
-  console.log(perceptron_layer_2_output_30);
-  console.log(perceptron_layer_2_output_31);
-  console.log(perceptron_layer_2_output_32);
-  console.log(perceptron_layer_2_output_33);
-  console.log(perceptron_layer_2_output_34);*/
+  outputs[0] = inputs[0]*19.52759933+54.4776001;
+	outputs[1] = inputs[1]*11.87460041+24.55200005;
+	outputs[2] = inputs[2]*14.55049992+32.80049896;
+	outputs[3] = inputs[3]*10.29640007+24.1651001;
+	outputs[4] = inputs[4]*2.054069996+3.114650011;
+	outputs[5] = inputs[5]*19.52370071+54.47969818;
+	outputs[6] = inputs[6]*11.87110043+24.55620003;
+	outputs[7] = inputs[7]*14.54959965+32.80220032;
+	outputs[8] = inputs[8]*10.29710007+24.1644001;
+	outputs[9] = inputs[9]*2.052639961+3.114340067;
+	outputs[10] = inputs[10]*19.51399994+54.48970032;
+	outputs[11] = inputs[11]*11.86979961+24.55820084;
+	outputs[12] = inputs[12]*14.55060005+32.81190109;
+	outputs[13] = inputs[13]*10.2968998+24.16399956;
+	outputs[14] = inputs[14]*2.052340031+3.112849951;
+	outputs[15] = inputs[15]*19.50919914+54.49829865;
+	outputs[16] = inputs[16]*11.87170029+24.56100082;
+	outputs[17] = inputs[17]*14.54959965+32.82080078;
+	outputs[18] = inputs[18]*10.29640007+24.1637001;
+	outputs[19] = inputs[19]*2.052580118+3.112679958;
+	outputs[20] = inputs[20]*19.50880051+54.50899887;
+	outputs[21] = inputs[21]*11.87450027+24.56340027;
+	outputs[22] = inputs[22]*14.54629993+32.82939911;
+	outputs[23] = inputs[23]*10.29660034+24.15920067;
+	outputs[24] = inputs[24]*2.052680016+3.112339973;
+	outputs[25] = inputs[25]*19.49950027+54.50899887;
+	outputs[26] = inputs[26]*11.87899971+24.56480026;
+	outputs[27] = inputs[27]*14.54370022+32.84460068;
+	outputs[28] = inputs[28]*10.29440022+24.15640068;
+	outputs[29] = inputs[29]*2.05208993+3.110960007;
+	outputs[30] = inputs[30]*19.50029945+54.50550079;
+	outputs[31] = inputs[31]*11.87959957+24.56620026;
+	outputs[32] = inputs[32]*14.5333004+32.84840012;
+	outputs[33] = inputs[33]*10.28880024+24.14299965;
+	outputs[34] = inputs[34]*2.049269915+3.108550072;
 
+  console.log(outputs[24]);
 
-
-
-  //CAMBIAR NOMBRE UNSACLIGN A PM25_AHEAD1 ETC
-  //console.log(perceptron_layer_2_output_0);
-  /*var unscaling_layer_output_0 = 10+0.5*(perceptron_layer_2_output_0+1)*(166-10);
-  var unscaling_layer_output_1 = 4+0.5*(perceptron_layer_2_output_1+1)*(160-4);
-  var unscaling_layer_output_2 = 1+0.5*(perceptron_layer_2_output_2+1)*(249-1);
-  var unscaling_layer_output_3 = 2+0.5*(perceptron_layer_2_output_3+1)*(74-2);
-  var unscaling_layer_output_4 = 0+0.5*(perceptron_layer_2_output_4+1)*(17-0);
-  var unscaling_layer_output_5 = 10+0.5*(perceptron_layer_2_output_5+1)*(166-10);
-  var unscaling_layer_output_6 = 4+0.5*(perceptron_layer_2_output_6+1)*(160-4);
-  var unscaling_layer_output_7 = 1+0.5*(perceptron_layer_2_output_7+1)*(249-1);
-  var unscaling_layer_output_8 = 2+0.5*(perceptron_layer_2_output_8+1)*(74-2);
-  var unscaling_layer_output_9 = 0+0.5*(perceptron_layer_2_output_9+1)*(17-0);
-  var unscaling_layer_output_10 = 10+0.5*(perceptron_layer_2_output_10+1)*(166-10);
-  var unscaling_layer_output_11 = 4+0.5*(perceptron_layer_2_output_11+1)*(160-4);
-  var unscaling_layer_output_12 = 1+0.5*(perceptron_layer_2_output_12+1)*(249-1);
-  var unscaling_layer_output_13 = 2+0.5*(perceptron_layer_2_output_13+1)*(74-2);
-  var unscaling_layer_output_14 = 0+0.5*(perceptron_layer_2_output_14+1)*(17-0);
-  var unscaling_layer_output_15 = 10+0.5*(perceptron_layer_2_output_15+1)*(166-10);
-  var unscaling_layer_output_16 = 4+0.5*(perceptron_layer_2_output_16+1)*(160-4);
-  var unscaling_layer_output_17 = 1+0.5*(perceptron_layer_2_output_17+1)*(249-1);
-  var unscaling_layer_output_18 = 2+0.5*(perceptron_layer_2_output_18+1)*(74-2);
-  var unscaling_layer_output_19 = 0+0.5*(perceptron_layer_2_output_19+1)*(17-0);
-  var unscaling_layer_output_20 = 10+0.5*(perceptron_layer_2_output_20+1)*(166-10);
-  var unscaling_layer_output_21 = 4+0.5*(perceptron_layer_2_output_21+1)*(160-4);
-  var unscaling_layer_output_22 = 1+0.5*(perceptron_layer_2_output_22+1)*(249-1);
-  var unscaling_layer_output_23 = 2+0.5*(perceptron_layer_2_output_23+1)*(74-2);
-  var unscaling_layer_output_24 = 0+0.5*(perceptron_layer_2_output_24+1)*(17-0);
-  var unscaling_layer_output_25 = 10+0.5*(perceptron_layer_2_output_25+1)*(166-10);
-  var unscaling_layer_output_26 = 4+0.5*(perceptron_layer_2_output_26+1)*(160-4);
-  var unscaling_layer_output_27 = 1+0.5*(perceptron_layer_2_output_27+1)*(249-1);
-  var unscaling_layer_output_28 = 2+0.5*(perceptron_layer_2_output_28+1)*(74-2);
-  var unscaling_layer_output_29 = 0+0.5*(perceptron_layer_2_output_29+1)*(17-0);
-  var unscaling_layer_output_30 = 10+0.5*(perceptron_layer_2_output_30+1)*(166-10);
-  var unscaling_layer_output_31 = 4+0.5*(perceptron_layer_2_output_31+1)*(160-4);
-  var unscaling_layer_output_32 = 1+0.5*(perceptron_layer_2_output_32+1)*(249-1);
-  var unscaling_layer_output_33 = 2+0.5*(perceptron_layer_2_output_33+1)*(74-2);
-  var unscaling_layer_output_34 = 0+0.5*(perceptron_layer_2_output_34+1)*(17-0);*/
-
-  var unscaling_layer_output_0 = perceptron_layer_2_output_0*19.51350021+54.49290085;
-	var unscaling_layer_output_1 = perceptron_layer_2_output_1*11.87619972+24.55019951;
-	var unscaling_layer_output_2 = perceptron_layer_2_output_2*14.54930019+32.80659866;
-	var unscaling_layer_output_3 = perceptron_layer_2_output_3*10.28919983+24.17300034;
-	var unscaling_layer_output_4 = perceptron_layer_2_output_4*2.052659988+3.113059998;
-	var unscaling_layer_output_5 = perceptron_layer_2_output_5*19.51329994+54.49330139;
-	var unscaling_layer_output_6 = perceptron_layer_2_output_6*11.87320042+24.5557003;
-	var unscaling_layer_output_7 = perceptron_layer_2_output_7*14.54920006+32.80770111;
-	var unscaling_layer_output_8 = perceptron_layer_2_output_8*10.28989983+24.17239952;
-	var unscaling_layer_output_9 = perceptron_layer_2_output_9*2.052390099+3.113409996;
-	var unscaling_layer_output_10 = perceptron_layer_2_output_10*19.50620079+54.50189972;
-	var unscaling_layer_output_11 = perceptron_layer_2_output_11*11.87180042+24.55879974;
-	var unscaling_layer_output_12 = perceptron_layer_2_output_12*14.55169964+32.81560135;
-	var unscaling_layer_output_13 = perceptron_layer_2_output_13*10.29039955+24.17169952;
-	var unscaling_layer_output_14 = perceptron_layer_2_output_14*2.05211997+3.113749981;
-	var unscaling_layer_output_15 = perceptron_layer_2_output_15*19.50329971+54.5094986;
-	var unscaling_layer_output_16 = perceptron_layer_2_output_16*11.87269974+24.56389999;
-	var unscaling_layer_output_17 = perceptron_layer_2_output_17*14.55179977+32.82249832;
-	var unscaling_layer_output_18 = perceptron_layer_2_output_18*10.29059982+24.17099953;
-	var unscaling_layer_output_19 = perceptron_layer_2_output_19*2.05211997+3.113749981;
-  var unscaling_layer_output_20 = perceptron_layer_2_output_20*19.50449944+54.51910019;
-	var unscaling_layer_output_21 = perceptron_layer_2_output_21*11.87390041+24.56809998;
-  var unscaling_layer_output_22 = perceptron_layer_2_output_22*14.54880047+32.83010101;
-  var unscaling_layer_output_23 = perceptron_layer_2_output_23*10.29290009+24.16550064;
-	var unscaling_layer_output_24 = perceptron_layer_2_output_24*2.052220106+3.113409996;
-	var unscaling_layer_output_25 = perceptron_layer_2_output_25*19.50020027+54.51499939;
-	var unscaling_layer_output_26 = perceptron_layer_2_output_26*11.87549973+24.57150078;
-	var unscaling_layer_output_27 = perceptron_layer_2_output_27*14.54349995+32.83940125;
-  var unscaling_layer_output_28 = perceptron_layer_2_output_28*10.29240036+24.1616993;
-	var unscaling_layer_output_29 = perceptron_layer_2_output_29*2.05163002+3.112030029;
-	var unscaling_layer_output_30 = perceptron_layer_2_output_30*19.49920082+54.51330185;
-	var unscaling_layer_output_31 = perceptron_layer_2_output_31*11.8767004+24.57259941;
-	var unscaling_layer_output_32 = perceptron_layer_2_output_32*14.53520012+32.84590149;
-	var unscaling_layer_output_33 = perceptron_layer_2_output_33*10.28719997+24.14789963;
-	var unscaling_layer_output_34 = perceptron_layer_2_output_34*2.048810005+3.109620094;
-
-  console.log(unscaling_layer_output_0);
-  console.log(unscaling_layer_output_1);
-  console.log(unscaling_layer_output_2);
-  console.log(unscaling_layer_output_3);
-  console.log(unscaling_layer_output_4);
-  console.log(unscaling_layer_output_5);
-  console.log(unscaling_layer_output_6);
-  console.log(unscaling_layer_output_7);
-  console.log(unscaling_layer_output_8);
-  console.log(unscaling_layer_output_9);
-  console.log(unscaling_layer_output_10);
-  console.log(unscaling_layer_output_11);
-  console.log(unscaling_layer_output_12);
-  console.log(unscaling_layer_output_13);
-  console.log(unscaling_layer_output_14);
-  console.log(unscaling_layer_output_15);
-  console.log(unscaling_layer_output_16);
-  console.log(unscaling_layer_output_17);
-  console.log(unscaling_layer_output_18);
-  console.log(unscaling_layer_output_19);
-  console.log(unscaling_layer_output_20);
-  console.log(unscaling_layer_output_21);
-  console.log(unscaling_layer_output_22);
-  console.log(unscaling_layer_output_23);
-  console.log(unscaling_layer_output_24);
-  console.log(unscaling_layer_output_25);
-  console.log(unscaling_layer_output_26);
-  console.log(unscaling_layer_output_27);
-  console.log(unscaling_layer_output_28);
-  console.log(unscaling_layer_output_29);
-  console.log(unscaling_layer_output_30);
-  console.log(unscaling_layer_output_31);
-  console.log(unscaling_layer_output_32);
-  console.log(unscaling_layer_output_33);
-  console.log(unscaling_layer_output_34);
-
+	return outputs;
 }
 
 module.exports = router;

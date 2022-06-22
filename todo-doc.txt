@@ -1,0 +1,5 @@
+-Integrar resultados en diseño y pruebas del modelo.
+-Borrar alguna grafica de entrenamiento.
+-Añadir alguna imagen en conceptos teoricos (dataset, etc).
+-Imagen logos lenguajes programación
+-Tabla X a todas las tablas.

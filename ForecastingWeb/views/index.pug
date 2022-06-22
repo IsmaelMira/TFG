@@ -69,7 +69,7 @@ block content
       +space
       canvas#PM25Chart
       script.
-        var data = [34,36,40,26,36,43,81,68];
+        var data=["#{actualPM25}", "#{PM25_ahead_1}", "#{PM25_ahead_2}", "#{PM25_ahead_3}", "#{PM25_ahead_4}", "#{PM25_ahead_5}", "#{PM25_ahead_6}", "#{PM25_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -137,7 +137,7 @@ block content
 
       canvas#PM10Chart(style=" display:none")
       script.
-        var data = [11,14,10,15,19,22,25,37];
+        var data = ["#{actualPM10}", "#{PM10_ahead_1}", "#{PM10_ahead_2}", "#{PM10_ahead_3}", "#{PM10_ahead_4}", "#{PM10_ahead_5}", "#{PM10_ahead_6}", "#{PM10_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -206,7 +206,7 @@ block content
 
       canvas#O3Chart(style="display:none")
       script.
-        var data = [112,14,140,15,19,22,25,37];
+        var data = ["#{actualO3}", "#{O3_ahead_1}", "#{O3_ahead_2}", "#{O3_ahead_3}", "#{O3_ahead_4}", "#{O3_ahead_5}", "#{O3_ahead_6}", "#{O3_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -275,7 +275,7 @@ block content
 
       canvas#NO2Chart(style="display:none")
       script.
-        var data = [11,14,10,154,19,22,25,347];
+        var data = ["#{actualNO2}", "#{NO2_ahead_1}", "#{NO2_ahead_2}", "#{NO2_ahead_3}", "#{NO2_ahead_4}", "#{NO2_ahead_5}", "#{NO2_ahead_6}", "#{NO2_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -344,7 +344,7 @@ block content
 
       canvas#SO2Chart(style="display:none")
       script.
-        var data = [67,14,10,15,19,123,25,37];
+        var data = ["#{actualSO2}", "#{SO2_ahead_1}", "#{SO2_ahead_2}", "#{SO2_ahead_3}", "#{SO2_ahead_4}", "#{SO2_ahead_5}", "#{SO2_ahead_6}", "#{SO2_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -438,76 +438,6 @@ block content
           a(href='https://www.airnow.gov/aqi/aqi-basics/') AirNow 
 
     +space
-    //table
-      caption(style='text-align:center;font-size:larger')
-        strong AQI Basics for Ozone and Particle Pollution
-      thead
-        tr(style='background: rgb(225, 235, 244)')
-          th(scope='col' style='text-align: center; vertical-align: text-top; width: 114px;') Daily AQI Color
-          th(scope='col' style='text-align: center; vertical-align: text-top; width: 122px;') Levels of Concern
-          th(scope='col' style='text-align: center; vertical-align: text-top; width: 98px;') Values of Index
-          th(scope='col' style='text-align: center; vertical-align: text-top; width: 258px;') Description of Air Quality
-      tbody
-        tr(style='background: rgb(0, 228, 0)')
-          td(style='text-align: center;')
-            strong Green
-          td#good(style='text-align: center;')
-            strong Good
-          td(style='text-align: center;')
-            strong 0 to 50
-          td
-            strong Air quality is satisfactory, and air pollution poses little or no risk.
-        tr(style='background: yellow')
-          td(style='text-align: center;')
-            strong Yellow
-          td#mod(style='text-align: center;')
-            strong Moderate
-          td(style='text-align: center;')
-            strong 51 to 100
-          td
-            strong
-              | Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution.
-        tr(style='background: #C96112;color:white')
-          td(style='text-align: center;')
-            strong Orange
-          td#sens(style='text-align: center;')
-            strong Unhealthy for Sensitive Groups
-          td(style='text-align: center;')
-            strong 101 to 150
-          td
-            strong
-              | Members of sensitive groups may experience health effects. The general public is less likely to be affected.
-        tr(style='background: red;color:white')
-          td(style='text-align: center; ')
-            strong Red
-          td#unh(style='text-align: center; ')
-            strong Unhealthy
-          td(style='text-align: center; ')
-            strong 151 to 200
-          td
-            strong
-              | Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects.
-        tr(style='background: #8F3F97;color:white')
-          td(style='text-align: center;')
-            strong Purple
-          td#vunh(style='text-align: center; ')
-            strong Very Unhealthy
-          td(style='text-align: center; ')
-            strong 201 to 300
-          td
-            strong Health alert: The risk of health effects is increased for everyone.
-        tr(style='background: #7E0023;color:white')
-          td(style='text-align: center; ')
-            strong Maroon
-          td#haz(style='text-align: center; ')
-            strong Hazardous
-          td(style='text-align: center; ')
-            strong 301 and higher
-          td
-            strong Health warning of emergency conditions: everyone is more likely to be affected.
-
-
-    +space
     #information
       h2 <br>What is AQI?
       p The Air Quality Index (AQI) is used for reporting daily air quality. It tells you how clean or polluted your air is, and what associated health effects might be a concern for you. 
@@ -517,125 +447,7 @@ block content
       h2 How do we obtain the forecast?
       p Using artificial intelligence techniques, we offer the prediction for the contamination values in the city of Madrid for the next week.
       p A model obtained from a neural network trained with historical data allows us to know the trends in order to anticipate possible issues.
-    //table(style='margin-top:30px')
-      tr
-        th Date
-        th Max. temperature (ºC)
-        th Min. temperature (ºC)
-        th Avg. temperature (ºC)
-        th Pressure (hPa)
-        th Humidity (%)
-        th Wind speed (km/h)
-        th Precipitation expected (mm)
-      tr
-        td Yesterday
-        td #{tMaxMinus1}
-        td #{tMinMinus1}
-        td #{tAvgMinus1}
-        td #{pressureMinus1}
-        td #{humidityMinus1}
-        td #{windSpeedMinus1}
-        td #{precipitationsMinus1}
-      tr
-        td Today
-        td #{tMax0}
-        td #{tMin0}
-        td #{tAvg0}
-        td #{pressure0}
-        td #{humidity0}
-        td #{windSpeed0}
-        td #{precipitations0}
-      tr
-        td Tomorrow
-        td #{tMax1}
-        td #{tMin1}
-        td #{tAvg1}
-        td #{pressure1}
-        td #{humidity1}
-        td #{windSpeed1}
-        td #{precipitations1}
-      tr
-        td 2 days from now
-        td #{tMax2}
-        td #{tMin2}
-        td #{tAvg2}
-        td #{pressure2}
-        td #{humidity2}
-        td #{windSpeed2}
-        td #{precipitations2}
-      tr
-        td 3 days from now
-        td #{tMax3}
-        td #{tMin3}
-        td #{tAvg3}
-        td #{pressure3}
-        td #{humidity3}
-        td #{windSpeed3}
-        td #{precipitations3}
-      tr
-        td 4 days from now
-        td #{tMax4}
-        td #{tMin4}
-        td #{tAvg4}
-        td #{pressure4}
-        td #{humidity4}
-        td #{windSpeed4}
-        td #{precipitations4}
-      tr
-        td 5 days from now
-        td #{tMax5}
-        td #{tMin5}
-        td #{tAvg5}
-        td #{pressure5}
-        td #{humidity5}
-        td #{windSpeed5}
-        td #{precipitations5}
-      tr
-        td 6 days from now
-        td #{tMax6}
-        td #{tMin6}
-        td #{tAvg6}
-        td #{pressure6}
-        td #{humidity6}
-        td #{windSpeed6}
-        td #{precipitations6}
-      tr
-        td 7 days from now
-        td #{tMax7}
-        td #{tMin7}
-        td #{tAvg7}
-        td #{pressure7}
-        td #{humidity7}
-        td #{windSpeed7}
-        td #{precipitations7}
-    
-
-    //#graphs2(style="display:flex; flex-direction: row; justify-content: center; align-items: center")
-      +space
-      canvas#proChart(width='600' height='400' style="margin:40px")
-      script.
-        var ctx= document.getElementById("proChart").getContext("2d");
-        var myChart= new Chart(ctx,{
-        type: 'bar',
-        data: {
-          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
-          datasets: [
-            {
-              label: "Max temperature (ºC)",
-              backgroundColor: ["#FF0000"],
-              data: [#{tMax0},#{tMax1},#{tMax2},#{tMax3},#{tMax4},#{tMax5},#{tMax6},#{tMax7}]
-            },
-            {
-              label: "Min temperature (ºC)",
-              backgroundColor: ["#0000FF"],
-              data: [#{tMin0},#{tMin1},#{tMin2},#{tMin3},#{tMin4},#{tMin5},#{tMin6},#{tMin7}]
-            }
-          ]
-        },
-        options: {
-          responsive:false
-        }
-        })
+      
   #footer
     img#usalImage(src='images/usal.png' alt='USAL')
     h3(style=" align-self: flex-end; padding:35px") Ismael Mira Hernández | TFG Grado en Ingeniería Informática | 2022
