@@ -1,8 +1,4 @@
--meter modelo neural en web y sacar las variables de las api ahi
--Buscar modelos fisicos para comparar
 
--API problema maximas diarios: Acceder a base de datos, guardar ahi los cambios si dateactual!=bbdd.bate. Si no, get de la base de datos, mandar esos.
 
--Probar grafico con datos contaminacion modelo. Continuous deployment
 
 
