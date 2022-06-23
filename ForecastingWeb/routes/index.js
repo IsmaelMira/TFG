@@ -262,8 +262,6 @@ function unscalingLayer(inputs){
 	outputs[33] = inputs[33]*10.28880024+24.14299965;
 	outputs[34] = inputs[34]*2.049269915+3.108550072;
 
-  console.log(outputs[24]);
-
 	return outputs;
 }
 
