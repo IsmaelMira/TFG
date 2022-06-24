@@ -1,4 +1,7 @@
-
+Continuous training
+-Pasar los 22 input a un csv.
+-Crear exe que haga continuous deployment y cree un csv de 35 elementos, usando XML de la red neuronal.
+-La funcion neuroalNetwork lee outputs.cvs.
 
 
 
