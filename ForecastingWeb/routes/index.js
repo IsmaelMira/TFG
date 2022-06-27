@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const axios = require("axios");
+var exec = require('child_process').execFile;
 
 var today_day;
 var today_month;
@@ -15,7 +16,7 @@ router.get('/', async function(req, res, next) {
   const pollutionData= await getPollutionData();
 
   //Get dates
-  var startDate = new Date();
+  /*var startDate = new Date();
   var finishDate = new Date();
   finishDate.setDate(finishDate.getDate() + 7);
   const getDaysArray = getDates(startDate, finishDate);
@@ -25,10 +26,11 @@ router.get('/', async function(req, res, next) {
     yesterdayWeather.days[0].pressure, yesterdayWeather.days[0].windspeed, yesterdayWeather.days[0].humidity, today_day, today_month, today_weekday, 
     pollutionData.iaqi.pm25.v, pollutionData.iaqi.pm10.v, pollutionData.iaqi.o3.v, pollutionData.iaqi.no2.v, pollutionData.iaqi.so2.v,
     todayWeather.days[0].precip, todayWeather.days[0].temp, todayWeather.days[0].tempmax, todayWeather.days[0].tempmin, 
-    todayWeather.days[0].pressure, todayWeather.days[0].windspeed, todayWeather.days[0].humidity);
+    todayWeather.days[0].pressure, todayWeather.days[0].windspeed, todayWeather.days[0].humidity);*/
 
+	fun();
   res.render('index', { title: "Air contamination forecast", 
-  currentTemperature: todayWeather.currentConditions.temp, condition: todayWeather.currentConditions.conditions,
+  /*currentTemperature: todayWeather.currentConditions.temp, condition: todayWeather.currentConditions.conditions,
   date0: getDaysArray[0], date1: getDaysArray[1], date2: getDaysArray[2], date3: getDaysArray[3], date4: getDaysArray[4], date5: getDaysArray[5], date6: getDaysArray[6], date7: getDaysArray[7],
   totalAQI: pollutionData.aqi, actualPM25: pollutionData.iaqi.pm25.v, actualPM10: pollutionData.iaqi.pm10.v, actualO3: pollutionData.iaqi.o3.v, actualNO2: pollutionData.iaqi.no2.v, actualSO2: pollutionData.iaqi.so2.v,
   PM25_ahead_1: contaminationPrediction[0], PM10_ahead_1: contaminationPrediction[1], O3_ahead_1: contaminationPrediction[2], NO2_ahead_1: contaminationPrediction[3], SO2_ahead_1: contaminationPrediction[4],
@@ -37,9 +39,20 @@ router.get('/', async function(req, res, next) {
   PM25_ahead_4: contaminationPrediction[15], PM10_ahead_4: contaminationPrediction[16], O3_ahead_4: contaminationPrediction[17], NO2_ahead_4: contaminationPrediction[18], SO2_ahead_4: contaminationPrediction[19],
   PM25_ahead_5: contaminationPrediction[20], PM10_ahead_5: contaminationPrediction[21], O3_ahead_5: contaminationPrediction[22], NO2_ahead_5: contaminationPrediction[23], SO2_ahead_5: contaminationPrediction[24],
   PM25_ahead_6: contaminationPrediction[25], PM10_ahead_6: contaminationPrediction[26], O3_ahead_6: contaminationPrediction[27], NO2_ahead_6: contaminationPrediction[28], SO2_ahead_6: contaminationPrediction[29],
-  PM25_ahead_7: contaminationPrediction[30], PM10_ahead_7: contaminationPrediction[31], O3_ahead_7: contaminationPrediction[32], NO2_ahead_7: contaminationPrediction[33], SO2_ahead_7: contaminationPrediction[34],
+  PM25_ahead_7: contaminationPrediction[30], PM10_ahead_7: contaminationPrediction[31], O3_ahead_7: contaminationPrediction[32], NO2_ahead_7: contaminationPrediction[33], SO2_ahead_7: contaminationPrediction[34],*/
   });
 });
+
+//var exec = require('child_process').execFile;
+
+var fun =function(){
+   console.log("fun() start");
+   exec('blank.exe', ["hola", "adios", 1],  function(err, data) {  
+        console.log(err)
+        console.log(data.toString());                       
+    });  
+}
+fun();
 
 function getDates(start, end) {
   var flag=0;
