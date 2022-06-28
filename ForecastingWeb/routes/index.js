@@ -11,24 +11,33 @@ var today_weekday;
 router.get('/', async function(req, res, next) {
   
   //Get weather and pollution data
-  const yesterdayWeather= await getYesterdayWeatherData();
-  const todayWeather= await getTodayWeatherData();
-  const pollutionData= await getPollutionData();
+  //const yesterdayWeather= await getYesterdayWeatherData();
+  //const todayWeather= await getTodayWeatherData();
+  //const pollutionData= await getPollutionData();
 
   //Get dates
-  /*var startDate = new Date();
+  var startDate = new Date();
   var finishDate = new Date();
   finishDate.setDate(finishDate.getDate() + 7);
   const getDaysArray = getDates(startDate, finishDate);
 
+  /*var inputs=[yesterdayWeather.days[0].precip, yesterdayWeather.days[0].temp, yesterdayWeather.days[0].tempmax, yesterdayWeather.days[0].tempmin, 
+  yesterdayWeather.days[0].pressure, yesterdayWeather.days[0].windspeed, yesterdayWeather.days[0].humidity, today_day, today_month, today_weekday, 
+  pollutionData.iaqi.pm25.v, pollutionData.iaqi.pm10.v, pollutionData.iaqi.o3.v, pollutionData.iaqi.no2.v, pollutionData.iaqi.so2.v,
+  todayWeather.days[0].precip, todayWeather.days[0].temp, todayWeather.days[0].tempmax, todayWeather.days[0].tempmin, 
+  todayWeather.days[0].pressure, todayWeather.days[0].windspeed, todayWeather.days[0].humidity];*/
+  var inputs=[1, 2];
+
   //Calculate outputs using the model
-  const contaminationPrediction=neuralNetworkModel(yesterdayWeather.days[0].precip, yesterdayWeather.days[0].temp, yesterdayWeather.days[0].tempmax, yesterdayWeather.days[0].tempmin, 
+  /*const contaminationPrediction=neuralNetworkModel(yesterdayWeather.days[0].precip, yesterdayWeather.days[0].temp, yesterdayWeather.days[0].tempmax, yesterdayWeather.days[0].tempmin, 
     yesterdayWeather.days[0].pressure, yesterdayWeather.days[0].windspeed, yesterdayWeather.days[0].humidity, today_day, today_month, today_weekday, 
     pollutionData.iaqi.pm25.v, pollutionData.iaqi.pm10.v, pollutionData.iaqi.o3.v, pollutionData.iaqi.no2.v, pollutionData.iaqi.so2.v,
     todayWeather.days[0].precip, todayWeather.days[0].temp, todayWeather.days[0].tempmax, todayWeather.days[0].tempmin, 
     todayWeather.days[0].pressure, todayWeather.days[0].windspeed, todayWeather.days[0].humidity);*/
 
-	fun();
+	//await calculateOutputs(inputs);
+	var csv=readCSV(inputs);
+	console.log(csv);
   res.render('index', { title: "Air contamination forecast", 
   /*currentTemperature: todayWeather.currentConditions.temp, condition: todayWeather.currentConditions.conditions,
   date0: getDaysArray[0], date1: getDaysArray[1], date2: getDaysArray[2], date3: getDaysArray[3], date4: getDaysArray[4], date5: getDaysArray[5], date6: getDaysArray[6], date7: getDaysArray[7],
@@ -45,14 +54,30 @@ router.get('/', async function(req, res, next) {
 
 //var exec = require('child_process').execFile;
 
-var fun =function(){
-   console.log("fun() start");
-   exec('blank.exe', ["hola", "adios", 1],  function(err, data) {  
-        console.log(err)
-        console.log(data.toString());                       
-    });  
+async function calculateOutputs(inputs){
+	return new Promise((resolve, reject) => {
+		exec('blank.exe', [0, 20.2, 26.6, 16.3, 1011.9, 36, 43.3, 21, 6, 2, 5, 
+	3, 37, 9.2, 3.1, 0, 20.2, 27.9, 12, 1011.9, 36, 37.2],  function(err, data) {  
+		console.log(err)                     
+	});  
+	})
+	/*exec('blank.exe', [inputs[0], inputs[1], inputs[2], inputs[3], inputs[4],inputs[5], inputs[6], inputs[7], inputs[8], inputs[9], inputs[10], 
+	inputs[11], inputs[12], inputs[13], inputs[14], inputs[15], inputs[16], inputs[17], inputs[18], inputs[19], inputs[20], inputs[21]],  function(err, data) {  
+		console.log(err)                     
+	});  
+	return;*/
 }
-fun();
+
+async function readCSV(inputs){
+	const result=await calculateOutputs(inputs);
+	var data = require("fs").readFileSync("outputs.csv", "utf8")
+	data = data.replace(/(\r\n|\n|\r)/gm, "");
+	data = data.split(";");
+	console.log(data);
+	return data;
+}
+
+
 
 function getDates(start, end) {
   var flag=0;
