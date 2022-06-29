@@ -1,9 +1,9 @@
 <NeuralDesignerOutput>
- <Task Title="Neural network" Id="3gDA3Z" Component="Neural network" Name="Randomize parameters">
+ <Task Component="Neural network" Title="Neural network" Name="Randomize parameters" Id="3gDA3Z">
   <Text Title="Task description" Id="KcYIS6">Neural Designer has initialized the neural network parameters at random with a uniform distribution.
 The number of randomized parameters is 615.</Text>
  </Task>
- <Task Title="Training" Id="WqJPBY" Component="Training strategy" Name="Perform training">
+ <Task Component="Training strategy" Title="Training" Name="Perform training" Id="WqJPBY">
   <Text Title="Task description" Id="gJwZNP">The procedure used to carry out the learning process is called the training (or learning) strategy.
 The training strategy is applied to the neural network to obtain the minimum possible loss.
 The type of training is determined by how the adjustment of the parameters in the neural network takes place.
@@ -56,7 +56,7 @@ Minimum loss decrease
    <Alignment>right</Alignment>
   </Table>
  </Task>
- <Task Title="Errors statistics" Id="97nBU2" Component="Testing analysis" Name="Calculate errors statistics">
+ <Task Component="Testing analysis" Title="Errors statistics" Name="Calculate errors statistics" Id="97nBU2">
   <Text Title="Task description" Id="aGdAkv">The errors statistics measure the minimums, maximums, means, and standard deviations of the errors between the neural network and the testing samples in the data set.
  They provide a valuable tool for testing the quality of a model. </Text>
   <Table Title="PM2.5(AQI)_ahead_1 errors statistics" Id="UZ7nae">
@@ -480,11 +480,11 @@ The mean relative error obtained by using the previous value as the prediction i
    <Alignment>right</Alignment>
   </Table>
  </Task>
- <Task Title="Neural network" Id="YOZWDG" Component="Neural network" Name="Randomize parameters">
+ <Task Component="Neural network" Title="Neural network" Name="Randomize parameters" Id="YOZWDG">
   <Text Title="Task description" Id="5V54au">Neural Designer has initialized the neural network parameters at random with a uniform distribution.
 The number of randomized parameters is 615.</Text>
  </Task>
- <Task Title="Training" Id="NBykzO" Component="Training strategy" Name="Perform training">
+ <Task Component="Training strategy" Title="Training" Name="Perform training" Id="NBykzO">
   <Text Title="Task description" Id="A5fo7F">The procedure used to carry out the learning process is called the training (or learning) strategy.
 The training strategy is applied to the neural network to obtain the minimum possible loss.
 The type of training is determined by how the adjustment of the parameters in the neural network takes place.
@@ -537,7 +537,7 @@ Maximum selection error increases
    <Alignment>right</Alignment>
   </Table>
  </Task>
- <Task Title="Errors statistics" Id="6ACEVZ" Component="Testing analysis" Name="Calculate errors statistics">
+ <Task Component="Testing analysis" Title="Errors statistics" Name="Calculate errors statistics" Id="6ACEVZ">
   <Text Title="Task description" Id="Tbx5iB">The errors statistics measure the minimums, maximums, means, and standard deviations of the errors between the neural network and the testing samples in the data set.
  They provide a valuable tool for testing the quality of a model. </Text>
   <Table Title="PM2.5(AQI)_ahead_1 errors statistics" Id="V8FG3O">
@@ -961,7 +961,7 @@ The mean relative error obtained by using the previous value as the prediction i
    <Alignment>right</Alignment>
   </Table>
  </Task>
- <Task Title="Neural network" Id="upmdKr" Component="Neural network" Name="Report neural network">
+ <Task Component="Neural network" Title="Neural network" Name="Report neural network" Id="upmdKr">
   <Text Title="Task description" Id="Bc38Ro">The neural network represents the predictive model.
 In Neural Designer, neural networks allow deep architectures, a class of universal approximators.</Text>
   <Table Title="Inputs" Id="l1ToOo">
@@ -1141,5 +1141,75 @@ It contains the following layers:
    <LayersName>scaling_layer\perceptron_layer_1\perceptron_layer_2\unscaling_layer\bounding_layer</LayersName>
    <Architecture>22\10\35\35\35</Architecture>
   </NeuralNetworkGraph>
+ </Task>
+ <Task Component="Neural network" Title="Neural network outputs" Name="Calculate outputs" Id="tcoI3f">
+  <Text Title="Task description" Id="hkR2yQ">A neural network produces a set of outputs for each set of inputs applied.
+The outputs depend, in turn, on the values of the parameters. </Text>
+  <Table Title="Inputs-outputs table" Id="TqBBUu">
+   <Caption Id="r9Febn">The following table shows the input values and their corresponding output values.
+The input variables are PRECIPITATIONS(mm)_lag_1, TAVG(C)_lag_1, TMAX(C)_lag_1, TMIN(C)_lag_1, PRESSURE(hPa)_lag_1, WINDSPEED(km/h)_lag_1, HUMIDITY(percentage)_lag_1, DAY_lag_0, MONTH_lag_0, WEEKDAY_lag_0, PM2.5(AQI)_lag_0, PM10(AQI)_lag_0, O3(AQI)_lag_0, NO2(AQI)_lag_0, SO2(AQI)_lag_0, PRECIPITATIONS(mm)_lag_0, TAVG(C)_lag_0, TMAX(C)_lag_0, TMIN(C)_lag_0, PRESSURE(hPa)_lag_0, WINDSPEED(km/h)_lag_0 and HUMIDITY(percentage)_lag_0, and the output variables are PM2.5(AQI)_ahead_1, PM10(AQI)_ahead_1, O3(AQI)_ahead_1, NO2(AQI)_ahead_1, SO2(AQI)_ahead_1, PM2.5(AQI)_ahead_2, PM10(AQI)_ahead_2, O3(AQI)_ahead_2, NO2(AQI)_ahead_2, SO2(AQI)_ahead_2, PM2.5(AQI)_ahead_3, PM10(AQI)_ahead_3, O3(AQI)_ahead_3, NO2(AQI)_ahead_3, SO2(AQI)_ahead_3, PM2.5(AQI)_ahead_4, PM10(AQI)_ahead_4, O3(AQI)_ahead_4, NO2(AQI)_ahead_4, SO2(AQI)_ahead_4, PM2.5(AQI)_ahead_5, PM10(AQI)_ahead_5, O3(AQI)_ahead_5, NO2(AQI)_ahead_5, SO2(AQI)_ahead_5, PM2.5(AQI)_ahead_6, PM10(AQI)_ahead_6, O3(AQI)_ahead_6, NO2(AQI)_ahead_6, SO2(AQI)_ahead_6, PM2.5(AQI)_ahead_7, PM10(AQI)_ahead_7, O3(AQI)_ahead_7, NO2(AQI)_ahead_7 and SO2(AQI)_ahead_7. </Caption>
+   <Data>0
+20.2
+26.6
+16.3
+1011.9
+36
+43.3
+21
+6
+2
+5
+3
+37
+9.2
+3.1
+0
+20.2
+27.9
+12
+1011.9
+36
+37.2
+28.948645
+12.310140
+41.324230
+15.883132
+3.619260
+34.483459
+15.401093
+43.380417
+19.793695
+3.857924
+39.508202
+17.199741
+44.483948
+19.678139
+3.819785
+41.793007
+18.334110
+45.322056
+18.784008
+3.808934
+43.084408
+18.718075
+44.986774
+20.460806
+3.948039
+44.599998
+20.386086
+44.468834
+22.399620
+4.041164
+46.439690
+21.441383
+44.121494
+21.602753
+3.945622</Data>
+   <RowsName>PRECIPITATIONS(mm)_lag_1\TAVG(C)_lag_1\TMAX(C)_lag_1\TMIN(C)_lag_1\PRESSURE(hPa)_lag_1\WINDSPEED(km/h)_lag_1\HUMIDITY(percentage)_lag_1\DAY_lag_0\MONTH_lag_0\WEEKDAY_lag_0\PM2.5(AQI)_lag_0\PM10(AQI)_lag_0\O3(AQI)_lag_0\NO2(AQI)_lag_0\SO2(AQI)_lag_0\PRECIPITATIONS(mm)_lag_0\TAVG(C)_lag_0\TMAX(C)_lag_0\TMIN(C)_lag_0\PRESSURE(hPa)_lag_0\WINDSPEED(km/h)_lag_0\HUMIDITY(percentage)_lag_0\PM2.5(AQI)_ahead_1\PM10(AQI)_ahead_1\O3(AQI)_ahead_1\NO2(AQI)_ahead_1\SO2(AQI)_ahead_1\PM2.5(AQI)_ahead_2\PM10(AQI)_ahead_2\O3(AQI)_ahead_2\NO2(AQI)_ahead_2\SO2(AQI)_ahead_2\PM2.5(AQI)_ahead_3\PM10(AQI)_ahead_3\O3(AQI)_ahead_3\NO2(AQI)_ahead_3\SO2(AQI)_ahead_3\PM2.5(AQI)_ahead_4\PM10(AQI)_ahead_4\O3(AQI)_ahead_4\NO2(AQI)_ahead_4\SO2(AQI)_ahead_4\PM2.5(AQI)_ahead_5\PM10(AQI)_ahead_5\O3(AQI)_ahead_5\NO2(AQI)_ahead_5\SO2(AQI)_ahead_5\PM2.5(AQI)_ahead_6\PM10(AQI)_ahead_6\O3(AQI)_ahead_6\NO2(AQI)_ahead_6\SO2(AQI)_ahead_6\PM2.5(AQI)_ahead_7\PM10(AQI)_ahead_7\O3(AQI)_ahead_7\NO2(AQI)_ahead_7\SO2(AQI)_ahead_7</RowsName>
+   <ColumnsName>Value</ColumnsName>
+   <RowHeadingsWidth>19</RowHeadingsWidth>
+   <ColumnHeadingsWidth>5</ColumnHeadingsWidth>
+   <Alignment>right</Alignment>
+  </Table>
  </Task>
 </NeuralDesignerOutput>
