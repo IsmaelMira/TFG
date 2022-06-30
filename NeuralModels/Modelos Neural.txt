@@ -1,5 +1,0 @@
--Quitar simbolos raros dataset
--Poner los missing a unused
--Quitar date?
-
--Borrar outliers de dataset y probar a volver a entrenar.
