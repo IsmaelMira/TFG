@@ -18,27 +18,27 @@ block content
           tr
             td(style='text-align: left;')
               | PM25:
-            td#good(style='text-align: right;')
+            td(style='text-align: right;')
               b #{actualPM25}
           tr
             td(style='text-align: left;')
               | PM10:
-            td#good(style='text-align: right;')
+            td(style='text-align: right;')
               b #{actualPM10}
           tr
             td(style='text-align: left;')
               | O3:
-            td#good(style='text-align: right;')
+            td(style='text-align: right;')
               b #{actualO3}
           tr
             td(style='text-align: left;')
               | NO2:
-            td#good(style='text-align: right;')
+            td(style='text-align: right;')
               b #{actualNO2}
           tr
             td(style='text-align: left;')
               | SO2:
-            td#good(style='text-align: right;')
+            td(style='text-align: right;')
               b #{actualSO2}
       .listMadrid
           ul
@@ -49,27 +49,30 @@ block content
             li
               | #{currentTemperature} ºC
             li 
-              | #{condition}      
+              | #{condition}  
+    p#actualValues Forecast of the maximun values for next week
+    //borrar last TRAINING
+    p.pollutantInfo(style="margin-bottom:5px;") Last training of the model: #{date0} 
     #buttons
-      button.pollutant#PM25Button(onclick="togglePM25()" style="text-decoration:underline; font-weight:bolder") PM2.5
+      button.pollutant(onclick="togglePM25()" style="text-decoration:underline; font-weight:bolder") PM2.5
       ||
-      button.pollutant#PM10Button(onclick="togglePM10()") PM10
+      button.pollutant(onclick="togglePM10()") PM10
       ||
-      button.pollutant#O3Button(onclick="toggleO3()") O3
+      button.pollutant(onclick="toggleO3()") O3
       ||
-      button.pollutant#NO2Button(onclick="toggleNO2()") NO2
+      button.pollutant(onclick="toggleNO2()") NO2
       ||
       button.pollutant#SO2Button(onclick="toggleSO2()") SO2
-    p.pollutantInfo#PM25Info PM2.5 refers to particles in the air that are two and one half microns or less in width. <br> Especially dangerous to human health because they bypass many of our body’s defenses.
-    p.pollutantInfo#PM10Info(style="display:none;") PM10 refers to particles with a diameter of 10 micrometers (µm) or less. <br> Because PM10 is a larger particle than PM2.5, it’s less likely to cross from the lungs into the bloodstream.
-    p.pollutantInfo#O3Info(style="display:none;") Ozone can be particularly dangerous and abundant on hot days in an urban area. <br> Exposure to ozone can make it very difficult to breathe and cause coughing and shortness of breath.
-    p.pollutantInfo#NO2Info(style="display:none;") Nitrogen dioxide is produced from combustion processes. <br> Its presence is closely linked to the formation or presence of other air pollutants. 
-    p.pollutantInfo#SO2Info(style="display:none;") Sulfur dioxide is a a colorless, bad-smelling, toxic gas. <br> It can contribute to respiratory illness by making breathing more difficult.
+    p.pollutantInfo PM2.5 refers to particles in the air that are two and one half microns or less in width. <br> Especially dangerous to human health because they bypass many of our body’s defenses.
+    p.pollutantInfo(style="display:none;") PM10 refers to particles with a diameter of 10 micrometers (µm) or less. <br> Because PM10 is a larger particle than PM2.5, it’s less likely to cross from the lungs into the bloodstream.
+    p.pollutantInfo(style="display:none;") Ozone can be particularly dangerous and abundant on hot days in an urban area. <br> Exposure to ozone can make it very difficult to breathe and cause coughing and shortness of breath.
+    p.pollutantInfo(style="display:none;") Nitrogen dioxide is produced from combustion processes. <br> Its presence is closely linked to the formation or presence of other air pollutants. 
+    p.pollutantInfo(style="display:none;") Sulfur dioxide is a a colorless, bad-smelling, toxic gas. <br> It can contribute to respiratory illness by making breathing more difficult.
     #pollutionCharts
       +space
       canvas#PM25Chart
       script.
-        var data=["#{actualPM25}", "#{PM25_ahead_1}", "#{PM25_ahead_2}", "#{PM25_ahead_3}", "#{PM25_ahead_4}", "#{PM25_ahead_5}", "#{PM25_ahead_6}", "#{PM25_ahead_7}"];
+        var data=["#{PM25_ahead_1}", "#{PM25_ahead_2}", "#{PM25_ahead_3}", "#{PM25_ahead_4}", "#{PM25_ahead_5}", "#{PM25_ahead_6}", "#{PM25_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -99,7 +102,7 @@ block content
         var myChart= new Chart(ctx,{
         type: 'bar',
         data: {
-          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          labels: ["#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
           datasets: [{ 
               data: data,
               backgroundColor: colors,
@@ -137,7 +140,7 @@ block content
 
       canvas#PM10Chart(style=" display:none")
       script.
-        var data = ["#{actualPM10}", "#{PM10_ahead_1}", "#{PM10_ahead_2}", "#{PM10_ahead_3}", "#{PM10_ahead_4}", "#{PM10_ahead_5}", "#{PM10_ahead_6}", "#{PM10_ahead_7}"];
+        var data = ["#{PM10_ahead_1}", "#{PM10_ahead_2}", "#{PM10_ahead_3}", "#{PM10_ahead_4}", "#{PM10_ahead_5}", "#{PM10_ahead_6}", "#{PM10_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -168,7 +171,7 @@ block content
         var myChart= new Chart(ctx,{
         type: 'bar',
         data: {
-          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          labels: ["#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
           datasets: [{ 
               data: data,
               backgroundColor: colors,
@@ -206,7 +209,7 @@ block content
 
       canvas#O3Chart(style="display:none")
       script.
-        var data = ["#{actualO3}", "#{O3_ahead_1}", "#{O3_ahead_2}", "#{O3_ahead_3}", "#{O3_ahead_4}", "#{O3_ahead_5}", "#{O3_ahead_6}", "#{O3_ahead_7}"];
+        var data = ["#{O3_ahead_1}", "#{O3_ahead_2}", "#{O3_ahead_3}", "#{O3_ahead_4}", "#{O3_ahead_5}", "#{O3_ahead_6}", "#{O3_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -237,7 +240,7 @@ block content
         var myChart= new Chart(ctx,{
         type: 'bar',
         data: {
-          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          labels: ["#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
           datasets: [{ 
               data: data,
               backgroundColor: colors,
@@ -275,7 +278,7 @@ block content
 
       canvas#NO2Chart(style="display:none")
       script.
-        var data = ["#{actualNO2}", "#{NO2_ahead_1}", "#{NO2_ahead_2}", "#{NO2_ahead_3}", "#{NO2_ahead_4}", "#{NO2_ahead_5}", "#{NO2_ahead_6}", "#{NO2_ahead_7}"];
+        var data = ["#{NO2_ahead_1}", "#{NO2_ahead_2}", "#{NO2_ahead_3}", "#{NO2_ahead_4}", "#{NO2_ahead_5}", "#{NO2_ahead_6}", "#{NO2_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -306,7 +309,7 @@ block content
         var myChart= new Chart(ctx,{
         type: 'bar',
         data: {
-          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          labels: ["#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
           datasets: [{ 
               data: data,
               backgroundColor: colors,
@@ -344,7 +347,7 @@ block content
 
       canvas#SO2Chart(style="display:none")
       script.
-        var data = ["#{actualSO2}", "#{SO2_ahead_1}", "#{SO2_ahead_2}", "#{SO2_ahead_3}", "#{SO2_ahead_4}", "#{SO2_ahead_5}", "#{SO2_ahead_6}", "#{SO2_ahead_7}"];
+        var data = ["#{SO2_ahead_1}", "#{SO2_ahead_2}", "#{SO2_ahead_3}", "#{SO2_ahead_4}", "#{SO2_ahead_5}", "#{SO2_ahead_6}", "#{SO2_ahead_7}"];
         var colors = [];
         for(var i = 0; i < data.length; i++){
           var color;
@@ -375,7 +378,7 @@ block content
         var myChart= new Chart(ctx,{
         type: 'bar',
         data: {
-          labels: ["#{date0}", "#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
+          labels: ["#{date1}", "#{date2}", "#{date3}", "#{date4}", "#{date5}", "#{date6}", "#{date7}"],
           datasets: [{ 
               data: data,
               backgroundColor: colors,

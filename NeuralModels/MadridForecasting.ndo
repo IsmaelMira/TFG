@@ -1,5 +1,5 @@
 <NeuralDesignerOutput>
- <Task Title="Neural network" Component="Neural network" Name="Report neural network" Id="RCBCH6">
+ <Task Name="Report neural network" Title="Neural network" Component="Neural network" Id="RCBCH6">
   <Text Title="Task description" Id="KDiQar">The neural network represents the predictive model.
 In Neural Designer, neural networks allow deep architectures, a class of universal approximators.</Text>
   <Table Title="Inputs" Id="xPukdd">
@@ -223,7 +223,7 @@ It contains the following layers:
    <Architecture>22\3\35\35\35</Architecture>
   </NeuralNetworkGraph>
  </Task>
- <Task Title="Data set" Component="Data set" Name="Report data set" Id="uunAWa">
+ <Task Name="Report data set" Title="Data set" Component="Data set" Id="uunAWa">
   <Text Title="Task description" Id="dnU07G">The data set contains the information needed to create the predictive model.
 It comprises a data matrix.
 Its columns represent variables, and its rows represent samples.
@@ -430,7 +430,7 @@ The number of training samples is 1741 (60%), the number of selection samples is
   </PieChart>
   <Text Title="Missing values" Id="30G2qw">There are no missing values in the data set. </Text>
  </Task>
- <Task Title="Training" Component="Training strategy" Name="Perform training" Id="v2zI67">
+ <Task Name="Perform training" Title="Training" Component="Training strategy" Id="v2zI67">
   <Text Title="Task description" Id="vymH2F">The procedure used to carry out the learning process is called the training (or learning) strategy.
 The training strategy is applied to the neural network to obtain the minimum possible loss.
 The type of training is determined by how the adjustment of the parameters in the neural network takes place.
@@ -483,7 +483,7 @@ Maximum selection error increases
    <Alignment>right</Alignment>
   </Table>
  </Task>
- <Task Title="Errors statistics" Component="Testing analysis" Name="Calculate errors statistics" Id="Oj6jpc">
+ <Task Name="Calculate errors statistics" Title="Errors statistics" Component="Testing analysis" Id="Oj6jpc">
   <Text Title="Task description" Id="DYYLYd">The errors statistics measure the minimums, maximums, means, and standard deviations of the errors between the neural network and the testing samples in the data set.
  They provide a valuable tool for testing the quality of a model. </Text>
   <Table Title="PM2.5(AQI)_ahead_1 errors statistics" Id="yV1D6N">
@@ -907,7 +907,7 @@ The mean relative error obtained by using the previous value as the prediction i
    <Alignment>right</Alignment>
   </Table>
  </Task>
- <Task Title="Mathematical expression" Component="Neural network" Name="Write expression" Id="lExzLR">
+ <Task Name="Write expression" Title="Mathematical expression" Component="Neural network" Id="lExzLR">
   <Text Title="Task description" Id="6ZhErb">The predictive model takes the form of a function of the outputs concerning the inputs.
 You can embed the mathematical expression represented by the model into another software in the so-called production mode. </Text>
   <PreformattedText Title="Expression" Id="wZ1gqZ">

@@ -1,6 +1,6 @@
-<NeuralNetwork>
-      <Inputs>
-         <InputsNumber>22</InputsNumber>
+<NeuralNetwork>													  
+    <Inputs>
+	 <InputsNumber>22</InputsNumber>
          <Input Index="1">PRECIPITATIONS(mm)_lag_1</Input>
          <Input Index="2">TAVG(C)_lag_1</Input>
          <Input Index="3">TMAX(C)_lag_1</Input>
