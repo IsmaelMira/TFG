@@ -29,91 +29,91 @@
       <ScalingLayer>
          <ScalingNeuronsNumber>22</ScalingNeuronsNumber>
          <ScalingNeuron Index="1">
-            <Descriptives>0\51\1.07457\3.71363</Descriptives>
+            <Descriptives>0\81.5\1.09092\3.98342</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="2">
-            <Descriptives>-3.3\32.9\15.345\8.13604</Descriptives>
+            <Descriptives>-3.3\32.9\15.3677\8.11299</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="3">
-            <Descriptives>0.6\42.7\21.968\8.94053</Descriptives>
+            <Descriptives>0.6\42.7\22.0185\8.91353</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="4">
-            <Descriptives>-10.1\24\8.65224\6.91447</Descriptives>
+            <Descriptives>-10.1\35.1\8.6579\6.90348</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="5">
-            <Descriptives>990.9\1043.7\1017.66\7.24176</Descriptives>
+            <Descriptives>20.4\1043.7\1017.28\19.787</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="6">
-            <Descriptives>2.5\36.8\10.5261\5.43462</Descriptives>
+            <Descriptives>2.5\1016.6\10.8818\19.3576</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="7">
-            <Descriptives>16.8\98\58.6413\19.5068</Descriptives>
+            <Descriptives>14.3\98\58.3775\19.5736</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="8">
-            <Descriptives>1\31\15.7088\8.79701</Descriptives>
+            <Descriptives>1\31\15.7059\8.79863</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="9">
-            <Descriptives>1\12\6.37629\3.49122</Descriptives>
+            <Descriptives>1\12\6.37052\3.47461</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="10">
-            <Descriptives>1\7\3.99104\1.99653</Descriptives>
+            <Descriptives>1\7\3.99113\1.99622</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="11">
-            <Descriptives>10\166\54.4866\19.5132</Descriptives>
+            <Descriptives>10\166\54.6923\19.6696</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="12">
-            <Descriptives>4\160\24.5465\11.8758</Descriptives>
+            <Descriptives>4\160\24.697\12.0065</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="13">
-            <Descriptives>1\249\32.8032\14.5479</Descriptives>
+            <Descriptives>1\249\32.8608\14.4997</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="14">
-            <Descriptives>2\74\24.1733\10.2874</Descriptives>
+            <Descriptives>2\74\24.1003\10.2715</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="15">
-            <Descriptives>0\17\3.11234\2.05268</Descriptives>
+            <Descriptives>0\17\3.10167\2.04536</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="16">
-            <Descriptives>0\51\1.07267\3.71277</Descriptives>
+            <Descriptives>0\81.5\1.08987\3.9833</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="17">
-            <Descriptives>-3.3\32.9\15.3474\8.13496</Descriptives>
+            <Descriptives>-3.3\32.9\15.3728\8.10802</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="18">
-            <Descriptives>0.6\42.7\21.9725\8.93774</Descriptives>
+            <Descriptives>0.6\42.7\22.0158\8.91294</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="19">
-            <Descriptives>-10.1\24\8.65245\6.91443</Descriptives>
+            <Descriptives>-10.1\24\8.64903\6.88617</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="20">
-            <Descriptives>990.9\1043.7\1017.66\7.24167</Descriptives>
+            <Descriptives>990.9\1043.7\1017.61\7.22873</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="21">
-            <Descriptives>2.5\36.8\10.5282\5.43567</Descriptives>
+            <Descriptives>2.5\36.8\10.5409\5.42264</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
          <ScalingNeuron Index="22">
-            <Descriptives>16.8\98\58.6251\19.4973</Descriptives>
+            <Descriptives>16.8\98\58.3905\19.557</Descriptives>
             <Scaler>MeanStandardDeviation</Scaler>
          </ScalingNeuron>
       </ScalingLayer>
@@ -122,260 +122,260 @@
          <InputsNumber>22</InputsNumber>
          <NeuronsNumber>10</NeuronsNumber>
          <ActivationFunction>HyperbolicTangent</ActivationFunction>
-         <Parameters>-1.17116 0.225258 -0.0112978 -0.347841 10.0595 0.0573322 0.0119064 0.0380803 -3.09066 -0.217097 0.0129596 -0.0177333 0.131388 -0.108878 -0.184989 0.000910009 -0.184678 0.0554398 -0.120068 1.9076 0.0197751 0.12986 -0.0134394 -0.259755 0.0416151 -0.149802 -0.746531 0.114362 0.426961 0.176157 0.0455293 0.0406723 -0.0162275 0.507077 -0.357211 -0.276416 0.0874899 0.0182475 0.0666145 0.00857547 0.253623 -0.0186937 -0.0205694 0.0454895 -0.323235 0.0960914 -0.144541 -0.00756393 0.163537 -0.284398 -0.198243 -0.0129373 0.00789667 0.110149 0.0105434 1.24153 -0.904076 -0.563914 -0.116764 0.0894702 0.0510049 0.131163 0.0282527 0.0384773 -0.128137 0.518582 0.0351996 -0.352389 0.00810073 -0.00314051 0.847402 -0.34557 -0.461186 0.0864941 0.0252123 0.0995064 0.000354322 -0.0702399 0.0640195 0.0235559 0.0290734 0.00216239 -0.00936484 -0.0211368 -0.0490954 -0.0317007 -0.0230734 -0.00621098 0.062862 -0.154756 0.61593 0.00359301 0.0774646 -0.0868283 0.101122 -0.0018086 0.00702549 0.008447 0.83353 -1.0314 -0.390615 2.30792 0.342112 -0.734968 -2.44191 0.740325 -0.906458 -1.32434 1.25554 0.103584 0.145797 -2.39674 -1.50196 0.181907 3.0066 1.59943 -1.12587 -1.06884 0.239216 -0.756206 0.0100245 0.550338 -0.496487 -0.261291 -0.102918 0.0413468 0.0643402 0.074913 -0.00217119 0.00519326 -0.0785499 0.543499 -0.199316 -0.118623 -0.19853 0.00082088 0.0847081 -0.0790728 -0.064308 0.0820178 -0.00742286 0.0420866 -0.0022044 -0.170074 0.0839771 0.0260207 0.0111237 0.00524508 0.0004017 -0.00921496 -0.00443476 0.213488 0.00264898 -0.102344 -0.123693 -0.0452231 -0.124002 -0.00711641 -0.0684381 -0.0285755 0.0719431 -0.0169275 -0.0114286 -0.0157972 0.045762 0.954514 -0.686846 -0.359022 -0.104258 0.112666 0.121648 0.0680099 -0.251276 -0.0987195 -0.379516 0.0929275 -0.213293 -0.238577 0.0741034 0.0534484 0.223992 0.0419343 -0.129948 0.0485758 -0.0652724 -0.0535674 -1.03792 2.9748 -1.69587 0.382513 4.01889 -0.855617 -3.6891 -1.21255 1.59268 -1.02632 -0.118256 1.38303 0.201298 -2.46775 -0.225052 -0.652149 -0.60179 -2.49825 0.771862 -1.97074 0.179161 3.76705 0.0374727 -1.24369 0.626741 0.765593 0.180998 -0.0540743 -0.0656082 -0.174268 -0.280682 -0.0441381 -0.309028 -0.217562 -0.362518 -0.168349 0.536551 0.0437087 -1.59745 0.716207 1.0918 -0.0647185 -0.112822 -0.169127</Parameters>
+         <Parameters>-8.16287 0.296146 -0.054816 -0.426363 0.339235 0.329279 0.00262062 -0.601175 -0.153565 -0.225361 0.358038 -3.02806 -0.394945 -1.54287 -0.216127 0.0583392 0.818487 -0.485216 0.970867 2.16604 0.0498136 -0.543426 -0.0515965 1.43984 1.04361 -1.01713 -3.90189 2.33844 2.86933 1.31638 0.0627313 0.253001 -0.040176 0.0566366 -0.0909093 -0.11993 0.360861 0.00529456 0.0115714 -0.0655651 0.292232 0.0433202 -0.0635822 0.0105069 -0.429309 0.161026 -0.160596 -0.0350318 0.163088 -0.271358 -0.190025 -0.0449803 -0.00765443 0.14878 -0.0538629 0.118381 -0.565288 0.0422867 0.0971323 0.371965 -0.0689418 0.132407 -0.363114 0.0495821 -0.099785 0.871503 0.00189933 -0.572398 0.051005 -0.0163409 0.122903 -0.0817352 -0.016749 -0.16951 0.0188708 -0.0276575 0.0424709 -0.226329 0.146246 0.181139 0.0149889 -0.0912565 0.042197 -0.0066683 -0.0910586 0.0509774 0.0233841 -0.0622705 0.160091 -0.142842 0.772024 0.0517455 -0.318135 0.26115 0.321071 0.03992 0.0390706 -0.0668294 -0.0133309 -0.24227 -0.0177564 0.343489 0.151173 0.0597421 0.0276497 -0.051587 -0.434933 -0.00101966 -0.401045 -0.101938 -0.0760339 -0.12972 0.040034 0.0309559 -0.675009 0.725294 0.23827 -0.120229 0.00448129 -0.0679127 -0.0820752 0.642105 -0.344571 -0.451553 0.150231 0.335007 -0.0367768 0.00994053 0.00529954 -0.0567971 -0.164329 0.122296 -0.208054 -0.081064 0.00472763 -0.045762 0.985976 -0.668052 -0.582102 -0.126138 -0.0299615 0.171385 -0.0122721 0.011945 -0.0581166 0.00503889 0.130952 0.135633 -0.000215235 -0.0334624 -0.0482992 -0.0324833 -0.0376591 -0.114957 -0.122873 -0.130283 -0.101572 -0.00960936 0.0162176 -0.0120847 0.0106244 -0.0325854 -0.00370478 0.0111337 -0.0589832 -0.155512 -0.815291 0.456805 0.123083 0.330688 -0.0196389 0.312246 -1.07317 0.0482969 -0.23168 0.983545 0.063565 -0.561482 0.280143 0.0435913 -0.660791 0.194879 0.385118 -0.444537 -0.0243664 -0.287931 0.13302 -0.425888 0.170821 0.739394 0.574824 -0.118068 0.0845504 -0.259132 -0.0769999 -0.199157 0.274801 -0.186964 -0.263424 0.0280719 0.0728018 0.0252302 -2.16678 1.02883 1.31554 0.215933 0.084694 -0.182352 0.0407997 0.0222283 0.0693908 0.315859 0.373594 0.0168218 0.0977172 -0.152906 -0.110506 -0.165432 -0.0452661 -0.292834 -0.151334 0.0377069 0.292675 0.0159628 -1.02294 0.43938 0.576043 0.0606719 0.0154713 -0.0823018</Parameters>
       </PerceptronLayer>
       <PerceptronLayer>
          <LayerName>perceptron_layer_2</LayerName>
          <InputsNumber>10</InputsNumber>
          <NeuronsNumber>35</NeuronsNumber>
          <ActivationFunction>Linear</ActivationFunction>
-         <Parameters>0.275069 0.168933 -0.0347056 0.198604 0.612771 0.210806 0.138257 0.0527388 0.21769 0.588655 0.136764 0.10074 0.0825017 0.256698 0.557694 0.0937067 0.0605479 0.0510692 0.258599 0.574807 0.0574096 0.00747099 0.0468996 0.186099 0.545742 0.0195151 0.000714867 0.0955815 0.103567 0.51584 -0.000610362 0.0492987 0.164145 0.13543 0.569817 0.198015 -0.602263 -0.685209 0.653452 -0.0716112 2.20041 -0.925363 -0.768302 0.0199762 -0.139094 0.588818 -0.0228744 0.687278 -0.874289 -0.17996 0.64322 -2.62533 -0.989933 -0.13961 0.813866 -0.0601212 -0.795379 0.944344 -0.620525 0.0546397 -0.999795 -0.305152 -0.278453 -0.0733407 0.0683397 0.795458 1.18641 -0.483409 -0.677313 -0.291985 -0.25567 -3.0629 -0.0622268 -0.229002 0.150323 0.193457 0.610869 0.0326623 1.56425 -0.198846 -0.0759584 -0.603725 -0.116101 -0.12723 0.0534869 0.352981 0.0263956 0.446535 -0.471145 -0.316184 0.697033 -1.75968 -0.964444 -0.111393 0.568856 0.583902 0.385342 1.4453 -1.38356 -0.316065 -0.591396 -2.55415 -1.15573 -0.192531 1.07189 -0.146995 -1.1358 0.452282 -0.290192 0.0669043 -0.318537 0.0827123 -0.0899842 -0.0160514 -0.0219983 0.801336 1.4869 0.550947 -1.16539 -0.33537 -1.11836 -2.78362 -0.384071 -0.23236 0.573533 0.0891077 0.719697 0.507294 1.36236 -0.212526 -0.430335 -0.261897 -0.273679 -0.128391 0.161767 0.384428 0.525976 1.35572 -1.09264 -0.412636 -0.544313 -1.95884 -1.16507 -0.177703 0.925041 0.282078 0.439982 2.21767 -1.54171 -0.381777 -1.14748 -1.64564 -1.58107 -0.27358 1.35362 -0.0441776 -1.22571 0.0225597 -0.185264 0.0708339 -0.0102053 -0.167324 0.191493 0.00643607 -0.154934 0.463623 1.30178 1.11171 -0.997336 -0.331804 -1.2432 -1.45768 -0.790641 -0.244735 0.731001 -0.0416801 0.792943 0.905888 1.22902 -0.226598 -0.713431 0.0658079 -0.463454 -0.143328 0.268135 0.195469 0.670193 2.11034 -1.37555 -0.45937 -1.15858 -1.40623 -1.5309 -0.234549 1.23417 -0.0936818 0.298781 2.7322 -1.45408 -0.410864 -1.25891 -0.547747 -1.93955 -0.367244 1.50425 0.0785481 -1.18303 -0.186512 -0.261135 0.146029 0.131304 -0.528564 0.287845 0.0282966 -0.094958 -0.0817836 0.919315 1.53176 -0.580184 -0.351991 -1.12802 0.383358 -1.27219 -0.336218 0.750812 -0.176587 0.740124 1.13418 1.26826 -0.226754 -0.782703 0.513717 -0.605239 -0.125787 0.307705 -0.0808263 0.587613 2.58065 -1.30248 -0.474743 -1.29748 -0.548835 -1.80817 -0.319169 1.34251 -0.370527 0.230406 2.98166 -1.54225 -0.474829 -1.32892 -0.187855 -2.02495 -0.422648 1.62712 0.172904 -1.17214 -0.374593 -0.169344 0.186832 0.18119 -0.515314 0.311625 0.0196266 -0.173713 -0.516314 0.792787 1.67679 -0.436058 -0.356744 -1.11367 1.023 -1.40607 -0.338569 0.735381 -0.309527 0.747698 1.24223 1.22348 -0.226973 -0.852903 0.707992 -0.651194 -0.108034 0.313758 -0.314096 0.532315 2.84354 -1.3426 -0.523167 -1.3932 -0.119833 -1.92099 -0.371273 1.43605 -0.445459 0.34029 3.03862 -1.71559 -0.510263 -1.53737 -0.55028 -1.8204 -0.331926 1.62298 0.17513 -1.23427 -0.34525 -0.0726499 0.163476 0.243089 -0.324083 0.293099 0.022041 -0.230297 -0.595139 0.954932 1.48535 -0.620811 -0.310997 -1.1263 0.193807 -1.09631 -0.212377 0.713875 -0.275369 0.783631 0.926013 1.27247 -0.156642 -0.703218 0.384648 -0.425159 -0.0327474 0.162324 -0.40516 0.635496 2.96725 -1.51903 -0.53831 -1.59553 -0.332272 -1.82921 -0.304172 1.5069 -0.210612 0.437466 2.66764 -1.73747 -0.456974 -1.50115 -1.11869 -1.43357 -0.200571 1.44828 0.0518719 -1.46979 -0.426081 0.123815 0.115247 0.530366 0.136424 0.292992 0.0195298 -0.269141 -0.182815 1.19901 1.22547 -0.900435 -0.26942 -1.15653 -0.983607 -0.734396 -0.110956 0.704081 -0.143747 0.754222 0.70529 1.32773 -0.142878 -0.550152 0.199922 -0.272923 0.0210875 0.0615272</Parameters>
+         <Parameters>-0.254865 -0.0456762 0.179102 0.211149 0.589791 0.178684 0.581822 -0.138497 0.750994 0.785699 0.739348 0.966563 -0.281901 1.02847 0.910765 1.07795 1.06373 -0.3831 1.11158 0.987808 1.2268 1.03955 -0.295637 1.04131 1.00259 1.20149 0.899899 -0.297635 0.761056 0.789218 1.01704 0.769779 -0.34149 0.576638 0.730073 0.0701755 -0.105203 0.57311 -0.327595 -0.147096 0.802126 -2.78989 -0.082887 0.82279 -0.472059 0.22423 0.2135 1.52055 -0.762857 0.181364 -0.346511 -2.85765 -0.780724 -0.244166 1.01869 -0.0922083 -0.828396 0.0726752 -0.161665 0.0945232 -0.720843 0.0108469 -0.133166 -0.44682 0.156878 0.284752 0.570985 0.0652853 -0.840113 0.165395 -0.237416 -2.58034 -0.0455415 -0.603688 1.42759 0.22077 0.116888 0.281576 1.01364 -0.332011 0.684051 -0.66302 -0.126042 -0.335663 0.914608 0.339426 0.101664 1.10637 -0.724329 -0.225568 -0.239658 -2.27147 -0.463622 -0.206681 1.05834 0.429482 0.355146 1.67098 -0.789892 -0.265531 -1.46452 -1.43765 -0.842778 -1.00365 1.92212 -0.192088 -0.870651 0.211976 -0.0661715 0.373211 -0.0956802 -0.33154 -0.315261 -0.0164958 -0.204505 0.413772 0.886307 0.57707 -0.611582 -0.235628 -1.24665 -0.924376 -0.276656 -1.08667 1.79167 0.244513 0.265275 0.493412 1.07026 -0.528091 0.250115 0.0913473 -0.244073 -0.564179 1.0213 0.510408 0.200109 1.37023 -0.828387 -0.671015 -1.23382 -1.07322 -0.582703 -0.982417 2.04816 0.554552 0.532171 1.89854 -0.720519 -0.538341 -2.1691 -0.458891 -0.936125 -1.41976 2.29824 -0.253527 -0.949146 0.213466 -0.135118 0.459839 0.187806 -0.641218 -0.333414 0.108395 -0.184993 0.500471 1.2128 0.797283 -0.333777 -0.338982 -1.8796 0.0015197 -0.360305 -1.26779 1.68866 0.266077 0.378332 0.633092 1.05797 -0.638821 -0.0630193 0.442468 -0.30344 -0.730369 1.17026 0.596929 0.386941 1.65781 -0.778429 -0.93631 -1.92293 -0.152786 -0.736879 -1.41026 2.47093 0.534215 0.651058 2.0368 -0.618693 -0.659531 -2.41581 0.0196301 -1.0137 -1.55327 2.33784 -0.25925 -1.06024 0.0347209 -0.151006 0.580283 0.456964 -0.804406 -0.257846 0.278533 -0.354477 0.512366 1.36386 0.722586 0.00993486 -0.368715 -2.03786 0.65864 -0.330441 -1.14812 1.1291 0.268815 0.414566 0.658203 1.08103 -0.737342 -0.214381 0.674969 -0.296617 -0.823669 1.19652 0.608549 0.488461 1.82886 -0.671692 -1.09826 -2.22031 0.390616 -0.828216 -1.62757 2.55919 0.460057 0.411215 2.0548 -0.798756 -0.826661 -2.2059 0.0158568 -1.03682 -1.60678 2.67418 -0.161344 -1.02611 -0.182914 -0.0116006 0.638393 0.388621 -0.562272 -0.119513 0.396473 -0.685749 0.347844 0.896233 0.588934 -0.180183 -0.706983 -1.52283 0.614456 -0.257858 -1.02859 1.38387 0.191599 0.186459 0.630124 1.01331 -0.984031 -0.0145464 0.904226 -0.285285 -0.777084 1.27305 0.531003 0.398479 1.84652 -0.747628 -1.21173 -2.14524 0.444202 -0.847888 -1.70936 2.76584 0.315634 -0.0677131 1.99309 -1.05994 -1.02363 -1.60979 -0.197337 -1.03978 -1.54842 3.03696 -0.151692 -0.95776 -0.166137 0.116198 0.676042 0.390282 -0.449669 -0.128907 0.476698 -0.919837 0.113035 0.154325 0.483063 -0.716449 -0.969857 -0.538384 -0.169471 -0.230978 -0.866429 2.02781 0.0621574 -0.119971 0.47324 0.928174 -1.00403 0.571416 0.611568 -0.260294 -0.539946 1.16758 0.37228 0.0652441 1.7668 -0.91561 -1.30109 -1.62089 0.213234 -0.857905 -1.59937 2.95928 0.230495 -0.0822705 1.94444 -1.12076 -0.944886 -1.47664 -0.366738 -1.05173 -1.52184 3.09788 -0.124413 -0.963711 -0.0892541 0.13751 0.765246 0.52175 -0.576163 -0.166844 0.543487 -1.02098 0.0542312 0.198227 0.477165 -0.820763 -0.769338 -0.392784 -0.660164 -0.264651 -0.835611 2.09333 0.0751512 -0.117506 0.410265 0.961801 -0.90433 0.669935 0.498794 -0.250082 -0.463945 1.00059</Parameters>
       </PerceptronLayer>
       <UnscalingLayer>
          <UnscalingNeuronsNumber>35</UnscalingNeuronsNumber>
          <Descriptives Index="1">
             <Minimum>10</Minimum>
             <Maximum>166</Maximum>
-            <Mean>54.4883</Mean>
-            <StandardDeviation>19.5118</StandardDeviation>
+            <Mean>54.7028</Mean>
+            <StandardDeviation>19.6679</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="2">
             <Minimum>4</Minimum>
             <Maximum>160</Maximum>
-            <Mean>24.5507</Mean>
-            <StandardDeviation>11.8742</StandardDeviation>
+            <Mean>24.7022</Mean>
+            <StandardDeviation>12.0052</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="3">
             <Minimum>1</Minimum>
             <Maximum>249</Maximum>
-            <Mean>32.8067</Mean>
-            <StandardDeviation>14.5468</StandardDeviation>
+            <Mean>32.8632</Mean>
+            <StandardDeviation>14.4987</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="4">
             <Minimum>2</Minimum>
             <Maximum>74</Maximum>
-            <Mean>24.1692</Mean>
-            <StandardDeviation>10.2895</StandardDeviation>
+            <Mean>24.0959</Mean>
+            <StandardDeviation>10.2739</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="5">
             <Minimum>0</Minimum>
             <Maximum>17</Maximum>
-            <Mean>3.11268</Mean>
-            <StandardDeviation>2.05241</StandardDeviation>
+            <Mean>3.10201</Mean>
+            <StandardDeviation>2.0451</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="6">
             <Minimum>10</Minimum>
             <Maximum>166</Maximum>
-            <Mean>54.4921</Mean>
-            <StandardDeviation>19.51</StandardDeviation>
+            <Mean>54.7114</Mean>
+            <StandardDeviation>19.667</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="7">
             <Minimum>4</Minimum>
             <Maximum>160</Maximum>
-            <Mean>24.5555</Mean>
-            <StandardDeviation>11.8711</StandardDeviation>
+            <Mean>24.7097</Mean>
+            <StandardDeviation>12.0028</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="8">
             <Minimum>1</Minimum>
             <Maximum>249</Maximum>
-            <Mean>32.8132</Mean>
-            <StandardDeviation>14.5498</StandardDeviation>
+            <Mean>32.8666</Mean>
+            <StandardDeviation>14.4992</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="9">
             <Minimum>2</Minimum>
             <Maximum>74</Maximum>
-            <Mean>24.1692</Mean>
-            <StandardDeviation>10.2895</StandardDeviation>
+            <Mean>24.0948</Mean>
+            <StandardDeviation>10.275</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="10">
             <Minimum>0</Minimum>
             <Maximum>17</Maximum>
-            <Mean>3.11303</Mean>
-            <StandardDeviation>2.05214</StandardDeviation>
+            <Mean>3.10235</Mean>
+            <StandardDeviation>2.04483</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="11">
             <Minimum>10</Minimum>
             <Maximum>166</Maximum>
-            <Mean>54.5031</Mean>
-            <StandardDeviation>19.5029</StandardDeviation>
+            <Mean>54.725</Mean>
+            <StandardDeviation>19.6609</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="12">
             <Minimum>4</Minimum>
             <Maximum>160</Maximum>
-            <Mean>24.562</Mean>
-            <StandardDeviation>11.8711</StandardDeviation>
+            <Mean>24.7151</Mean>
+            <StandardDeviation>12.0021</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="13">
             <Minimum>1</Minimum>
             <Maximum>249</Maximum>
-            <Mean>32.8191</Mean>
-            <StandardDeviation>14.5505</StandardDeviation>
+            <Mean>32.8731</Mean>
+            <StandardDeviation>14.5004</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="14">
             <Minimum>2</Minimum>
             <Maximum>74</Maximum>
-            <Mean>24.1702</Mean>
-            <StandardDeviation>10.2889</StandardDeviation>
+            <Mean>24.0942</Mean>
+            <StandardDeviation>10.2755</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="15">
             <Minimum>0</Minimum>
             <Maximum>17</Maximum>
-            <Mean>3.11337</Mean>
-            <StandardDeviation>2.05187</StandardDeviation>
+            <Mean>3.1027</Mean>
+            <StandardDeviation>2.04456</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="16">
             <Minimum>10</Minimum>
             <Maximum>166</Maximum>
-            <Mean>54.5152</Mean>
-            <StandardDeviation>19.5023</StandardDeviation>
+            <Mean>54.7339</Mean>
+            <StandardDeviation>19.6583</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="17">
             <Minimum>4</Minimum>
             <Maximum>160</Maximum>
-            <Mean>24.5672</Mean>
-            <StandardDeviation>11.8719</StandardDeviation>
+            <Mean>24.7216</Mean>
+            <StandardDeviation>12.0041</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="18">
             <Minimum>1</Minimum>
             <Maximum>249</Maximum>
-            <Mean>32.8243</Mean>
-            <StandardDeviation>14.5496</StandardDeviation>
+            <Mean>32.8823</Mean>
+            <StandardDeviation>14.5027</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="19">
             <Minimum>2</Minimum>
             <Maximum>74</Maximum>
-            <Mean>24.1668</Mean>
-            <StandardDeviation>10.2913</StandardDeviation>
+            <Mean>24.0918</Mean>
+            <StandardDeviation>10.2768</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="20">
             <Minimum>0</Minimum>
             <Maximum>17</Maximum>
-            <Mean>3.11337</Mean>
-            <StandardDeviation>2.05187</StandardDeviation>
+            <Mean>3.10304</Mean>
+            <StandardDeviation>2.04446</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="21">
             <Minimum>10</Minimum>
             <Maximum>166</Maximum>
-            <Mean>54.5241</Mean>
-            <StandardDeviation>19.503</StandardDeviation>
+            <Mean>54.7431</Mean>
+            <StandardDeviation>19.6592</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="22">
             <Minimum>4</Minimum>
             <Maximum>160</Maximum>
-            <Mean>24.5717</Mean>
-            <StandardDeviation>11.8734</StandardDeviation>
+            <Mean>24.7288</Mean>
+            <StandardDeviation>12.0087</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="23">
             <Minimum>1</Minimum>
             <Maximum>249</Maximum>
-            <Mean>32.8318</Mean>
-            <StandardDeviation>14.5466</StandardDeviation>
+            <Mean>32.8915</Mean>
+            <StandardDeviation>14.5005</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="24">
             <Minimum>2</Minimum>
             <Maximum>74</Maximum>
-            <Mean>24.164</Mean>
-            <StandardDeviation>10.2914</StandardDeviation>
+            <Mean>24.0901</Mean>
+            <StandardDeviation>10.2766</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="25">
             <Minimum>0</Minimum>
             <Maximum>17</Maximum>
-            <Mean>3.11303</Mean>
-            <StandardDeviation>2.05197</StandardDeviation>
+            <Mean>3.1027</Mean>
+            <StandardDeviation>2.04456</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="26">
             <Minimum>10</Minimum>
             <Maximum>166</Maximum>
-            <Mean>54.5179</Mean>
-            <StandardDeviation>19.4974</StandardDeviation>
+            <Mean>54.741</Mean>
+            <StandardDeviation>19.6567</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="27">
             <Minimum>4</Minimum>
             <Maximum>160</Maximum>
-            <Mean>24.5768</Mean>
-            <StandardDeviation>11.8769</StandardDeviation>
+            <Mean>24.7428</Mean>
+            <StandardDeviation>12.0329</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="28">
             <Minimum>1</Minimum>
             <Maximum>249</Maximum>
-            <Mean>32.8363</Mean>
-            <StandardDeviation>14.5419</StandardDeviation>
+            <Mean>32.8997</Mean>
+            <StandardDeviation>14.4949</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="29">
             <Minimum>2</Minimum>
             <Maximum>74</Maximum>
-            <Mean>24.1561</Mean>
-            <StandardDeviation>10.295</StandardDeviation>
+            <Mean>24.0853</Mean>
+            <StandardDeviation>10.2766</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="30">
             <Minimum>0</Minimum>
             <Maximum>17</Maximum>
-            <Mean>3.11165</Mean>
-            <StandardDeviation>2.05138</StandardDeviation>
+            <Mean>3.10133</Mean>
+            <StandardDeviation>2.04396</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="31">
-            <Minimum>9</Minimum>
+            <Minimum>10</Minimum>
             <Maximum>166</Maximum>
-            <Mean>54.4976</Mean>
-            <StandardDeviation>19.5141</StandardDeviation>
+            <Mean>54.738</Mean>
+            <StandardDeviation>19.6554</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="32">
             <Minimum>4</Minimum>
             <Maximum>160</Maximum>
-            <Mean>24.5672</Mean>
-            <StandardDeviation>11.8781</StandardDeviation>
+            <Mean>24.7393</Mean>
+            <StandardDeviation>12.0309</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="33">
             <Minimum>1</Minimum>
             <Maximum>249</Maximum>
-            <Mean>32.8416</Mean>
-            <StandardDeviation>14.5345</StandardDeviation>
+            <Mean>32.9065</Mean>
+            <StandardDeviation>14.4865</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="34">
             <Minimum>2</Minimum>
             <Maximum>74</Maximum>
-            <Mean>24.1418</Mean>
-            <StandardDeviation>10.2907</StandardDeviation>
+            <Mean>24.0713</Mean>
+            <StandardDeviation>10.2719</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
          <Descriptives Index="35">
             <Minimum>0</Minimum>
             <Maximum>17</Maximum>
-            <Mean>3.10944</Mean>
-            <StandardDeviation>2.04848</StandardDeviation>
+            <Mean>3.09894</Mean>
+            <StandardDeviation>2.04116</StandardDeviation>
             <Scaler>MeanStandardDeviation</Scaler>
          </Descriptives>
       </UnscalingLayer>

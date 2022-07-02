@@ -50,17 +50,17 @@ block content
               | #{currentTemperature} ºC
             li 
               | #{condition}  
-    p#actualValues Forecast of the maximun values for next week
+    p#actualValues Forecast of the pollutants values for next week
     //borrar last TRAINING
     p.pollutantInfo(style="margin-bottom:5px;") Last training of the model: #{date0} 
     #buttons
-      button.pollutant(onclick="togglePM25()" style="text-decoration:underline; font-weight:bolder") PM2.5
+      button.pollutant#PM25Button(onclick="togglePM25()" style="text-decoration:underline; font-weight:bolder") PM2.5
       ||
-      button.pollutant(onclick="togglePM10()") PM10
+      button.pollutant#PM10Button(onclick="togglePM10()") PM10
       ||
-      button.pollutant(onclick="toggleO3()") O3
+      button.pollutant#O3Button(onclick="toggleO3()") O3
       ||
-      button.pollutant(onclick="toggleNO2()") NO2
+      button.pollutant#NO2Button(onclick="toggleNO2()") NO2
       ||
       button.pollutant#SO2Button(onclick="toggleSO2()") SO2
     p.pollutantInfo PM2.5 refers to particles in the air that are two and one half microns or less in width. <br> Especially dangerous to human health because they bypass many of our body’s defenses.
