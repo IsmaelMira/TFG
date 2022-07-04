@@ -38,6 +38,7 @@ router.get('/', async function(req, res, next) {
   todayWeather.days[0].pressure, todayWeather.days[0].windspeed, todayWeather.days[0].humidity];
   await appendTodayData(todayData);
 
+  //Load view
   res.render('index', { title: "Air contamination forecast", 
   currentTemperature: todayWeather.currentConditions.temp, condition: todayWeather.currentConditions.conditions,
   date0: getDaysArray[0], date1: getDaysArray[1], date2: getDaysArray[2], date3: getDaysArray[3], date4: getDaysArray[4], date5: getDaysArray[5], date6: getDaysArray[6], date7: getDaysArray[7],
@@ -52,6 +53,7 @@ router.get('/', async function(req, res, next) {
   });
 });
 
+//Get JSON with yesterday meteorological information
 async function getYesterdayWeatherData() {
   try {
     const response = await axios.get('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Madrid/yesterday', 
@@ -67,6 +69,7 @@ async function getYesterdayWeatherData() {
   }
 }
 
+//Get JSON with today meteorological information
 async function getTodayWeatherData() {
   try {
     const response = await axios.get('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Madrid/today', 
@@ -82,6 +85,7 @@ async function getTodayWeatherData() {
   }
 }
 
+//Get JSON with today pollution data
 async function getPollutionData() {
   try {
     const response = await axios.get('https://api.waqi.info/feed/madrid', 
@@ -95,6 +99,7 @@ async function getPollutionData() {
   }
 }
 
+//Get an array with next week dates
 function getDates(start, end) {
   var flag=0;
   const options = {
@@ -114,6 +119,7 @@ function getDates(start, end) {
   return datesArray;
 };
 
+//Execute deployment.exe with selected inputs
 async function executeModel(inputs){
 	return new Promise((resolve, reject) => {
 		exec('deployment.exe', [inputs[0], inputs[1], inputs[2], inputs[3], inputs[4],inputs[5], inputs[6], inputs[7], inputs[8], inputs[9], inputs[10], 
@@ -124,6 +130,7 @@ async function executeModel(inputs){
 	})
 }
 
+//Read outputs CSV after deployment in order to use them in charts
 async function calculateOutputs(inputs){
 	await executeModel(inputs);
 	var outputs = fs.readFileSync("outputs.csv", "utf8")
@@ -132,8 +139,9 @@ async function calculateOutputs(inputs){
 	return outputs;
 }
 
+//Add new data to historical data CSV
 async function appendTodayData(appendData){
-	var data = fs.readFileSync("HistoricalData.csv", "utf8")
+	var data = fs.readFileSync("historical_data.csv", "utf8")
 	data = data.split("\n");
 	var lastLine=data[data.length-2];
 	lastLine = lastLine.split(";");
@@ -141,7 +149,7 @@ async function appendTodayData(appendData){
 	date=today.toLocaleDateString("en-UK");
 
 	if(!(lastLine[0].localeCompare(date)==0)){
-		fs.appendFile('HistoricalData.csv', date + ";" + appendData[0]  + ";" + appendData[1]  + ";" + appendData[2]  + ";" + appendData[3]  + ";" + appendData[4] 
+		fs.appendFile('historical_data.csv', date + ";" + appendData[0]  + ";" + appendData[1]  + ";" + appendData[2]  + ";" + appendData[3]  + ";" + appendData[4] 
 						+ ";" + appendData[5]  + ";" + appendData[6]  + ";" + appendData[7]  + ";" + appendData[8]  + ";" + appendData[9] 
 						+ ";" + appendData[10]  + ";" + appendData[11]  + ";" + appendData[12]  + ";" + appendData[13]  + ";" + appendData[14] + '\r\n', (err) => {
 			if (err) throw err;
@@ -152,6 +160,7 @@ async function appendTodayData(appendData){
 	return lastLine;
 }
 
+//Execute training.exe after new data is added to historical CSV
 async function trainNeuralNetwork(inputs){
 	return new Promise((resolve, reject) => {
 		exec('training.exe',  function(err, data) {  
