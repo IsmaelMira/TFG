@@ -186,7 +186,7 @@ button:hover{
 }
 
 #pollutionCharts{
-    margin-left:15.7%;
+    margin-left:14.7%;
     display:flex;
     flex-direction: row; 
     align-items: center;
@@ -213,7 +213,7 @@ canvas{
     list-style: none;
 }
 .legend .scale ul li {
-    font-size: 18px;
+    font-size: 15px;
     list-style: none;
     margin-left: 0;
     line-height: 18px;
