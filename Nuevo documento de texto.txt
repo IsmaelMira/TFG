@@ -1,0 +1,9 @@
+hacer pruebas con 20 minutos
+intentar ir mas rapido
+cuidado con coletillas
+ser mas rapido y concreto en metodologias y otros apartados: 
+decir que no es el tipico de desarrollo aunque tiene desarrollo: por eso se usa Design Science. para el desarrollo se usa Scrum. todo mas directo
+no enrollarme tanto en resultados, una grafica en detalle y luego solo cosas puntuales
+mas agilidad en la introduccion
+centrarme en lo de mi trabajo, no en el resto de cosas
+arquitectura proyecto: recalcar que el núcleo es la parte mas alejada del usuario: modelo y red neuronal. La interfaz es solo un objetivo secundario, entorno simple.
