@@ -61,11 +61,11 @@ block content
       button.pollutant#NO2Button(onclick="toggleNO2()") NO2
       ||
       button.pollutant#SO2Button(onclick="toggleSO2()") SO2
-    p.pollutantInfo PM2.5 refers to particles in the air that are two and one half microns or less in width. <br> Especially dangerous to human health because they bypass many of our body’s defenses.
-    p.pollutantInfo(style="display:none;") PM10 refers to particles with a diameter of 10 micrometers (µm) or less. <br> Because PM10 is a larger particle than PM2.5, it’s less likely to cross from the lungs into the bloodstream.
-    p.pollutantInfo(style="display:none;") Ozone can be particularly dangerous and abundant on hot days in an urban area. <br> Exposure to ozone can make it very difficult to breathe and cause coughing and shortness of breath.
-    p.pollutantInfo(style="display:none;") Nitrogen dioxide is produced from combustion processes. <br> Its presence is closely linked to the formation or presence of other air pollutants. 
-    p.pollutantInfo(style="display:none;") Sulfur dioxide is a a colorless, bad-smelling, toxic gas. <br> It can contribute to respiratory illness by making breathing more difficult.
+    p.pollutantInfo#PM25Info PM2.5 refers to particles in the air that are two and one half microns or less in width. <br> Especially dangerous to human health because they bypass many of our body’s defenses.
+    p.pollutantInfo#PM10Info(style="display:none;") PM10 refers to particles with a diameter of 10 micrometers (µm) or less. <br> Because PM10 is a larger particle than PM2.5, it’s less likely to cross from the lungs into the bloodstream.
+    p.pollutantInfo#O3Info(style="display:none;") Ozone can be particularly dangerous and abundant on hot days in an urban area. <br> Exposure to ozone can make it very difficult to breathe and cause coughing and shortness of breath.
+    p.pollutantInfo#NO2Info(style="display:none;") Nitrogen dioxide is produced from combustion processes. <br> Its presence is closely linked to the formation or presence of other air pollutants. 
+    p.pollutantInfo#SO2Info(style="display:none;") Sulfur dioxide is a a colorless, bad-smelling, toxic gas. <br> It can contribute to respiratory illness by making breathing more difficult.
     #pollutionCharts
       +space
       canvas#PM25Chart
